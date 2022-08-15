@@ -1,0 +1,242 @@
+% Running on host: BL-SOIC-30ZND42
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[data\AP_IMDB\test/test_pos.txt, data\AP_IMDB\test/test_neg.txt, data\AP_IMDB\test/test_bk.txt, data\AP_IMDB\test/test_facts.txt]
+%  for N=0: args[N]=data\AP_IMDB\test/test_pos.txt
+
+% getInputArgWithDefaultValue: args=[data\AP_IMDB\test/test_pos.txt, data\AP_IMDB\test/test_neg.txt, data\AP_IMDB\test/test_bk.txt, data\AP_IMDB\test/test_facts.txt]
+%  for N=1: args[N]=data\AP_IMDB\test/test_neg.txt
+
+% getInputArgWithDefaultValue: args=[data\AP_IMDB\test/test_pos.txt, data\AP_IMDB\test/test_neg.txt, data\AP_IMDB\test/test_bk.txt, data\AP_IMDB\test/test_facts.txt]
+%  for N=2: args[N]=data\AP_IMDB\test/test_bk.txt
+
+% getInputArgWithDefaultValue: args=[data\AP_IMDB\test/test_pos.txt, data\AP_IMDB\test/test_neg.txt, data\AP_IMDB\test/test_bk.txt, data\AP_IMDB\test/test_facts.txt]
+%  for N=3: args[N]=data\AP_IMDB\test/test_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+% Load '../imdb_bk.txt'.
+
+% Switching to VarIndicator = uppercase.
+
+***** Warning: At least one argument in a mode should be an input argument.  You provided signature = [const], types = [`person] for 'recursive_actor'. *****
+
+
+***** Warning: At least one argument in a mode should be an input argument.  You provided signature = [const], types = [`person] for 'recursive_female_gender'. *****
+
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+  loadThisFile: i=0 newName=precomputed.txt sents=[(movie_2_1_genre(M, G, C) :- movie(M, P1), genre(P1, G), all(P, movie(M, P), genre(P, G), AllP), C is length(AllP)), (movie_2_1_gender(M, C) :- movie(M, P1), female_gender(P1), all(P, movie(M, P), female_gender(P), AllP), C is length(AllP)), (workedunder_2_1_genre(M, G, C) :- workedunder(M, P1), genre(P1, G), all(P, workedunder(M, P), genre(P, G), AllP), C is length(AllP)), (workedunder_1_1_gender(M, C) :- workedunder(P1, M), female_gender(P1), all(P, workedunder(P, M), female_gender(P), AllP), C is length(AllP)), (movie_1(P, C) :- movie(M, P), all(M, movie(M, P), AllM), C is length(AllM)), (movie_2(M, C) :- movie(M, P), all(P, movie(M, P), AllM), C is length(AllM)), (workedunder_1(D, C) :- workedunder(A, D), all(A, workedunder(A, D), AllA), C is length(AllA)), (workedunder_2(A, C) :- workedunder(A, D), all(D, workedunder(A, D), AllD), C is length(AllD))]
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+% LoadAllModes() called.  Currently loaded modes: []
+% [ LazyGroundClauseIndex ]  Building full index for sameAs/2 with 2 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for exp/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for log/3.
+% LoadAllLibraries() called.  Currently loaded libraries: [listsInLogic, differentInLogic, modes_arithmeticInLogic, inlines_comparisonInLogic, modes_listsInLogic, inlines_differentInLogic, modes_differentInLogic, arithmeticInLogic, inlines_listsInLogic, modes_comparisonInLogic, comparisonInLogic, inlines_arithmeticInLogic]
+
+%  Read the facts.
+%  Have read 951 facts.
+% Have read 95 examples from 'data\AP_IMDB\test' [data\AP_IMDB\test/test*].
+% Have read 146 examples from 'data\AP_IMDB\test' [data\AP_IMDB\test/test*].
+
+%  LearnOneClause initialized.
+
+% The outer looper has been created.
+
+% Initializing the ILP inner looper.
+
+% NEW target:                 female_gender(E)
+%  targetPred:                female_gender/1
+%  targetArgTypes:            signature = [const], types = [+person]
+%  targets:                   [female_gender(E)]
+%  targetPredicates:          [female_gender/1]
+%  targetArgSpecs:            [[E[+person]]]
+%  variablesInTargets:        [[E]]
+
+% Precompute #0's requests: 'precomputed.txt'
+%   movie_2_1_genre(M, G, C) :- movie(M, P1), genre(P1, G), all(P, movie(M, P), genre(P, G), AllP), C is length(AllP)
+%   movie_2_1_gender(M, C) :- movie(M, P1), female_gender(P1), all(P, movie(M, P), female_gender(P), AllP), C is length(AllP)
+%   workedunder_2_1_genre(M, G, C) :- workedunder(M, P1), genre(P1, G), all(P, workedunder(M, P), genre(P, G), AllP), C is length(AllP)
+%   workedunder_1_1_gender(M, C) :- workedunder(P1, M), female_gender(P1), all(P, workedunder(P, M), female_gender(P), AllP), C is length(AllP)
+%   movie_1(P, C) :- movie(M, P), all(M, movie(M, P), AllM), C is length(AllM)
+%   movie_2(M, C) :- movie(M, P), all(P, movie(M, P), AllM), C is length(AllM)
+%   workedunder_1(D, C) :- workedunder(A, D), all(A, workedunder(A, D), AllA), C is length(AllA)
+%   workedunder_2(A, C) :- workedunder(A, D), all(D, workedunder(A, D), AllD), C is length(AllD)
+% Processing precompute file: precomputed.txt
+Writing to file: C:\Users\mxd174630\Dropbox\BoostingTutorial\Code\precomputed.txt
+
+% Precomputing 'precomputed.txt'.
+
+%%% Precomputing 8 predicates.
+
+% Saving all provable instances of 'workedunder_1_1_gender'
+% using clause:   workedunder_1_1_gender(M, C) :- workedunder(P1, M), female_gender(P1), all(P, workedunder(P, M), female_gender(P), AllP), C is length(AllP)
+
+There is no fact nor clause nor built-in predicate matching: 'female_gender/1'.
+  Possibly a typo?  If not, add to the BK file:   okIfUnknown: female_gender/1.
+
+% Skipping over this 'waitHere': There is no fact nor clause nor built-in predicate matching: 'female_gender/1'.
+  Possibly a typo?  If not, add to the BK file:   okIfUnknown: female_gender/1.
+%  Found 0 proofs of 'workedunder_1_1_gender(M, C)'.
+
+// Precomputed a total of 0 facts (and found 0 duplications) from: 'workedunder_1_1_gender(M, C) :- workedunder(P1, M), female_gender(P1), all(P, workedunder(P, M), female_gender(P), AllP), C is length(AllP).'
+
+/* *** NOTE THAT NOTHING WAS FOUND FOR 'workedunder_1_1_gender(M, C)'. *** */
+// That is OK since 'okIfUnknown' has been specified for it.
+
+
+% Saving all provable instances of 'movie_2_1_gender'
+% using clause:   movie_2_1_gender(M, C) :- movie(M, P1), female_gender(P1), all(P, movie(M, P), female_gender(P), AllP), C is length(AllP)
+
+%  Found 0 proofs of 'movie_2_1_gender(M, C)'.
+
+// Precomputed a total of 0 facts (and found 0 duplications) from: 'movie_2_1_gender(M, C) :- movie(M, P1), female_gender(P1), all(P, movie(M, P), female_gender(P), AllP), C is length(AllP).'
+
+/* *** NOTE THAT NOTHING WAS FOUND FOR 'movie_2_1_gender(M, C)'. *** */
+// That is OK since 'okIfUnknown' has been specified for it.
+
+
+% Saving all provable instances of 'workedunder_2_1_genre'
+% using clause:   workedunder_2_1_genre(M, G, C) :- workedunder(M, P1), genre(P1, G), all(P, workedunder(M, P), genre(P, G), AllP), C is length(AllP)
+
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for genre/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for workedunder/2.
+% [ LazyGroundClauseIndex ]  Building full index for genre/2 with 47 assertions.
+%  Found 684 proofs of 'workedunder_2_1_genre(M, G, C)'.
+
+// Precomputed a total of 513 facts (and found 171 duplications) from: 'workedunder_2_1_genre(M, G, C) :- workedunder(M, P1), genre(P1, G), all(P, workedunder(M, P), genre(P, G), AllP), C is length(AllP).'
+
+
+% Saving all provable instances of 'movie_2'
+% using clause:   movie_2(M, C) :- movie(M, P), all(P, movie(M, P), AllM), C is length(AllM)
+
+% [ LazyGroundClauseIndex ]  Building full index for movie/2 with 286 assertions.
+%  Found 286 proofs of 'movie_2(M, C)'.
+
+// Precomputed a total of 20 facts (and found 266 duplications) from: 'movie_2(M, C) :- movie(M, P), all(P, movie(M, P), AllM), C is length(AllM).'
+
+
+% Saving all provable instances of 'movie_1'
+% using clause:   movie_1(P, C) :- movie(M, P), all(M, movie(M, P), AllM), C is length(AllM)
+
+%  Found 286 proofs of 'movie_1(P, C)'.
+
+// Precomputed a total of 268 facts (and found 18 duplications) from: 'movie_1(P, C) :- movie(M, P), all(M, movie(M, P), AllM), C is length(AllM).'
+
+
+% Saving all provable instances of 'workedunder_2'
+% using clause:   workedunder_2(A, C) :- workedunder(A, D), all(D, workedunder(A, D), AllD), C is length(AllD)
+
+% [ LazyGroundClauseIndex ]  Building full index for workedunder/2 with 382 assertions.
+%  Found 382 proofs of 'workedunder_2(A, C)'.
+
+// Precomputed a total of 236 facts (and found 146 duplications) from: 'workedunder_2(A, C) :- workedunder(A, D), all(D, workedunder(A, D), AllD), C is length(AllD).'
+
+
+% Saving all provable instances of 'movie_2_1_genre'
+% using clause:   movie_2_1_genre(M, G, C) :- movie(M, P1), genre(P1, G), all(P, movie(M, P), genre(P, G), AllP), C is length(AllP)
+
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for movie/2.
+%  Found 53 proofs of 'movie_2_1_genre(M, G, C)'.
+
+// Precomputed a total of 39 facts (and found 14 duplications) from: 'movie_2_1_genre(M, G, C) :- movie(M, P1), genre(P1, G), all(P, movie(M, P), genre(P, G), AllP), C is length(AllP).'
+
+
+% Saving all provable instances of 'workedunder_1'
+% using clause:   workedunder_1(D, C) :- workedunder(A, D), all(A, workedunder(A, D), AllA), C is length(AllA)
+
+%  Found 382 proofs of 'workedunder_1(D, C)'.
+
+// Precomputed a total of 32 facts (and found 350 duplications) from: 'workedunder_1(D, C) :- workedunder(A, D), all(A, workedunder(A, D), AllA), C is length(AllA).'
+
+
+
+%%% Precomputed a total of 1,108 facts (and found 965 duplications).  Done at 11:16:06 11/20/18
+
+%    No need to compress since small: precomputed.txt
+% Loading: precomputed.txt
+% Read an additional 1,108 facts from edu.wisc.cs.will.Utils.condor.CondorFileReader@6f65aa58.
+
+% Started collecting constants
+
+% Collecting the types of constants.
+
+% Looking at the training examples to see if any types of new constants can be inferred.
+% Time to collect constants: 6 milliseconds
+% Time to collect examples: 0 seconds
+
+% Read 95 pos examples and 146 neg examples.
+% Time to init learnOneClause: 94 milliseconds
+% Old dirdata\AP_IMDB\train/models/
+
+% Have 95 'raw' positive examples and kept 95.
+% Have 146 'raw' negative examples and kept 146.
+
+% processing backup's for female_gender
+%  POS EX = 95
+%  NEG EX = 146
+
+% Memory usage by WILLSetup (just counts # targets?):
+%  |backupPosExamples| = 1
+%  |backupNegExamples| = 1
+%  |predicatesAsFacts| = 0
+%  |addedToFactBase|   = 0
+Recursion set to:true
+
+% Getting bRDN's target predicates.
+File: data\AP_IMDB\test/advice.txt doesnt exist.Hence no advice loaded
+
+% for female_gender |lookupPos| = 95
+% for female_gender |lookupNeg| = 146
+% getJointExamples: |pos| = 95, |neg| = 146
+
+% Starting inference in bRDN.
+% Trees = 5
+
+% Starting getMarginalProbabilities.
+% [ LazyGroundClauseIndex ]  Building full index for workedunder_2_1_genre/3 with 513 assertions.
+% No Gibbs sampling needed during inference.
+ (Arithmetic) Mean Probability Assigned to Correct Output Class: 138.765/241.00 = 0.575789
+
+ The weighted count of positive examples = 95.000 and the weighted count of negative examples = 146.000
+
+printExamples: Writing out predictions (for Tuffy?) on 241 examples for 'female_gender' to:
+  data\AP_IMDB\test/results_female_gender.db
+ and to:
+  data\AP_IMDB\test/query_female_gender.db
+%    No need to compress since small: data\AP_IMDB\test/query_female_gender.db
+
+% Computing Area Under Curves.
+%Pos=95
+%Neg=146
+%LL:-185.46875606174146
+%LL:-207.81460060336954
+
+% Running command: java -jar .//auc.jar data\AP_IMDB\test/AUC/aucTemp.txt list 0.0
+% WAITING FOR command: java -jar .//auc.jar data\AP_IMDB\test/AUC/aucTemp.txt list 0.0
+% DONE WAITING FOR command: java -jar .//auc.jar data\AP_IMDB\test/AUC/aucTemp.txt list 0.0
+
+%   AUC ROC   = 0.670764
+%   AUC PR    = 0.572795
+%   CLL	      = -0.862301
+%   Precision = 0.448864 at threshold = 0.142
+%   Recall    = 0.831579
+%   F1        = 0.583026
+
+% Total inference time (5 trees): 594 milliseconds.

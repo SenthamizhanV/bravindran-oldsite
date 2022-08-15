@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Publications</title>
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #eee;
+}
+
+h1 {
+  padding: 50px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+ol li{
+ margin: 0 0 20px;
+ line-height: 1.5;
+}
+
+
+main {
+  min-width: 320px;
+  max-width: 800px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label[for*='1']:before {
+  content: '\f1cb';
+}
+
+label[for*='2']:before {
+  content: '\f17d';
+}
+
+label[for*='3']:before {
+  content: '\f16b';
+}
+
+label[for*='4']:before {
+  content: '\f1a9';
+}
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <h1>Publications</h1>
+
+<main>
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Proceedings</label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Other Publications</label>
+    
+    
+  <section id="content1">
+  
+  <p>
+  <b>2017</b> <br>
+<ol>
+<li>
+Rajendran, J., Lakshminarayanan, A. S., Khapra, M. M., Parthasarathy, P., and Ravindran, B. (2017) "Attend, Adapt, and Transfer: Attentive Deep Architecture for Adative Transfer from Multiple Sources in the Same Domain". To appear in the Proceedings of the Fifth International Conference on Learning Representations (ICLR 2017).
+</li>
+<li>Sharma, S., Lakshminarayanan, A. S., and Ravindran, B. (2017) "Learning to Repeat: Fine Grained Action Repetition for Deep Reinforcement Learning". To appear in the Proceedings of the Fifth International Conference on Learning Representations (ICLR 2017).
+</li>
+<li>Rajeswaran, A., Ghotra, S., Ravindran, B., and Levine, S. (2017) "EPOpt: Learning Robust Neural Network Policies using Model Ensembles". To appear in the Proceedings of the Fifth International Conference on Learning Representations (ICLR 2017).
+</li>
+<li>Prasad,V., Jangir, R., Krishna, K. M., and Ravindran, B. (2017) "Data driven strategies for Active Monocular SLAM using Inverse Reinforcement Learning". To appear in the proceedings of the Sixteenth International Conference on Autonomous Agents and Multi Agent Systems (AAMAS 2017). ACM Press. (Extended Abstract)
+</li>
+<li>Gupte, P. V., Ravindran, B., and Parthasarthy, S. (2017) " Role Discovery in Graphs using Global Features: Algorithms, Applications and a Novel Evaluation Strategy". To appear in the proceedings of the Thirty-Third IEEE International Conference on Data Engineering (ICDE 2017). IEEE Press.
+</li>
+<li>Lakshminarayanan, A. S., Sharma, S., and Ravindran, B. (2017) " Dynamic Action Repetition For Deep Reinforcement Learning". To appear in the proceedings of the Thirty-First AAAI Conference on Artificial Intelligence (AAAI-17). AAAI Press.
+</li>
+<b>2016</b> <br><br>
+<li>Gangal, V., Ravindran, B., and Narayanam, R. (2016) "HEMI: Hyperedge Majority Influence Maximization". Accepted at the Second IJCAI Workshop on Social Influence Analysis (SocInf 2016), New York City, July 2016.
+</li>
+<li>Rajendran, J., Khapra, M. M., Chandar, S., Ravindran, B. (2016) "Bridge Correlational Neural Networks for Multilingual Multimodal Representation Learning". In the Proceedings of the Fifteenth Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL:HLT 2016), pp. 171-181. ACL.</li>
+<li>Sarath Chandar, A. P., Khapra, M., Larochelle, H., and Ravindran, B. (2016) "Correlational Neural Networks". In Neural Computation, Vol 28, No. 2, pp. 257-285. MIT Press</li>
+<li>Nahas, P., James, F., Ravindran, B., and Shah, S. V. (2016) "RRT-HX: RRT with Heuristic Extend Operations for Motion Planning in Non-Holonomic Systems". To appear in the proceedings of the 2016 ASME IDETC/CIE Mechanisms and Robotics Conference. ASME.
+</li>
+<b>2015</b> <br><br>
+<li>Saha, A., Acharya, A., Ravindran, B., and Ghosh, J. (2015) "Nonparametric Poisson Factorization Machine". In the Proceedings of the Fifteenth IEEE International Conference on Data Mining (ICDM 2015), pp. 967-972. IEEE Press.
+</li>
+<li>Sankar, V., and Ravindran, B. (2015) "Parallelization of Game Theoretic Centrality Algorithms". In the Special Issue on Applications of Data Sciences of Sadhana, The Engineering Proceedings of the Indian Academy of Sciences, September 2015, Volume 40, Issue 6, pp. 1821-1843. Springer.</li>
+<li>Balasubramani, P. P., Chakravarthy, V. S., Ravindran, B., and Moustafa, A. A. (2015) "A Network Model of Basal Ganglia for Understanding the Roles of Dopamine and Serotonin in Reward-Punishment-Risk based Decision Making". Frontiers in Computational Neuroscience 9:76. June 17, 2015.</li>
+<li>Balasubramani, P. P., Chakravarthy, V. S., Ali, M., Ravindran, B., and Moustafa, A. A. (2015) "Identifying the Basal Ganglia Network Model Markers for Medication-induced Impulsivity in Parkinson's Disease patients". PLoS ONE 10(6): e0127542. June 4, 2015. </li>
+<li>Sankar, V., Shivashankar, S., and Ravindran. B. (2015) "CEIL: A Scalable, Resolution Limit Free Approach for Detecting Communities in Large Networks". In the Proceedings of the Twenty Fourth International Joint Conference on Artificial Intelligence (IJCAI 2015), pp. 2097-2103. AAAI Press.</li>
+<li>Satchidanand, S. N., Ananthapadmanaban, H., and Ravindran, B. (2015) "Extended Discriminative Random Walk: A Hypergraph Approach to Multi-View Multi-Relational Transductive Learning". In the Proceedings of the Twenty Fourth International Joint Conference on Artificial Intelligence (IJCAI 2015), pp. 3791-3797. AAAI Press. </li>
+<li>Patil, S., and Ravindran, B. (2015) "Active Learning based Weak Supervision for Textual Survey Response Classification". In the Proceedings of the Sixteenth International Conference on Intelligent Text Processing and Computational Linguistics (CICLing 2015), Vol. 2, pp. 309-320. Springer. </li>
+<li>Pasumarthi, R. K., Narayanam, R., and Ravindran, B. (2015) "Near Optimal Strategies for Targeted Marketing on Social Networks". In the Proceedings of the Fourteenth International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2015), pp. 1679-1680. ACM Press. (Extended Abstract) </li>
+<li>Gurukar, S., Ranu, S., and Ravindran, B. (2015) "COMMIT : A Scalable Approach to Mining Communication Motifs from Dynamic Networks". in the Proceedings of ACM SIGMOD Conference on Management of Data, pp. 475-489. ACM Press.</li>
+<li>Roy, S., and Ravindran, B. (2015) "Measuring Network Centrality Using Hypergraphs". In the Proceedings of the Second ACM-IKDD Conference on Data Sciences (IKDD CoDS). ACM Digital Library. <br>[Best Student Paper]</li>
+<li>Rongali, S., Sarath Chandar, A. P., and Ravindran, B. (2015) "From Multiple Views to Single View : A Neural Network Approach". In the Proceedings of the Second ACM-IKDD Conference on Data Sciences (IKDD CoDS). ACM Digital Library.</li>
+<b>2014</b> <br><br>
+<li>Sarath Chandar, A. P., Lauly, S., Larochelle, H., Khapra, M., Ravindran, B., Raykar, V., and Saha, A. (2014) "An Autoencoder Approach to Learning Bilingual Word Representations". In the Proceedings of the Neural Information Processing Systems conference (NIPS 2014), pp. 1853-1861. </li>
+<li>Saha, A., Rajendran, J., Shekhar, S., and Ravindran, B. (2014) "How popular are your tweets?". In Proceedings of the 2014 Recommender Systems Challenge (RecSysChallenge '14). ACM, New York, NY, USA, Pages 66-69.
+</li>
+<li>Chrungoo, A., Manimaran, S. S., and Ravindran, B. (2014) "Activity Recognition for Natural Human Robot Interaction". In the Proceedings of the Fifth International Conference on Social Robotics (ICSR 2014), pp. 84-94. AAAI Press. </li>
+<li>Vijayan, P., Shivashankar, S., and Ravindran, B. (2014) "Multi-label Collective Classification in Multi-attribute Multi-relational Network Data". In the Proceedings of the IEEE/ACM International Conference on Social Networks Analysis and Mining (ASONAM 2014), pp. 509-514. </li>
+<li>Priyadharsini, B. P., Chakravarthy, V. S., Ravindran, B., and Moustafa, A. A. (2014) "An Extended Reinforcement Learning Model of Basal Ganglia to Understand the Contributions of Serotonin and Dopamine in Risk-based Decision Making, Reward Prediction, and Punishment Learning". In the Frontiers of Computational Neuroscience, 8(47), April 16, 2014. </li>
+<li>Manimaran, S. S., and Ravindran, B. (2014) "RRTPI: Policy Iteration on Continuous Domains using Rapidly-exploring Random Trees". In the Proceedings of the IEEE International Conference on Robotics and Automation (ICRA 2014), pp. 4362-4367. Hong Kong, China. IEEE Press. </li>
+<li>Gurukar, S., and Ravindran, B. (2014) "Temporal Analysis of Telecom Graphs". In the Proceedings of the Social Networking Workshop at COMSNETS 2014. Springer.
+</li>
+<li>Jain, S. K., Satchidanand, S. N., Maurya, A. K., and Ravindran, B. (2014) "Studying Indian Railways Network using Hypergraphs". In the Proceedings of the Social Networking Workshop at COMSNETS 2014. Springer. (This is an expanded version of the poster presented at NetSci 2013.)
+</li>
+<b>2013</b> <br><br>
+<li>Pai, D., Ravindran, B., Rajagopalan, S., and Srinivasaraghavan, R. (2013) "Automated Faceted Reporting for Web Analytics" In the Fourth International Workshop on Knowledge Representation, Retrieval and Reasoning (Web-KR) at CIKM 2013, pp. 9-16. ACM Digital Library.
+</li>
+<li>Srinivasan, B. V., Anandhavelu, N., Sinha, R., Gupta, V., Revankar, S., and Ravindran, B. (2013) "Will your Facebook Post be Engaging?" In the First Workshop on User Engagement Optimization (UEO) at CIKM 2013, pp. 25-28. ACM Digital Library.</li>
+<li>Ramachandran, L., Ravindran, B., and Gehringer, E. (2013) "Determining Review Coverage by Extracting Topic Sentences Using a Graph-based Clustering Approach". In the Proceedings of the sixth International Conference on Educational Data Mining (EDM 2013), pp. 346-347. Memphis, TN, USA.
+</li>
+<li>Kar, D., Kumar, A., Chakraborti, S., and Ravindran, B. (2013) "iCaseViz : Learning Case Similarities through Interaction with a Case Base Visualizer". In the Proceedings of the Twenty First International Conference on Case Based Reasoning (ICCBR 2013), pp. 203-217. Springer.
+</li>
+<li>Banerjee, N., Chakraborty, D., Joshi, A., Mittal, S., Rai, A., and Ravindran, B. (2013) "Detection of Real-Time Intentions from Micro-blogs". In the Proceedings of MobiQuitous 2013, pp. 116-128. (Extended version of the short paper from ICWSM 2012.)
+</li>
+<li>Michalak, T. P., Aadithya, K. V., Szpzepański, P. L., Ravindran, B., and Jennings, N. R. (2013) "Efficient Computation of the Shapley Value for Game-Theoretic Network Centrality". In the Journal of Artificial Intelligence Research (JAIR), Vol 46, pp. 607-650. March 2013. AAAI Press.
+</li>
+<li>Swapna Raj P., and Ravindran, B. (2013) "Incremental Constrained Clustering : A Decision Theoretic Approach". In the Proceedings of the PAKDD workshop on Constraint Discovery and Applications (CDA 2013), pp. 475-486. Springer.
+</li>
+<li>Ravindran, B. (2013) "Relativized hierarchical decomposition of Markov decision processes". In Decision making: neural and behavioural approaches, Pammi, V. S. C. and Srinivasan, N. (eds), pp. 465-488, Vol 202, Progress in Brain Research, Elsevier. (Book Chapter)
+</li>
+<b>2012</b> <br><br>
+<li>Kar, S., Deepak, V., Ravindran, B., and Tendulkar, A. V. (2012) "Functional Site Prediction by Exploiting Correlations between Labels of Interacting Residues". In the Proceedings of the Third ACM Conference on Bioinformatics, Computational Biology and Biomedicine (ACM BCB 2012), pp. 76-83. ACM Press. </li>
+<li>Maya, M., Chakravarthy, V. S., and Ravindran, B. (2012) "An Oscillatory neural network model for birdsong learning and generation: Implications for the role of Dopamine in Song Learning". In the International Journal of Mind, Brain and Cognition, Vol. 3, No. 1., Jan-Jun 2012. Bahri Publications.
+</li>
+<li>Priyadarshini, B. P., Ravindran, B., and Chakravarthy, V. S. (2012) "Understanding the role of Serotonin in Basal Ganglia through a unified model". In the Proceedings of the Twenty Second International Conference on Artificial Neural Networks (ICANN 2012), pp. 467-473. Springer.
+</li>
+<li>Kar, D., Chakraborti, S., and Ravindran, B. (2012) "Feature Weighting and Confidence based Prediction for Case Based Reasoning Systems". In the Proceedings of the Twentieth International Conference on Case Based Reasoning (ICCBR 2012), pp. 211-225. Springer.
+</li>
+<li>Nunez-Varela, J., Ravindran, B., and Wyatt, J. L. (2012) "Gaze Allocation Analysis for a Visually Guided Manipulation Task". In the Proceedings of the Twelfth International Conference on the Simulation of Adaptive Behavior (SAB 2012), pp. 44-53. Springer.
+</li>
+<li>Banerjee, N., Chakraborty, D., Joshi, A., Mittal, S., Rai, A., and Ravindran, B. (2012) "Towards Analyzing Micro-blogs for Detection and Classification of Real-Time Intentions". In the Proceedings of the Sixth International AAAI Conference on Weblogs and Social Media (ICWSM 2012), pp. 391-394. AAAI Press.</li>
+<li>Pradyot, K. V. N., Manimaran, S. S., and Ravindran, B. (2012) "Instructing a Reinforcement Learner". In the Proceedings of the Twenty Fifth Florida AI Research Society Conference (FLAIRS 2012), pp. 56-61. AAAI Press.</li>
+<li>Nunez-Varela, J., Ravindran, B., and Wyatt, J. L. (2012) "Where Do I Look Now? Gaze Allocation During Visually Guided Manipulation". In the Proceedings of the 2012 IEEE International Conference on Robotics and Automation (ICRA 2012), pp. 4444-4449. IEEE Press. </li>
+<li>Chaganty, A., Gaur, P., and Ravindran, B. (2012) "Learning in a Small World". In the Proceedings of the Eleventh International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2012), pp. 391-397. ACM Press. </li>
+<li>Rangadurai, K. R., Hattiwale, V., and Ravindran, B. (2012) "Adaptive Network Intrusion Detection System using a Hybrid Approach". To appear in the Proceedings of the Fourth International Conference on COMmunications Systems and NETworkS (COMSNETS 2012). IEEE Press. </li>
+<b>2011</b> <br><br>
+<li>Sai Ramesh, M. and Ravindran, B. (2011) "Options with Exceptions". In the Proceedings of the Ninth European Workshop on Reinforcement Learning (EWRL 2011), pp. 165-176. Springer-Verlag.</li>
+<li>Mohay, G., Ahmed, E., Bhatia, S., Nadarajan, A., Ravindran, B., Tickle, A. B., and Vijayasarathy, R. (2011) "Detection and Mitigation of High-Rate Flooding Attacks". In An Investigation into the Detection and Mitigation of Denial of Service (DoS) Attacks: Critical Information Infrastructure Protection , Raghavan, S. V., and Dawson, E. (Eds.), pp. 131-181, Sept. 2011. Springer. (Book Chapter)
+</li>
+<li>Ananda Narayanan, B. and Ravindran, B. (2011) "Fractional Moments on Bandit Problems". In the Proceedings of the Twenty Seventh Conference on Uncertainty in Artificial Intelligence (UAI 2011), pp. 531-538. AUAI Press.</li>
+<li>Shivashankar, S., Srivathsan, S., Ravindran, B., and Tendulkar, A. V. (2011) "Multi-view Methods for Protein Structure Comparison using Latent Dirichlet Allocation". In Bioinformatics 2011 27(13): pp.i61-i68. OUP. (Special issue with the proceedings of the 19th Annual International Conference on Intelligent Systems for Molecular Biology (ISMB/ECCB 2011).) </li>
+<li>Magdoom, M., Subramanian, D., Ravindran, B., Chakravarthy, V. S., Shun-ichi-Amari, and Meenakshisundaram, N. (2011) "Modelling Basal Ganglia for Understanding Parkinsonian Reaching Movements". Neural Computation, February 2011, Vol. 23, No. 2, Pages 477-516.
+</li>
+<li>Swapna Raj P., and Ravindran, B. (2011) "Utility Driven Clustering". In the Proceedings of the Twenty Fourth Florida AI Research Society Conference (FLAIRS 2011), pp. 479-480. AAAI Press.
+</li>
+<li>Malpani, A., Ravindran, B., and Murthy, H. A. (2011) "Personalized Intelligent Tutoring System Using Reinforcement Learning". In the Proceedings of the Twenty Third Florida AI Research Society Conference (FLAIRS 2011), pp. 561-562. AAAI Press. </li>
+<li>Vijayasarthy, R., Ravindran, B., and Raghavan, S. V. (2011) "A System Approach to Network Modeling for DDoS Detection using Naive Bayesian Classifiers". In the Proceedings of the Third International Conference on Communication and Networks (COMSNETS 2011), pp. 1-10. IEEE Press. </li>
+<b>2010</b> <br><br>
+<li>Aadithya, K. V., Ravindran, B., Michalak, T., and Jennings, N. R. (2010) "Efficient Computation of the Shapley Value for Centrality in Networks". In the Proceedings of the Sixth Workshop on Internet and Network Economics (WINE 2010), pp. 1-13. Springer-Verlag. </li>
+<li>Zaki, M.J., Yu, J.X., Ravindran, B., and Pudi, V. (Eds.) (2010) "Advances in Knowledge Discovery and Data Mining", Proceedings of the 14th Pacific-Asia Conference on Knowledge Discovery and Data Mining, PAKDD 2010, Hyderabad, India, June 21-24, 2010. Springer-Verlag, LNCS. </li>
+<li>Maya, M., Chakravarthy, V. S., and Ravindran, B. (2010) "An Oscillatory Neural Network Model for Birdsong Learning and Generation". In the Proceedings of the Twentieth International Conference on Artificial Neural Networks (ICANN 2010), pp. 210-215.
+</li>
+<li>Balaji, L., and Ravindran, B. (2010) "Transfer Learning Across Heterogeneous Robots with Action Sequence Mapping". In the Proceedings of the 2010 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2010), pp. 3251-3256. IEEE Press. </li>
+<li>Shivashankar, S., and Ravindran, B. (2010) "Multi Grain Sentiment Analysis using Collective Classification". In the Proceedings of the Nineteenth European Conference on Artificial Intelligence (ECAI 2010), pp. 823-828. IOS Press. </li>
+<li>Saravanan, M., and Ravindran, B. (2010) "Identification of Rhetorical Roles for Segmentation and Summarization of a Legal Judgment". Artificial Intelligence and Law, Volume 18, Issue 1 (March, 2010), pp. 45-76. Springer. </li>
+<li>Yousuf, A., and Ravindran, B. (2010) "Visual Object Detection using Frequent Pattern Mining". In the Proceedings of the Twenty Third Florida AI Research Society Conference (FLAIRS 2010), pp. 98-103. AAAI Press.</li>
+<li>Swapna Raj P., and Ravindran, B. (2010) "Mining Actionable Patterns". In the Proceedings of the Twenty Third Florida AI Research Society Conference (FLAIRS 2010), pp. 444-445. AAAI </li>
+<li>Aswin, N. R., Manimaran S. S., Ananthapadmanaban, H., and Ravindran, B. (2010) "Accurate Mobile Robot Localization in Indoor environments using Bluetooth". In the Proceedings of the 2010 IEEE International Conference on Robotics and Automation (ICRA 2010), pp. 4391-4396. IEEE Press.</li>
+<li>Aadithya, K. V. and Ravindran, B. (2010) "Game Theoretic Network Centrality: Exact Formulas and Efficient Algorithms". In the Proceedings of the Ninth International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2010), pp. 1459-1460. ACM Press.</li>
+<b>2009</b> <br><br>
+<li>Kate, K. and Ravindran, B. (2009) "Epsilon Equitable Partition: A Positional Analysis Method for Large Social Networks". In the Proceedings of 15th International Conference on Management of Data (COMAD 2009). </li>
+<li>Shivashankar, S., Ravindran, B., and Srinivasa Raghavan, N. R. (2009) "Text mining of Internet content: The bridge connecting product research with customers in the digital era". In Product Research: The Art and Science Behind Successful Product Launches, Srinivasa Raghavan, N.R. and Cafeo, J. A. (Eds.), pp. 231-242, Nov. 2009. Springer. (Book Chapter).
+</li>
+<li>Mohamed, M., Chakravarthy, V. S., Subramanian, D., and Ravindran, B. (2009) "The Role of Basal Ganglia in Performing Simple Reaching Movements: A Computational Model". In the Proceedings of the 14th Conference of the International Graphonomics Society (IGS09), pp. 477-516.
+</li>
+<li>Bahuguna, J., Ravindran, B., and Krishna, K. M. (2009) "MDP based Active Localization for Multiple Robots". In the Proceedings of the Fifth Annual IEEE Conference on Automation Science and Engineering (CASE 2009), pp. 635-640. IEEE Press.</li>
+<li>Saravanan, M., Ravindran, B., and Raman, S. (2009) "Improving Legal Information Retrieval Using Ontological Framework". In Artificial Intelligence and Law,Volume 17, Issue 2 (2009), pp. 101-124. Springer.
+</li>
+<b>2008</b> <br><br>
+<li>Swapna Raj, P. and Ravindran, B. (2008) "Personalized Web-page Rendering System". In the Proceedings of the Fourteenth International Conference on Management of Data (COMAD 2008), pp. 30-39.</li>
+<li>Arora, R. and Ravindran, B. (2008) "Latent Dirichlet Allocation and Singular Value Decomposition based Multi-Document Summarization". In the Proceedings of the Eighth IEEE International Conference on Data Mining (ICDM 2008), pp. 713-718. IEEE Press. </li>
+<li>Arora, R. and Ravindran, B. (2008) "Latent Dirichlet Allocation Based Multi-Document Summarization". In the Proceedings of the Second Workshop on Analytics for Noisy Unstructured Text Data (AND 2008), pp. 91-97. ACM Press. (Best Student Paper)</li>
+<li>Narayanamurthy, S. M. and Ravindran, B. (2008) "On the Hardness of Finding Symmetries in Markov Decision Processes". In the Proceedings of the Twenty Fifth International Conference on Machine Learning (ICML 2008), pp. 688-696. AAAI Press.</li>
+<li>Ray, A., Kumar, V., Ravindran, B., Dr. Lingam Gopal, and Dr. Verma, A. (2008) "Machine Learning to predict the incidence of Retinopathy of Prematurity". In the Proceedings of the Twenty First Florida AI Research Society Conference (FLAIRS 2008), pp. 300-305. AAAI Press.</li>
+<li>Swaminathan, P. and Ravindran, B. (2008) "Co-SOFT-Clustering: An Information Theoretic approach to obtain overlapping clusters from co-occurrence data". In the Proceedings of the Twenty First Florida AI Research Society Conference (FLAIRS 2008), pp. 320-321. AAAI Press.</li>
+<li>Sriram, R. and Ravindran, B. (2008) "Successive Refinement Algorithms for Distributed Area Coverage Using Mobile Robots". In the Proceedings of ACM Compute 2008, Article No. 20. ACM Press.</li>
+<li>Jayarajan, D., Deodhare, D., and Ravindran, B. (2008) "Lexical Chains as Document Features". In the Proceedings of the Third International Joint Confernce on Natural Language Processing, IJCNLP 2008, pp. 111-117.</li>
+<li>Saravanan, M., Ravindran, B., and Raman, S. (2008) "Automatic Identification of Rhetorical Roles using Conditional Random Fields for Legal Document Summarization ". In the Proceedings of the Third International Joint Confernce on Natural Language Processing, IJCNLP 2008, pp. 481-488.</li>
+<b>2007</b> <br><br>
+<li>Saravanan, M., Ravindran, B., and Raman, S. (2007) "Legal Ontology for Query Enhancement". In the Proceedings of the Twentieth Annual Conference on Legal Knowledge and Information Systems(JURIX 2007), pp.171-172. IOS Press.</li>
+<li>Sarma, B.H.S. and Ravindran, B. (2007) "Intelligent Tutoring System using Reinforcement Learning to Teach Autistic Students". In the Proceedings of the Conference on Home/Community Oriented ICT for the Next Billion (HOIT 2007), pp. 65-78. Springer.</li>
+<li>Sriram, R. and Ravindran, B. (2007) "Homogeneous Hierarchical Composition of Areas in Multi-Robot Area Coverage". In the Proceedings of the Seventh Symposium on Abstraction, Approximation, and Reformulation (SARA 2007), pp. 300-313, LNAI 4612. Springer. </li>
+<li>Awasthi, P., Gagrani, A., and Ravindran, B. (2007) "Image Modeling using Tree Structured Conditional Random Fields". In the Proceedings of the Twentieth International Joint Conference on Artificial Intelligence (IJCAI 2007), pp. 2060-2065. AAAI Press.</li>
+<li>Narayanamurthy, S. M. and Ravindran, B. (2007) "Efficiently Exploiting Symmetries in Real Time Dynamic Programming". In the Proceedings of the Twentieth International Joint Conference on Artificial Intelligence (IJCAI 2007), pp. 2556-2561. AAAI Press.</li>
+<li>Ravindran, B., Barto, A. G., and Mathew, V. (2007) "Deictic Option Schemas". In the Proceedings of the Twentieth International Joint Conference on Artificial Intelligence (IJCAI 2007), pp. 1023-1028. AAAI Press.</li>
+<li>Sriram, R. and Ravindran, B. (2007) "Profiling Pseudonet Architecture for Coordinating Mobile Robots". In the Proceedings of the Second IEEE International Conference on COMmunication System softWAre and MiddlewaRE (COMSWARE 2007). IEEE Press.</li>
+<b>2006</b> <br><br>
+<li>Saravanan, M., Ravindran, B., and Raman, S. (2006) " Improving Legal Document Summarization using Graphical Models " In the Proceedings of the Nineteenth Annual Conference on Legal Knowledge and Information Systems(JURIX 2006), pp. 51-60, IOS Press. </li>
+<li>Gagrani, A., Gupta, L., Ravindran, B., Das, S., Roychowdhury, P., and Panchal, V. K. (2006) "A Hierarchical approach to Landform Classification of Satellite Images using a Fusion Strategy". In the Proceedings of Fifth Indian Conference on Computer Vision, Graphics, and Image Processing (ICVGIP 2006).</li>
+<li>Saravanan, M., Raman, S., and Ravindran, B. (2006) "A Probabilistic Approach to Multi-Document Summarization for Generating a Tiled Summary". In International Journal of Computational Intelligence and Applications, Vol. 6, No. 2, June 2006, pp. 231-244. Imperial College Press. (This is an expanded version of the conference paper below.)</li>
+<b>2005</b> <br><br>
+<li>Saravanan, M., Raman, S., and Ravindran, B. (2005) "A Probabilistic Approach to Multi-Document Summarization for generating a Tiled Summary". In the Proceedings of the International Conference of Computational Intelligence and Multimedia Applications (ICCIMA '05).
+</li>
+<li>Siva Soumya, E., Manimegalai, R., Muralidharan V., Ravindran, B., Kamakoti, V., and Bhatia, D. (2005) "Placement and Routing for 3D-FPGAs using Reinforcement Learning and Support Vector Machines". In the Proceedings of the Eighteenth International Conference on VLSI Design.</li>
+<b>2004</b> <br><br>
+<li>Ravindran, B. and Barto, A. G. (2004) "Approximate Homomorphisms: A Framework for Non-exact Minimization in Markov Decision Processes". In the Proceedings of the Fifth International Conference on Knowledge Based Computer Systems (KBCS 04). </li>
+<li>Ravindran, B. (2004) "An Algebraic Approach to Abstraction in Reinforcement Learning". Doctoral Dissertation, Department of Computer Science, University of Massachusetts, Amherst MA.</li>
+<b>2003</b> <br><br>
+<li>Ravindran, B. and Barto, A. G. (2003) " Relativized Options: Choosing the Right Transformation". In the Proceedings of the Twentieth International Conference on Machine Learning(ICML 2003), pp. 608-615. AAAI Press. </li>
+<li>Ravindran, B. and Barto, A. G. (2003) " SMDP Homomorphisms: An Algebraic Approach to Abstraction in Semi Markov Decision Processes". In the Proceedings of the Eighteenth International Joint Conference on Artificial Intelligence (IJCAI 03), pp. 1011-1016. AAAI Press.</li>
+<li>Ravindran, B. and Barto, A. G. (2003) " An Algebraic Approach to Abstraction in Reinforcement Learning". In the Proceedings of the Twelfth Yale Workshop on Adaptive and Learning Systems, pp. 109-114. Yale University.</li>
+<b>1994-2002</b> <br><br>
+<li>Ravindran, B. and Barto, A. G. (2002) " Model Minimization in Hierarchical Reinforcement Learning". In the Proceedings of the Fifth Symposium on Abstraction, Reformulation and Approximation (SARA 2002), pp.196-211, LNCS, Springer Verlag. </li>
+<li>Ravindran, B. and Barto, A. G. (2001) " Symmetries and Model Minimization of Markov Decision Processes". Computer Science Technical Report 01-43, University of Massachusetts, Amherst, MA.</li>
+<li>Sutton, R. S., Singh, S., Precup, D. and Ravindran, B. (1999) " Improved Switching among Temporally Abstract Actions". In Advances in Neural Information Processing Systems 11 (Proceedings of NIPS'98), pp.1066-1072. MIT Press.</li>
+<li>McGovern, Amy , Precup, Doina, Ravindran, B., Singh, Satinder and Sutton, Richard S. (1998) " Hierarchical Optimal Control of MDPs", Proceedings of the Tenth Yale Workshop on Adaptive and Learning Systems, pp.186-191.</li>
+<li>Ravindran, B. (1996) "Solution of Delayed Reinforcement Learning Problems having Continuous Action Spaces", Master's Thesis, Department of Computer Science and Automation, Indian Institute of Science, Bangalore, India. </li>
+<li>Keerthi, S. S. and Ravindran, B. (1996) " C3: Reinforcement Learning". In Handbook Of Neural Computation, E. Fiesler and R. Beale, Editors, Oxford University Press, U. K. </li>
+<li>Keerthi, S. S. and Ravindran, B. (1994) " A Tutorial Survey Of Reinforcement Learning". In Sadhana (Proceedings of the Indian Academy of Sciences), Vol. 19, Dec. 1994, pp. 851-889. </li>
+</ol>
+  </p>
+  </section>
+    
+  <section id="content2">
+    <p>
+ <b>2017</b> <br>
+<ol>
+<li>
+Sharma, S., Lakshminarayanan, A. S., Ravindran, B. (2017): “Learning to Repeat: Fine Grained Action Repetition for Deep Reinforcement Learning”. <a href='http://arxiv.org/abs/1702.06054'>arXiv</a>
+</li>
+<li>Sharma, S., Ravindran, B. (2017) : “Online Multi-Task Learning Using Active Sampling”. <a href='http://arxiv.org/abs/1702.06053'>arXiv</a>
+</li>
+<b>2016</b> <br><br>
+<li>Bangaru, S. P., Suhas, J., Ravindran, B. (2016): “Exploration for Multi-task Reinforcement Learning with Deep Generative Models”. <a href='http://arxiv.org/abs/1611.09894'>arXiv</a>
+</li>
+<li>Rajeswaran A., Ghotra, S., Ravindran, B., Levine, S. (2016): “EPOpt: Learning Robust Neural Network Policies Using Model Ensembles”. <a href='http://arxiv.org/abs/1610.01283'>arXiv</a></li>
+<li>Prasad, V., Singh, S., Pareekutty, N., Ravindran, B. and Krishna, M. (2016): “SLAM-Safe Planner: Preventing Monocular SLAM Failure using Reinforcement Learning”, <a href='http://arxiv.org/abs/1607.07558'>arXiv</a></li>
+<li>Lakshminarayanan, A. S., Krishnamurthy, R., Kumar, P. and Ravindran, B. (2016): “Option Discovery in Hierarchical Reinforcement Learning using Spatio-Temporal Clustering”. <a href='http://arxiv.org/abs/1605.05359'>arXiv</a></li>
+<li>Lakshminarayanan, A. S., Sharma, S., and Ravindran, B. (2016) " Dynamic Frame skip Deep Q Network". Accepted at the IJCAI Workshop on Deep Reinforcement Learning: Frontiers and Challenges, New Yok City, July 2016. <a href="http://arxiv.org/abs/1605.05365">arXiv</a> version. 
+</li>
+<li>Sudarsanam, N. and Ravindran, B. (2016) : “Linear Bandit algorithms using the Bootstrap”. <a href='http://arxiv.org/abs/1605.01185'>arXiv</a></li>
+<li>Krishnamurthy, R., Lakshminarayanan, A. S., Kumar, P., Ravindran, B. (2016) "Hierarchical Reinforcement Learning using Spatio-Temporal Abstractions and Deep Neural Networks". Accepted at the ICML Workshop on Abstraction in Reinforcement Learning, New York City, June 2016. <a href="http://arxiv.org/abs/1605.05359">arXiv</a> version.</li>
+<b>2015</b> <br><br>
+<li>Rajendran, J., Lakshminarayanan, A. S., Khapra, M. and Prasanna, P.: “Attend, Adapt and Transfer: Attentive Deep Architecture for Adaptive Transfer from Multiple Source Tasks”. <a href='http://arxiv.org/abs/1510.02879'>arXiv</a></li>
+<li>Prasanna, P., Chandar, S., Ravindran, B. (2015) "TSEB: More Efficient Thompson Sampling for Policy Learning". <a href="http://arxiv.org/abs/1510.02874">arXiv</a></li>
+<li>Rajendran J., Prasanna, P., Ravindran, B., and Khapra, M. M. (2015) "ADAAPT: A Deep Architecture for Adaptive Policy Transfer from Multiple Sources". <a href="http://arxiv.org/abs/1510.02879">arXiv</a></li>
+<li>Saha, A., Misra, R., and Ravindran, B. (2015) "Scalable Bayesian Matrix Factorization". Accepted at the Sixth International Workshop on Mining Ubiquitous and Social Environments (MUSE), co-located with ECML/PKDD 2015, Porto, Portugal.</li>
+<li>Garlapati, A., Raghunathan, A., Nagarajan, V., and Ravindran, B. (2015) "A Reinforcement Learning Approach to Online Learning of Decision Trees". Accepted at the European Workshop on Reinforcement Learning (EWRL 2015). <a href="http://arxiv.org/abs/1507.06923">arXiv</a></li>
+<b>2014</b> <br><br>
+<li>Prasanna P., Sarath Chandar, A. P., and Ravindran, B. (2014) "iBayes: A Thompson Sampling Approach to Reinforcement Learning with Instructions". Presented at the NIPS workshop on Novel Trends and Applications in Reinforcement Learning. </li>
+<li>Pasumarthi, R. K., Narayanam, R., and Ravindran, B. (2014) "Targeted Influence Maximization through a Social Network". Presented at the NIPS workshop on Networks: From Graphs to Rich Data.</li>
+<li>Gupte, P. V. and Ravindran, B. (2014) "Scalable Positional Analysis for Studying Evolution of Nodes in Networks". Accepted for presentation in the Workshop on Mining Networks and Graphs, at the Siam Conference on Data Mining (SDM 14). <a href="http://arxiv.org/abs/1402.3797">arXiv</a></li>
+<b>2013</b> <br><br>
+<li>Sarath Chandar, A. P., Khapra, M., Ravindran, B., Raykar, V., and Saha, A. (2013) "Multilingual Deep Learning". In the Deep Learning Workshop at NIPS 2013.</li>
+<li>Kumar, P., Narasimhan, N., and Ravindran, B. (2013) "Spectral Clustering as Mapping to a Simplex". Accepted at the 2013 ICML workshop on Spectral Learning. Atlanta, GA, USA.</li>
+<li>Jain, S. K., Satchidanand, S. N., Maurya, A. K., and Ravindran, B. (2013) "Studying Indian Railways Network using Hypergraphs". Accepted as a poster presentation at the International School and Conference on Network Science (NetSci 2013). Copenhagen, Denmark. </li>
+<b>2012</b> <br><br>
+<li>Pradyot K. V. N., Manimaran, S. S., Ravindran, B., and Natarajan, S. (2012) "Integrating Human Instructions and Reinforcement Learners : An SRL Approach". In the Proceedings of the UAI workshop on Statistical Relational AI (StarAI 2012).</li>
+<li>Kumar, P., Mathew, V., and Ravindran, B. (2012) "Abstraction in Reinforcement Learning in Terms of Metastability". In the Proceedings of the European Workshop on Reinforcement Learning (EWRL 2012). </li>
+<li>Chaganty, A., and Ravindran, B. (2012) "Discovering Continuous Homomorphisms for Transfer". In the Proceedings of the European Workshop on Reinforcement Learning (EWRL 2012). </li>
+<li>Gupte, P. and Ravindran, B. (2012) "Multiple Epsilon Equitable Partitions - Roles and Positional Analysis for Real World Networks". Accepted for presentation at the Thirty Second Sunbelt Social Networks Conference (Sunbelt XXXII).</li>
+<li>Dharwez, S., Shivashankar, S., and Ravindran, B. (2012) "Why Collective Classification is Successful? : A Homophily based Analysis on Network Data". Accepted for presentation at the Thirty Second Sunbelt Social Networks Conference (Sunbelt XXXII).</li>
+<b>2011</b> <br><br>
+<li>Pradyot, K. V. N. and Ravindran, B. (2011) "Beyond Rewards: Learning with Richer Supervision". In the Proceedings of the Ninth European Workshop on Reinforcement Learning (EWRL 2011).</li>
+<li>Saravanan, M., Bharanidharan, S., and Ravindran, B. (2011) "Collective Learning of the Community Effect on Chrun". Accepted at the Workshop on Collective Learning and Inference on Structured Data, held in conjunction with the Twenty Second European Conference on Machine Learning (ECML PKDD 2011).</li>
+<b>2009</b> <br><br>
+<li>Malpani, A., Ravindran, B., and Murthy, H. A. (2009) "Personalized Intelligent Tutoring System Using Reinforcement Learning". Presented at the Multidisciplinary Symposium on Reinforcement Learning. (Preliminary version of the paper at FLAIRS 2011.)</li>
+<li>Mohamed, M., Chakravarthy, V. S., Subramanian, D., and Ravindran, B. (2009) "The Role of Basal Ganglia in Performing Simple Reaching Movements: A Computational Model". Presented at the Multidisciplinary Symposium on Reinforcement Learning. (Shorter version of the paper at IGS09.)</li>
+<b>2008</b> <br><br>
+<li>Balaji, L. and Ravindran, B. (2008) "Transfer Learning with Differently-abled Robots". In the IROS Workshop on Robotics Challenges for Machine Learning.</li>
+<li>Cheboli, D. and Ravindran, B. (2008) "Detection of keratoconus by semi-supervised learning". In the ICML/UAI workshop on Machine Learning in health care applications.</li>
+<b>2007</b> <br><br>
+<li>Jayarajan, D., Deodhare, D., Ravindran, B., and Sarkar, S. (2007) "Document Clustering using Lexical Chains". In the Proceedings of the Workshop on Text-Mining & Link-Analysis (TextLink 2007).</li>
+<b>2006</b> <br><br>
+<li>Awasthi, P., Rao, D. G., and Ravindran, B. (2006) "Part Of Speech Tagging and Chunking with HMM and CRF". In the Proceedings of NLPAI Machine Learning Contest 2006 , Mumbai, India.</li>
+<b>2005</b> <br><br>
+<li>Saravanan, M., Ravindran, B., and Raman, S. (2005) "A Review of Automatic Summarization". Presented in the Workshop on Optical character Recognition with workflow and Document Summarization, IIIT Allahabad, March 19-20.</li>
+<li>Saravanan, M., Ravindran, B., and Raman, S. (2005) "Learn to Teach Autistic Children". Presented in the National Conference on Computational Intelligence (St. Joseph's College, Trichy), Feb 16-18.</li>
+</ol>
+</p>
+  </section>
+  </section>
+
+</main>
+  
+  
+</body>
+</html>

@@ -1,0 +1,10 @@
+(1) set 777 as permission for the /gcerr/temp directory. it is used for temporarily creating the c file and compiling the c code is done in this directory as well.
+(2) point your browser to /gcerr/index.php. you should be able to write a c code in the given textarea box and compile it. if the compilation gives any error or warning, the code with the errors/warnings highlighted is shown below, you can click on any line to edit and recompile it by clicking on "save and recompile" button. 
+as you can see, you can add a new line anywhere.
+if the recompilation contains any error/wanring, the recompiled code is again displayed with the errors/warning.
+
+green	==	warning
+red	==	error
+
+
+it is assumed that, the web server can execute php programs and the php setting allows to execute popen function

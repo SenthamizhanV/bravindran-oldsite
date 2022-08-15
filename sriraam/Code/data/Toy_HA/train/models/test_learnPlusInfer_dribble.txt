@@ -1,0 +1,158 @@
+% Running on host: BL-SOIC-30ZND42
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[data\Toy_HA\test/test_pos.txt, data\Toy_HA\test/test_neg.txt, data\Toy_HA\test/test_bk.txt, data\Toy_HA\test/test_facts.txt]
+%  for N=0: args[N]=data\Toy_HA\test/test_pos.txt
+
+% getInputArgWithDefaultValue: args=[data\Toy_HA\test/test_pos.txt, data\Toy_HA\test/test_neg.txt, data\Toy_HA\test/test_bk.txt, data\Toy_HA\test/test_facts.txt]
+%  for N=1: args[N]=data\Toy_HA\test/test_neg.txt
+
+% getInputArgWithDefaultValue: args=[data\Toy_HA\test/test_pos.txt, data\Toy_HA\test/test_neg.txt, data\Toy_HA\test/test_bk.txt, data\Toy_HA\test/test_facts.txt]
+%  for N=2: args[N]=data\Toy_HA\test/test_bk.txt
+
+% getInputArgWithDefaultValue: args=[data\Toy_HA\test/test_pos.txt, data\Toy_HA\test/test_neg.txt, data\Toy_HA\test/test_bk.txt, data\Toy_HA\test/test_facts.txt]
+%  for N=3: args[N]=data\Toy_HA\test/test_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+% Load '../background.txt'.
+
+% Switching to VarIndicator = uppercase.
+
+% Switching to standard-logic notation for variables; previous setting = uppercase
+
+% Switching to VarIndicator = lowercase.
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = lowercase *****
+
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = lowercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+% LoadAllModes() called.  Currently loaded modes: []
+
+% Switching to Prolog notation for variables; previous setting = lowercase
+
+% Switching to VarIndicator = uppercase.
+
+% Switching to VarIndicator = lowercase.
+
+% Switching to Prolog notation for variables; previous setting = lowercase
+
+% Switching to VarIndicator = uppercase.
+
+% Switching to VarIndicator = lowercase.
+
+% Switching to Prolog notation for variables; previous setting = lowercase
+
+% Switching to VarIndicator = uppercase.
+
+% Switching to VarIndicator = lowercase.
+
+% Switching to Prolog notation for variables; previous setting = lowercase
+
+% Switching to VarIndicator = uppercase.
+
+% Switching to VarIndicator = lowercase.
+% [ LazyGroundClauseIndex ]  Building full index for sameAs/2 with 2 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for exp/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for log/3.
+% LoadAllLibraries() called.  Currently loaded libraries: [listsInLogic, differentInLogic, modes_arithmeticInLogic, inlines_comparisonInLogic, modes_listsInLogic, inlines_differentInLogic, modes_differentInLogic, arithmeticInLogic, inlines_listsInLogic, modes_comparisonInLogic, comparisonInLogic, inlines_arithmeticInLogic]
+
+%  Read the facts.
+%  Have read 14 facts.
+% Have read 3 examples from 'data\Toy_HA\test' [data\Toy_HA\test/test*].
+% Have read 4 examples from 'data\Toy_HA\test' [data\Toy_HA\test/test*].
+
+%  LearnOneClause initialized.
+
+% The outer looper has been created.
+
+% Initializing the ILP inner looper.
+
+% NEW target:                 HA(a)
+%  targetPred:                HA/1
+%  targetArgTypes:            signature = [Const], types = [+patient]
+%  targets:                   [HA(a)]
+%  targetPredicates:          [HA/1]
+%  targetArgSpecs:            [[a[+patient]]]
+%  variablesInTargets:        [[a]]
+
+% Started collecting constants
+
+% Collecting the types of constants.
+
+% Looking at the training examples to see if any types of new constants can be inferred.
+% Time to collect constants: 0 seconds
+% Time to collect examples: 0 seconds
+
+% Read 3 pos examples and 4 neg examples.
+% Time to init learnOneClause: 22 milliseconds
+% Old dirdata\Toy_HA\train/models/
+
+% Have 3 'raw' positive examples and kept 3.
+% Have 4 'raw' negative examples and kept 4.
+
+% processing backup's for HA
+%  POS EX = 3
+%  NEG EX = 4
+
+% Memory usage by WILLSetup (just counts # targets?):
+%  |backupPosExamples| = 1
+%  |backupNegExamples| = 1
+%  |predicatesAsFacts| = 0
+%  |addedToFactBase|   = 0
+
+% Getting bRDN's target predicates.
+File: data\Toy_HA\test/advice.txt doesnt exist.Hence no advice loaded
+
+% for HA |lookupPos| = 3
+% for HA |lookupNeg| = 4
+% getJointExamples: |pos| = 3, |neg| = 4
+
+% Starting inference in bRDN.
+% Trees = 3
+
+% Starting getMarginalProbabilities.
+% [ LazyGroundClauseIndex ]  Building full index for Chol/2 with 8 assertions.
+% No Gibbs sampling needed during inference.
+ (Arithmetic) Mean Probability Assigned to Correct Output Class: 3.772/7.00 = 0.538919
+
+ The weighted count of positive examples = 3.000 and the weighted count of negative examples = 4.000
+
+printExamples: Writing out predictions (for Tuffy?) on 7 examples for 'HA' to:
+  data\Toy_HA\test/results_HA.db
+ and to:
+  data\Toy_HA\test/query_HA.db
+%    No need to compress since small: data\Toy_HA\test/query_HA.db
+
+% Computing Area Under Curves.
+%Pos=3
+%Neg=4
+%LL:-4.4409240950769036
+%LL:-5.473767117748322
+
+% Running command: java -jar .//auc.jar data\Toy_HA\test/AUC/aucTemp.txt list 0.0
+% WAITING FOR command: java -jar .//auc.jar data\Toy_HA\test/AUC/aucTemp.txt list 0.0
+% DONE WAITING FOR command: java -jar .//auc.jar data\Toy_HA\test/AUC/aucTemp.txt list 0.0
+
+%   AUC ROC   = 0.500000
+%   AUC PR    = 0.428571
+%   CLL	      = -0.781967
+%   Precision = NaN at threshold = 0.300
+%   Recall    = 0.000000
+%   F1        = NaN
+
+% Total inference time (3 trees): 417 milliseconds.

@@ -1,0 +1,383 @@
+////// Learned from a dataset containing 90 positive (90.0 weighted sum) and 0 negative (0.0 wgt'ed) examples.
+////// The minimal (wgt'ed) coverage = 3.000, the maximal (wgt'ed) NEG coverage = 0.499, and the minimal (wgt'ed) precision = 0.001 (using m = 0.1)
+
+usePrologVariables: true.
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: allPossibleMarkers
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #0, (-Infinity, 0.05], from 'outerLoop #3, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.045, precision = 0.976, and F1 = 0.087 - learned after 5 total and 0 acceptable nodes.  Node score = -21.45172199400938
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608001 ELSE output = 0.417571;
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #5, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.087, precision = 0.976, and F1 = 0.159 - learned after 5 total and 0 acceptable nodes.  Node score = -11.03563555339573
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608001 ELSE output = 0.429473;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #7, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.125, precision = 0.976, and F1 = 0.221 - learned after 6 total and 1 acceptable nodes.  Node score = -7.42854602017905
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608001 ELSE output = 0.465178;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #5, null' and covering 10.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.188, precision = 0.990, and F1 = 0.316 - learned after 6 total and 1 acceptable nodes.  Node score = -12.70465221279075
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 7)) THEN output = 0.158149 ELSE output = 0.416288;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #5, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.239, precision = 0.991, and F1 = 0.385 - learned after 7 total and 2 acceptable nodes.  Node score = -11.127145791064585
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 2)) THEN output = 0.403501 ELSE output = 0.458038;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #6, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.261, precision = 0.991, and F1 = 0.414 - learned after 6 total and 1 acceptable nodes.  Node score = -10.275660874046906
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 2)) THEN output = 0.403603 ELSE output = 0.438794;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #7, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.343, precision = 0.991, and F1 = 0.509 - learned after 5 total and 0 acceptable nodes.  Node score = -7.3939227287498515
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 2)) THEN output = 0.403501 ELSE output = 0.524689;
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #4, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.386, precision = 0.997, and F1 = 0.557 - learned after 6 total and 1 acceptable nodes.  Node score = -17.7037993512059
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513227 ELSE output = 0.445024;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #8, null' and covering 59.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.409, precision = 0.998, and F1 = 0.581 - learned after 8 total and 2 acceptable nodes.  Node score = -30.148755708783717
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, athriller, 1)) THEN output = 0.146285 ELSE output = 0.164031;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #6, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.475, precision = 0.997, and F1 = 0.643 - learned after 5 total and 0 acceptable nodes.  Node score = -14.051681832957396
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513227 ELSE output = 0.483060;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #8, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.579, precision = 0.997, and F1 = 0.732 - learned after 5 total and 0 acceptable nodes.  Node score = -11.218378113087772
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513227 ELSE output = 0.524721;
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #8, null' and covering 80.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.888, precision = 0.999, and F1 = 0.940 - learned after 15 total and 4 acceptable nodes.  Node score = -768.4885288998306
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, acomedy, 1), movie(Anon45309, E), movie_2_1_genre(Anon45309, athriller, 1), workedunder_2_1_genre(E, athriller, 1)) THEN output = 1.821392 ELSE output = 3.336637;
+      /* FALSE NEG: female_gender(ajuliaroberts) Actual Bool=true Prob=0.14185106490048777 Output=3.723135893604104 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #7, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.963, precision = 0.997, and F1 = 0.980 - learned after 6 total and 0 acceptable nodes.  Node score = -Infinity
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 1), workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513321 ELSE output = 0.858149;
+      /* FALSE NEG: female_gender(asharonstone) Actual Bool=true Prob=0.14185106490048777 Output=4.290556319334266 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #1, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #0, (-Infinity, 0.05], from 'outerLoop #1, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.016, precision = 0.976, and F1 = 0.032 - learned after 5 total and 0 acceptable nodes.  Node score = -57.56171653117197
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608149 ELSE output = 0.247270;
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #1, null' and covering 14.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.058, precision = 0.993, and F1 = 0.109 - learned after 21 total and 14 acceptable nodes.  Node score = -57.5865701600766
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, aromance, 1)) THEN output = 0.072404 ELSE output = 0.264215;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #1, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.119, precision = 0.997, and F1 = 0.213 - learned after 98 total and 91 acceptable nodes.  Node score = -55.84483702512286
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, aaction, 1), workedunder_2_1_genre(E, athriller, 1)) THEN output = 0.513227 ELSE output = 0.217922;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #1, null' and covering 43.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.177, precision = 0.998, and F1 = 0.300 - learned after 112 total and 105 acceptable nodes.  Node score = -56.6921105007441
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, amystery, 1), workedunder_2_1_genre(E, athriller, 1)) THEN output = 0.090673 ELSE output = 0.288081;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #1, null' and covering 59.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.243, precision = 0.998, and F1 = 0.390 - learned after 10 total and 5 acceptable nodes.  Node score = -57.06938137350272
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 1)) THEN output = 0.366544 ELSE output = 0.216789;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #1, null' and covering 62.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.255, precision = 0.998, and F1 = 0.406 - learned after 8 total and 3 acceptable nodes.  Node score = -57.15500510204276
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 1)) THEN output = 0.358069 ELSE output = 0.217210;
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #1, null' and covering 88.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.362, precision = 0.999, and F1 = 0.531 - learned after 9 total and 4 acceptable nodes.  Node score = -58.044158329751504
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, athriller, 1)) THEN output = 0.267175 ELSE output = 0.245186;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #1, null' and covering 144.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.592, precision = 0.999, and F1 = 0.744 - learned after 5 total and 0 acceptable nodes.  Node score = -54.78481014560332
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1)) THEN output = 0.156722 ELSE output = 0.393407;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #2, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #0, (-Infinity, 0.05], from 'outerLoop #2, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.040, precision = 0.976, and F1 = 0.078 - learned after 19 total and 10 acceptable nodes.  Node score = -24.433666363993098
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608075 ELSE output = 0.384418;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #2, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.111, precision = 0.991, and F1 = 0.200 - learned after 12 total and 7 acceptable nodes.  Node score = -23.77200083136724
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 7)) THEN output = 0.130844 ELSE output = 0.426227;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #2, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.293, precision = 0.997, and F1 = 0.452 - learned after 5 total and 0 acceptable nodes.  Node score = -24.036584578266954
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513196 ELSE output = 0.343780;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #2, null' and covering 30.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.303, precision = 0.997, and F1 = 0.464 - learned after 6 total and 1 acceptable nodes.  Node score = -23.88322371001842
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 1)) THEN output = 0.524693 ELSE output = 0.336326;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #3, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #0, (-Infinity, 0.05], from 'outerLoop #3, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.045, precision = 0.976, and F1 = 0.087 - learned after 5 total and 0 acceptable nodes.  Node score = -21.45172199400938
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608001 ELSE output = 0.417571;
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #3, null' and covering 20.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.058, precision = 0.995, and F1 = 0.110 - learned after 9 total and 4 acceptable nodes.  Node score = -2112.934910373856
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 3.040374 ELSE output = 1.598238;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #3, null' and covering 10.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.145, precision = 0.990, and F1 = 0.253 - learned after 8 total and 3 acceptable nodes.  Node score = -16.845763761864497
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 7)) THEN output = 0.158149 ELSE output = 0.366624;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #3, null' and covering 12.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.174, precision = 0.992, and F1 = 0.296 - learned after 6 total and 1 acceptable nodes.  Node score = -16.460527365789563
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, ascifi, 1)) THEN output = 0.108149 ELSE output = 0.384465;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #3, null' and covering 14.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.203, precision = 0.993, and F1 = 0.337 - learned after 5 total and 0 acceptable nodes.  Node score = -17.209091959090983
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 2)) THEN output = 0.358149 ELSE output = 0.330876;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #3, null' and covering 30.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.341, precision = 0.997, and F1 = 0.508 - learned after 7 total and 2 acceptable nodes.  Node score = -21.148871351222986
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 1)) THEN output = 0.524693 ELSE output = 0.375296;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #4, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #4, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.070, precision = 0.976, and F1 = 0.131 - learned after 5 total and 0 acceptable nodes.  Node score = -13.995284068868
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608149 ELSE output = 0.367583;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #4, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.146, precision = 0.991, and F1 = 0.255 - learned after 11 total and 6 acceptable nodes.  Node score = -17.7271591370637
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 2)) THEN output = 0.403526 ELSE output = 0.483061;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #4, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.193, precision = 0.991, and F1 = 0.323 - learned after 6 total and 1 acceptable nodes.  Node score = -14.205534646838002
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 2)) THEN output = 0.403603 ELSE output = 0.379888;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #4, null' and covering 12.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.207, precision = 0.992, and F1 = 0.342 - learned after 6 total and 1 acceptable nodes.  Node score = -13.402038938318778
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, ascifi, 1)) THEN output = 0.108112 ELSE output = 0.444997;
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #4, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.386, precision = 0.997, and F1 = 0.557 - learned after 6 total and 1 acceptable nodes.  Node score = -17.7037993512059
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513227 ELSE output = 0.445024;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #5, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #5, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.087, precision = 0.976, and F1 = 0.159 - learned after 5 total and 0 acceptable nodes.  Node score = -11.03563555339573
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608001 ELSE output = 0.429473;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #5, null' and covering 10.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.188, precision = 0.990, and F1 = 0.316 - learned after 6 total and 1 acceptable nodes.  Node score = -12.70465221279075
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 7)) THEN output = 0.158149 ELSE output = 0.416288;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #5, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.239, precision = 0.991, and F1 = 0.385 - learned after 7 total and 2 acceptable nodes.  Node score = -11.127145791064585
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 2)) THEN output = 0.403501 ELSE output = 0.458038;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #5, null' and covering 14.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.264, precision = 0.993, and F1 = 0.417 - learned after 8 total and 3 acceptable nodes.  Node score = -13.243590793589737
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 2)) THEN output = 0.358149 ELSE output = 0.370969;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #5, null' and covering 14.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.304, precision = 0.993, and F1 = 0.465 - learned after 6 total and 1 acceptable nodes.  Node score = -10.99994035975181
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 2)) THEN output = 0.358062 ELSE output = 0.483031;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #6, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #6, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.065, precision = 0.976, and F1 = 0.123 - learned after 10 total and 5 acceptable nodes.  Node score = -14.01312936143268
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608038 ELSE output = 0.489638;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #6, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.180, precision = 0.991, and F1 = 0.305 - learned after 11 total and 6 acceptable nodes.  Node score = -13.947259951294933
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 2)) THEN output = 0.403526 ELSE output = 0.518055;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #6, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.261, precision = 0.991, and F1 = 0.414 - learned after 6 total and 1 acceptable nodes.  Node score = -10.275660874046906
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 2)) THEN output = 0.403603 ELSE output = 0.438794;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #6, null' and covering 14.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.333, precision = 0.993, and F1 = 0.498 - learned after 5 total and 0 acceptable nodes.  Node score = -10.178572478571416
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 2)) THEN output = 0.358149 ELSE output = 0.465292;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #6, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.475, precision = 0.997, and F1 = 0.643 - learned after 5 total and 0 acceptable nodes.  Node score = -14.051681832957396
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513227 ELSE output = 0.483060;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #7, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #7, null' and covering 70.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.097, precision = 0.999, and F1 = 0.177 - learned after 10 total and 4 acceptable nodes.  Node score = -4083.6032600414073
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, aromance, 1)) THEN output = 0.362071 ELSE output = 0.888158;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #7, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.125, precision = 0.976, and F1 = 0.221 - learned after 6 total and 1 acceptable nodes.  Node score = -7.42854602017905
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608001 ELSE output = 0.465178;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #7, null' and covering 160.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.222, precision = 0.999, and F1 = 0.364 - learned after 6 total and 0 acceptable nodes.  Node score = -4061.1527531533043
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, acomedy, 1)) THEN output = 1.277642 ELSE output = 0.711116;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #7, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.343, precision = 0.991, and F1 = 0.509 - learned after 5 total and 0 acceptable nodes.  Node score = -7.3939227287498515
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acrime, 2)) THEN output = 0.403501 ELSE output = 0.524689;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #7, null' and covering 295.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.410, precision = 1.000, and F1 = 0.581 - learned after 7 total and 1 acceptable nodes.  Node score = -4100.702209810015
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, athriller, 1)) THEN output = 0.809032 ELSE output = 0.856431;
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #7, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.963, precision = 0.997, and F1 = 0.980 - learned after 6 total and 0 acceptable nodes.  Node score = -Infinity
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 1), workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513321 ELSE output = 0.858149;
+      /* FALSE NEG: female_gender(asharonstone) Actual Bool=true Prob=0.14185106490048777 Output=4.290556319334266 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #8, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #8, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.080, precision = 0.976, and F1 = 0.148 - learned after 10 total and 5 acceptable nodes.  Node score = -11.184783028425402
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 2)) THEN output = 0.608038 ELSE output = 0.510230;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #8, null' and covering 10.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.111, precision = 0.990, and F1 = 0.200 - learned after 11 total and 0 acceptable nodes.  Node score = -768.4885289198306
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, acomedy, 1), movie(Anon45309, E), movie_2_1_genre(Anon45309, athriller, 1), movie_2_1_genre(Anon45309, aaction, 1)) THEN output = 3.336637 ELSE output = 1.821392;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #8, null' and covering 28.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.194, precision = 0.996, and F1 = 0.325 - learned after 35 total and 20 acceptable nodes.  Node score = -30.040644204088796
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, amystery, 1), workedunder_2_1_genre(E, athriller, 1), workedunder_2_1_genre(E, acrime, 1)) THEN output = 0.215292 ELSE output = 0.142632;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #8, null' and covering 30.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.208, precision = 0.997, and F1 = 0.344 - learned after 6 total and 0 acceptable nodes.  Node score = -29.984212496315926
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, acrime, 1)) THEN output = 0.224816 ELSE output = 0.138851;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #8, null' and covering 43.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.298, precision = 0.998, and F1 = 0.459 - learned after 22 total and 11 acceptable nodes.  Node score = -29.89224327682952
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, amystery, 1), workedunder_2_1_genre(E, athriller, 1)) THEN output = 0.090707 ELSE output = 0.184882;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #8, null' and covering 45.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.312, precision = 0.998, and F1 = 0.476 - learned after 7 total and 1 acceptable nodes.  Node score = -29.96767873767688
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, amystery, 1)) THEN output = 0.102593 ELSE output = 0.181381;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #8, null' and covering 59.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.409, precision = 0.998, and F1 = 0.581 - learned after 8 total and 2 acceptable nodes.  Node score = -30.148755708783717
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, athriller, 1)) THEN output = 0.146285 ELSE output = 0.164031;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #8, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.579, precision = 0.997, and F1 = 0.732 - learned after 5 total and 0 acceptable nodes.  Node score = -11.218378113087772
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513227 ELSE output = 0.524721;
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #8, null' and covering 80.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.888, precision = 0.999, and F1 = 0.940 - learned after 15 total and 4 acceptable nodes.  Node score = -768.4885288998306
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, adrama, 1), workedunder_2_1_genre(E, acomedy, 1), movie(Anon45309, E), movie_2_1_genre(Anon45309, athriller, 1), workedunder_2_1_genre(E, athriller, 1)) THEN output = 1.821392 ELSE output = 3.336637;
+      /* FALSE NEG: female_gender(ajuliaroberts) Actual Bool=true Prob=0.14185106490048777 Output=3.723135893604104 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #8, null' and covering 29.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.963, precision = 0.997, and F1 = 0.980 - learned after 6 total and 0 acceptable nodes.  Node score = -Infinity
+
+ FOR female_gender(E) IF (workedunder_2_1_genre(E, acomedy, 1), workedunder_2_1_genre(E, aaction, 1)) THEN output = 0.513196 ELSE output = 0.858087;
+      /* FALSE NEG: female_gender(asharonstone) Actual Bool=true Prob=0.14191329723647644 Output=0.8580867027635235 */
+

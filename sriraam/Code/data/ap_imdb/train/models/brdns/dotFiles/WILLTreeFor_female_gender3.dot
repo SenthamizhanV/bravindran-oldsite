@@ -1,0 +1,27 @@
+digraph G{ 
+1[label = "[workedunder_2_1_genre(A, adrama, 1)]"];
+1 -> 2[label="True"];
+1 -> 3[label="False"];
+2[shape = box,label = "0.157(0.539)"];
+3[label = "[workedunder_2_1_genre(A, acomedy, 7)]"];
+3 -> 4[label="True"];
+3 -> 5[label="False"];
+4[shape = box,label = "0.131(0.533)"];
+5[label = "[workedunder_2_1_genre(A, ascifi, 1)]"];
+5 -> 6[label="True"];
+5 -> 7[label="False"];
+6[shape = box,label = "0.166(0.541)"];
+7[label = "[workedunder_2_1_genre(A, acomedy, 2)]"];
+7 -> 8[label="True"];
+7 -> 9[label="False"];
+8[shape = box,label = "0.358(0.589)"];
+9[label = "[workedunder_2_1_genre(A, acrime, 2)]"];
+9 -> 10[label="True"];
+9 -> 11[label="False"];
+10[shape = box,label = "0.404(0.600)"];
+11[label = "[workedunder_2_1_genre(A, adrama, 2)]"];
+11 -> 12[label="True"];
+11 -> 13[label="False"];
+12[shape = box,label = "0.608(0.647)"];
+13[shape = box,label = "0.510(0.625)"];
+}

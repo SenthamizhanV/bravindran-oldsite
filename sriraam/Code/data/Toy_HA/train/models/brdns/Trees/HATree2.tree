@@ -1,0 +1,7 @@
+setParam: stringsAreCaseSensitive = true.
+
+useStdLogicNotation: true.
+
+
+(Chol(a, 160) ^ ! => HA(a, 0.41257245288266)).
+(! => HA(_, 0.16352953408429413)).

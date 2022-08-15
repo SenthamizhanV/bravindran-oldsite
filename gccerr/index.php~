@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>Compilation result</title>
+<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.livequery.min.js"></script>
+<script language="javascript">
+$(document).ready(function(){
+	var codeView = $('#codeview');
+	//var last_mouseover_color = null;
+	$("span[my_type='edit_line']").livequery("mouseover", function(){
+		//last_mouseover_color = $(this).css("color");
+		//$(this).css("color", "green");
+		$(this).css("text-decoration", "underline");
+		$(this).css("cursor", "pointer");
+	});
+	$("span[my_type='edit_line']").livequery("mouseout", function(){
+		//$(this).css("color", last_mouseover_color);
+		$(this).css("text-decoration", "none");
+		$(this).css("cursor", "default");
+	});
+
+
+	$("span[my_type='edit_line']").livequery("click", function(){
+		if($("input[type='button'][name='recompile']").length == 0)
+		{
+			codeView.append("<br><input type=button name=recompile value='Save and Recompile' onClick='recompileCCode()'>");
+			save_recompile_link_created = true;
+		}
+		var my_val = $(this).attr("org_val");
+		var my_line = $(this).attr("line_no");
+		$(this).replaceWith("<textarea name=blah style='width:500px;height:50px' my_type='editing_line' line_no='"+ my_line +"'>"+ my_val +"</textarea>");
+
+	});	
+});
+function compileCCode()
+{
+	var ccode = $('#ccode').val();
+	prepareCompilationResult(ccode);
+
+}
+function recompileCCode()
+{
+	//first convert the edited textareas to span
+	var edited_lines = $("textarea[my_type='editing_line']");
+	$.each(edited_lines, function(){
+		var my_val = $(this).val();
+		var my_line = $(this).attr("line_no");
+		$(this).replaceWith("<span my_type='edit_line' org_val=\""+ my_val.replace(/"/g,'&quot;') +"\" line_no=\""+ my_line +"\">"+ my_val +"</span>");
+	});
+	//now assemble the code
+	var spanEls = $("span[my_type='edit_line']");
+	var ccode = "";
+	$.each(spanEls, function(){
+		var my_val = $(this).attr("org_val");
+		if($.trim(my_val) != "")
+			ccode += my_val + "\n";		
+	});
+	//alert(ccode);
+	//replace the code with the newly written code
+	$('#ccode').val(ccode);
+	//recompile
+	prepareCompilationResult(ccode);
+}
+function prepareCompilationResult(ccode)
+{
+	var codeView = $('#codeview');
+	codeView.html("Compiling the code");
+	$.ajax(
+		{url: 'compile.php',
+		data: {code: ccode},
+		async: false,
+		dataType: 'json',
+		type: 'POST',
+		success: function(response){
+					//alert(response); return;
+				if(response.status == "failure")
+				{
+					codeView.html("Error encountered.");
+				}
+				else if(response.status == "success" && response.errors == null)
+				{
+
+					codeView.html("No compilation error or warning." + "<br><a href='"+ response.output +"'>Download Output</a>");
+
+				}	
+				else
+				{
+					var no_of_errors = 0;
+					var no_of_warnings = 0;
+					var myCode = ccode.split("\n");
+					var htmlCode = "<pre>";
+					$.each(myCode, function(i){
+						var j = i + 1;
+
+						var error_line = false;
+						var error_text = "";
+						var error_type = "error";
+						var error_color = "red";
+						var add_code = "";
+
+						$.each(response.errors, function(){
+							if(this.line_no == j)
+							{
+								if(this.warning)
+								{
+									error_type = "warning";
+									error_text = this.warning;
+									no_of_warnings++;
+								}
+								else
+								{
+									error_type = "error";
+									error_text = this.error;
+									no_of_errors++;
+								}
+								error_line = true;
+								return false;
+							}
+						});
+						error_text = error_text.replace(/"/g, '&quot;');
+						if(error_type == "warning")
+							error_color = "green";
+						else
+							error_color ="red";
+						if(error_line == true)
+							add_code = "<span style='color:"+ error_color +"' my_type='edit_line' title=\""+ error_text +"\" org_val=\""+ this.replace(/"/g,'&quot;') +"\" line_no=\""+ j +"\">"+ this.replace('<','&lt;').replace('>','&gt') +"</span>";
+						else
+							add_code = "<span my_type='edit_line' org_val=\""+ this.replace(/"/g,'&quot;') +"\" line_no=\""+ j +"\">"+ this.replace('<','&lt;').replace('>','&gt') +"</span>";
+						htmlCode += add_code +"<br>";
+					});	
+					htmlCode += "</pre>";
+					var download_link = "";
+					if(no_of_errors == 0)
+						download_link = "<br><a href='"+ response.output +"'>Download Output</a>";
+					alert
+					codeView.html('No of errors: '+ no_of_errors + '<br>No of warnings: '+ no_of_warnings + download_link + '<br>' + htmlCode);
+				}
+			}
+		}			
+	);
+}
+</script>
+</head>
+<body>
+
+<form onSubmit="return false;">
+C Code: <br>
+<textarea name=code rows=10 cols=100 id="ccode"></textarea>
+<br>
+<input type=submit name=submit value=Compile onClick="compileCCode()" />
+</form>
+<div id="codeview">
+
+</div>
+</body>
+<html>

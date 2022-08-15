@@ -1,0 +1,12 @@
+setParam: stringsAreCaseSensitive = true.
+
+usePrologVariables: true.
+
+
+(female_gender(A, 0.15675050477403488) :-  /* #neg=101 #pos=43 */ workedunder_2_1_genre(A, adrama, 1)).
+(female_gender(A, 0.13086824190287472) :-  /* #neg=8 #pos=3 */ workedunder_2_1_genre(A, acomedy, 7)).
+(female_gender(A, 0.16583270920324228) :-  /* #neg=9 #pos=4 */ workedunder_2_1_genre(A, ascifi, 1)).
+(female_gender(A, 0.35812713508462224) :-  /* #neg=7 #pos=7 */ workedunder_2_1_genre(A, acomedy, 2)).
+(female_gender(A, 0.40357515836287183) :-  /* #neg=5 #pos=6 */ workedunder_2_1_genre(A, acrime, 2)).
+(female_gender(A, 0.6081119162839693) :-  /* #neg=1 #pos=3 */ workedunder_2_1_genre(A, adrama, 2)).
+female_gender(_, 0.5102922415465223) /* #neg=16 #pos=30 */ .

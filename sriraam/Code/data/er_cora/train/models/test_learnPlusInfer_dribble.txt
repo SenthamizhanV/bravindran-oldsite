@@ -1,0 +1,162 @@
+% Running on host: BL-SOIC-30ZND42
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[data\Cora\test/test_pos.txt, data\Cora\test/test_neg.txt, data\Cora\test/test_bk.txt, data\Cora\test/test_facts.txt]
+%  for N=0: args[N]=data\Cora\test/test_pos.txt
+
+% getInputArgWithDefaultValue: args=[data\Cora\test/test_pos.txt, data\Cora\test/test_neg.txt, data\Cora\test/test_bk.txt, data\Cora\test/test_facts.txt]
+%  for N=1: args[N]=data\Cora\test/test_neg.txt
+
+% getInputArgWithDefaultValue: args=[data\Cora\test/test_pos.txt, data\Cora\test/test_neg.txt, data\Cora\test/test_bk.txt, data\Cora\test/test_facts.txt]
+%  for N=2: args[N]=data\Cora\test/test_bk.txt
+
+% getInputArgWithDefaultValue: args=[data\Cora\test/test_pos.txt, data\Cora\test/test_neg.txt, data\Cora\test/test_bk.txt, data\Cora\test/test_facts.txt]
+%  for N=3: args[N]=data\Cora\test/test_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+% Load '../cora_bk.txt'.
+
+% Switching to VarIndicator = uppercase.
+
+% Switching to standard-logic notation for variables; previous setting = uppercase
+
+% Switching to VarIndicator = lowercase.
+
+% Switching to Prolog notation for variables; previous setting = lowercase
+
+% Switching to VarIndicator = uppercase.
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+
+%  Read the facts.
+%  Have read 6,541 facts.
+% Have read 35,007 examples from 'data\Cora\test' [data\Cora\test/test*].
+% Have read 27,708 examples from 'data\Cora\test' [data\Cora\test/test*].
+
+%  LearnOneClause initialized.
+
+% The outer looper has been created.
+
+% Initializing the ILP inner looper.
+
+% NEW target:                 sameauthor(A, B)
+%  targetPred:                sameauthor/2
+%  targetArgTypes:            signature = ["Const", "Const"], types = [+auth, +auth]
+%  targets:                   [sameauthor(A, B)]
+%  targetPredicates:          [sameauthor/2, samebib/2, sametitle/2, samevenue/2]
+%  targetArgSpecs:            [[A[+auth], B[+auth]]]
+%  variablesInTargets:        [[A, B]]
+
+% NEW target:                 samebib(C, D)
+%  targetPred:                samebib/2
+%  targetArgTypes:            signature = ["Const", "Const"], types = [+paper, +paper]
+%  targets:                   [sameauthor(A, B), samebib(C, D)]
+%  targetPredicates:          [sameauthor/2, samebib/2, sametitle/2, samevenue/2]
+%  targetArgSpecs:            [[A[+auth], B[+auth]], [C[+paper], D[+paper]]]
+%  variablesInTargets:        [[A, B], [C, D]]
+
+% NEW target:                 sametitle(E, F)
+%  targetPred:                sametitle/2
+%  targetArgTypes:            signature = ["Const", "Const"], types = [+title, +title]
+%  targets:                   [sameauthor(A, B), samebib(C, D), sametitle(E, F)]
+%  targetPredicates:          [sameauthor/2, samebib/2, sametitle/2, samevenue/2]
+%  targetArgSpecs:            [[A[+auth], B[+auth]], [C[+paper], D[+paper]], [E[+title], F[+title]]]
+%  variablesInTargets:        [[A, B], [C, D], [E, F]]
+
+% NEW target:                 samevenue(G, H)
+%  targetPred:                samevenue/2
+%  targetArgTypes:            signature = ["Const", "Const"], types = [+venue, +venue]
+%  targets:                   [sameauthor(A, B), samebib(C, D), sametitle(E, F), samevenue(G, H)]
+%  targetPredicates:          [sameauthor/2, samebib/2, sametitle/2, samevenue/2]
+%  targetArgSpecs:            [[A[+auth], B[+auth]], [C[+paper], D[+paper]], [E[+title], F[+title]], [G[+venue], H[+venue]]]
+%  variablesInTargets:        [[A, B], [C, D], [E, F], [G, H]]
+
+% Started collecting constants
+
+% Collecting the types of constants.
+
+% Looking at the training examples to see if any types of new constants can be inferred.
+% Time to collect constants: 89 milliseconds
+% Time to collect examples: 0 seconds
+
+% Read 35,007 pos examples and 27,708 neg examples.
+% Time to init learnOneClause: 100 milliseconds
+% Old dirdata\Cora\train/models/
+
+% Have 35,007 'raw' positive examples and kept 488.
+% Have 27,708 'raw' negative examples and kept 66.
+
+% processing backup's for sameauthor
+%  POS EX = 488
+%  NEG EX = 66
+
+% Memory usage by WILLSetup (just counts # targets?):
+%  |backupPosExamples| = 1
+%  |backupNegExamples| = 1
+%  |predicatesAsFacts| = 0
+%  |addedToFactBase|   = 0
+
+% Getting bRDN's target predicates.
+File: data\Cora\test/advice.txt doesnt exist.Hence no advice loaded
+
+% for sameauthor |lookupPos| = 488
+% for sameauthor |lookupNeg| = 66
+% getJointExamples: |pos| = 488, |neg| = 66
+
+% Starting inference in bRDN.
+% Trees = 5
+
+% Starting getMarginalProbabilities.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for haswordauthor/2.
+% [ LazyGroundClauseIndex ]  Building full index for haswordauthor/2 with 203 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for haswordtitle/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for haswordvenue/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for author/2.
+% [ LazyGroundClauseIndex ]  Building full index for title/2 with 1,295 assertions.
+% No Gibbs sampling needed during inference.
+ (Arithmetic) Mean Probability Assigned to Correct Output Class: 373.789/554.00 = 0.674710
+
+ The weighted count of positive examples = 488.000 and the weighted count of negative examples = 66.000
+
+printExamples: Writing out predictions (for Tuffy?) on 554 examples for 'sameauthor' to:
+  data\Cora\test/results_sameauthor.db
+ and to:
+  data\Cora\test/query_sameauthor.db
+%    No need to compress since small: data\Cora\test/query_sameauthor.db
+
+% Computing Area Under Curves.
+%Pos=488
+%Neg=66
+%LL:-179.20086636827435
+%LL:-228.56275774646636
+
+% Running command: java -jar .//auc.jar data\Cora\test/AUC/aucTemp.txt list 0.0
+% WAITING FOR command: java -jar .//auc.jar data\Cora\test/AUC/aucTemp.txt list 0.0
+% DONE WAITING FOR command: java -jar .//auc.jar data\Cora\test/AUC/aucTemp.txt list 0.0
+
+%   AUC ROC   = 0.827558
+%   AUC PR    = 0.966583
+%   CLL	      = -0.412568
+%   Precision = 0.977444 at threshold = 0.675
+%   Recall    = 0.532787
+%   F1        = 0.689655
+
+% Total inference time (5 trees): 1.233 seconds.

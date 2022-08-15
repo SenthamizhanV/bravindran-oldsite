@@ -1,0 +1,8 @@
+useStdLogicVariables: true.
+
+mode: BP(+patient,#value1).
+mode: Chol(+patient,#value).
+mode: HA(+patient).
+disc: BP([2],[4]).
+disc: Chol([2],[3]).
+

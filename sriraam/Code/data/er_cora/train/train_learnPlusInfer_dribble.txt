@@ -1,0 +1,666 @@
+% Running on host: BL-SOIC-30ZND42
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[data\Cora\train/train_pos.txt, data\Cora\train/train_neg.txt, data\Cora\train/train_bk.txt, data\Cora\train/train_facts.txt]
+%  for N=0: args[N]=data\Cora\train/train_pos.txt
+
+% getInputArgWithDefaultValue: args=[data\Cora\train/train_pos.txt, data\Cora\train/train_neg.txt, data\Cora\train/train_bk.txt, data\Cora\train/train_facts.txt]
+%  for N=1: args[N]=data\Cora\train/train_neg.txt
+
+% getInputArgWithDefaultValue: args=[data\Cora\train/train_pos.txt, data\Cora\train/train_neg.txt, data\Cora\train/train_bk.txt, data\Cora\train/train_facts.txt]
+%  for N=2: args[N]=data\Cora\train/train_bk.txt
+
+% getInputArgWithDefaultValue: args=[data\Cora\train/train_pos.txt, data\Cora\train/train_neg.txt, data\Cora\train/train_bk.txt, data\Cora\train/train_facts.txt]
+%  for N=3: args[N]=data\Cora\train/train_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+% Load '../cora_bk.txt'.
+
+% Switching to VarIndicator = uppercase.
+
+% Switching to standard-logic notation for variables; previous setting = uppercase
+
+% Switching to VarIndicator = lowercase.
+
+% Switching to Prolog notation for variables; previous setting = lowercase
+
+% Switching to VarIndicator = uppercase.
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+
+%  Read the facts.
+%  Have read 6,541 facts.
+% Have read 488 examples from 'data\Cora\train' [data\Cora\train/train*].
+% Have read 66 examples from 'data\Cora\train' [data\Cora\train/train*].
+
+%  LearnOneClause initialized.
+
+% The outer looper has been created.
+
+% Initializing the ILP inner looper.
+
+% NEW target:                 sameauthor(A, B)
+%  targetPred:                sameauthor/2
+%  targetArgTypes:            signature = ["Const", "Const"], types = [+auth, +auth]
+%  targets:                   [sameauthor(A, B)]
+%  targetPredicates:          [sameauthor/2]
+%  targetArgSpecs:            [[A[+auth], B[+auth]]]
+%  variablesInTargets:        [[A, B]]
+
+% Started collecting constants
+
+% Collecting the types of constants.
+
+% Looking at the training examples to see if any types of new constants can be inferred.
+% Time to collect constants: 62 milliseconds
+% Time to collect examples: 0 seconds
+
+% Read 488 pos examples and 66 neg examples.
+% Time to init learnOneClause: 62 milliseconds
+% Old dirnull
+Setting model dir
+
+% Have 488 'raw' positive examples and kept 488.
+% Have 66 'raw' negative examples and kept 66.
+
+% processing backup's for sameauthor
+%  POS EX = 488
+%  NEG EX = 66
+
+% Memory usage by WILLSetup (just counts # targets?):
+%  |backupPosExamples| = 1
+%  |backupNegExamples| = 1
+%  |predicatesAsFacts| = 0
+%  |addedToFactBase|   = 0
+data\Cora\train/models/
+File: data\Cora\train/advice.txt doesnt exist.Hence no advice loaded
+% Learning 5 trees in this iteration for sameauthor
+
+% Learn model for: sameauthor
+% Kept 488 of the 488 positive examples.
+% Kept 66 of the 66 negative examples.
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.10494076555148646
+Set score:0.0025
+% Dataset size: 554
+Computing probabilities
+prob time:3 milliseconds
+No hidden examples for : sameauthor
+Time to build dataset: 4 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.10494076555149223
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 81 99 103 116 334 375 402 430 467 475
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% LearnOneClause Parameters:
+%   Targets (3):
+%    sameauthor(+auth, +auth),
+%    sameauthor(+auth, -auth),
+%    sameauthor(-auth, +auth)
+%  Modes (29):
+%    author(+paper, -auth),
+%    author(-paper, +auth),
+%    haswordauthor(+auth, -word),
+%    haswordauthor(-auth, +word),
+%    haswordtitle(+title, -word),
+%    haswordtitle(-title, +word),
+%    haswordvenue(+venue, -word),
+%    haswordvenue(-venue, +word),
+%    title(+paper, -title),
+%    title(-paper, +title),
+%    venue(+paper, -venue),
+%    venue(-paper, +venue),
+%    samebib(+paper, +paper),
+%    samebib(+paper, -paper),
+%    samebib(-paper, +paper),
+%    sametitle(+title, +title),
+%    sametitle(+title, -title),
+%    sametitle(-title, +title),
+%    samevenue(+venue, +venue),
+%    samevenue(+venue, -venue),
+%    samevenue(-venue, +venue),
+%    recursive_samebib(+paper, `paper),
+%    recursive_samebib(`paper, +paper),
+%    recursive_sametitle(+title, `title),
+%    recursive_sametitle(`title, +title),
+%    recursive_samevenue(+venue, `venue),
+%    recursive_samevenue(`venue, +venue),
+%    recursive_sameauthor(+auth, `auth),
+%    recursive_sameauthor(`auth, +auth)
+
+% target           = sameauthor(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  sameauthor(_, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+% Most-general root: sameauthor(_, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'sameauthor(_, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for author/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for haswordauthor/2.
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  sameauthor(A, _) :- author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  sameauthor(_, A) :- author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  sameauthor(A, _) :- haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  sameauthor(_, A) :- haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'sameauthor(A, _) :- author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for author/2 with 1,295 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for author/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for title/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for venue/2.
+There is no fact nor clause nor built-in predicate matching: 'samebib/2'.
+  Possibly a typo?  If not, add to the BK file:   okIfUnknown: samebib/2.
+
+% Skipping over this 'waitHere': There is no fact nor clause nor built-in predicate matching: 'samebib/2'.
+  Possibly a typo?  If not, add to the BK file:   okIfUnknown: samebib/2.
+%  At # nodes expanded = 2, |OPEN| = 3.  Pruned 4 variant children.  Sending 6 items to OPEN for evaluation and possible insertion.
+% Have created 6 valid-on-seeds descendants and have picked up 3 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(A, _) :- author(_, A), author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000003E-6) for clause:  sameauthor(A, B) :- author(_, A), author(_, B).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.3400000000000005E-6) for clause:  sameauthor(A, _) :- author(_, A), haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(A, B) :- author(_, A), haswordauthor(B, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(A, _) :- author(B, A), title(B, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(A, _) :- author(B, A), venue(B, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'sameauthor(_, A) :- author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 2.  Pruned 4 variant children.  Sending 6 items to OPEN for evaluation and possible insertion.
+% Have created 6 valid-on-seeds descendants and have picked up 3 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000003E-6) for clause:  sameauthor(A, B) :- author(_, B), author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(_, A) :- author(_, A), author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(A, B) :- author(_, B), haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.3400000000000005E-6) for clause:  sameauthor(_, A) :- author(_, A), haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(_, A) :- author(B, A), title(B, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(_, A) :- author(B, A), venue(B, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#4 of outerLoop #1, bodyLen=1] 'sameauthor(A, _) :- haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for haswordauthor/2 with 203 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for haswordauthor/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for haswordtitle/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for haswordvenue/2.
+%  At # nodes expanded = 4, |OPEN| = 1.  Pruned 1 variant children.  Sending 8 items to OPEN for evaluation and possible insertion.
+% Have created 8 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.3400000000000005E-6) for clause:  sameauthor(A, _) :- haswordauthor(A, _), author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, _), author(_, B).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(A, _) :- haswordauthor(A, _), haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -59.592157 (regressionFit = 59.592155, penalties=1.93E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/554.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -59.592157): sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000003E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, _), haswordauthor(B, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000003E-6) for clause:  sameauthor(A, _) :- haswordauthor(A, B), haswordauthor(_, B).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -192.694701 (regressionFit = 192.694699, penalties=2.24E-6) for clause:  sameauthor(A, _) :- haswordauthor(A, B), haswordtitle(_, B).  [covers 394.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -116.691030 (regressionFit = 116.691028, penalties=2.24E-6) for clause:  sameauthor(A, _) :- haswordauthor(A, B), haswordvenue(_, B).  [covers 292.0/554.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#5 of outerLoop #1, bodyLen=1] 'sameauthor(_, A) :- haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 5, |OPEN| = 0.  Pruned 1 variant children.  Sending 8 items to OPEN for evaluation and possible insertion.
+% Have created 8 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(A, B) :- haswordauthor(B, _), author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.3400000000000005E-6) for clause:  sameauthor(_, A) :- haswordauthor(A, _), author(_, A).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -59.592157 (regressionFit = 59.592155, penalties=1.93E-6) for clause:  sameauthor(A, B) :- haswordauthor(B, C), haswordauthor(A, C).  [covers 532.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000003E-6) for clause:  sameauthor(A, B) :- haswordauthor(B, _), haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  sameauthor(_, A) :- haswordauthor(A, _), haswordauthor(A, _).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000003E-6) for clause:  sameauthor(_, A) :- haswordauthor(A, B), haswordauthor(_, B).  [covers 554.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -192.694701 (regressionFit = 192.694699, penalties=2.24E-6) for clause:  sameauthor(_, A) :- haswordauthor(A, B), haswordtitle(_, B).  [covers 394.0/554.0 pos, 0.0/0.0 neg]
+%     Score = -116.691030 (regressionFit = 116.691028, penalties=2.24E-6) for clause:  sameauthor(_, A) :- haswordauthor(A, B), haswordvenue(_, B).  [covers 292.0/554.0 pos, 0.0/0.0 neg]
+
+% The best node found: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/554.0 pos, 0.0/0.0 neg]
+
+% The best node found: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/554.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/554.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.11198304178392393 to score=0.0025 #egs=532.0
+Comparing variance: 7.807764539568576E-4 to score=0.0025 #egs=22.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 532.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.111983)
+%         ILP node to extend: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/554.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 1 and with score = -0.111983) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch leaf because good enough fit since score < 0.0025
+
+% Time for loop #1: 3.328 seconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 4
+
+% On cycle #1, the best clause found is:
+%      sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/554.0 pos, 0.0/0.0 neg]
+% This clause covers 532 positive examples, of which 532 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]'
+%     Score = -59.592157 (regressionFit = 59.592155, penalties=1.93E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+
+% Have these 10 positive seeds: 95 139 188 213 245 256 303 311 387 388
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=2] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]' score=-59.592157241034585
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 7 items to OPEN for evaluation and possible insertion.
+% Have created 7 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.04E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, A).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.04E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, B).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.9400000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.9400000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.9400000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(_, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -170.690573 (regressionFit = 170.690570, penalties=3.04E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -170.690573): sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -91.418477 (regressionFit = 91.418474, penalties=3.04E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -91.418477): sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=3] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]' score=-91.4184768377195
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for haswordvenue/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for venue/2.
+There is no fact nor clause nor built-in predicate matching: 'samevenue/2'.
+  Possibly a typo?  If not, add to the BK file:   okIfUnknown: samevenue/2.
+
+% Skipping over this 'waitHere': There is no fact nor clause nor built-in predicate matching: 'samevenue/2'.
+  Possibly a typo?  If not, add to the BK file:   okIfUnknown: samevenue/2.
+%  At # nodes expanded = 2, |OPEN| = 6.  Pruned 3 variant children.  Sending 9 items to OPEN for evaluation and possible insertion.
+% Have created 9 valid-on-seeds descendants and have picked up 2 bad extensions.
+%     Score = -140.489273 (regressionFit = 140.489269, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C), author(_, A).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -140.489273 (regressionFit = 140.489269, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C), author(_, B).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -96.857469 (regressionFit = 96.857465, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C), haswordauthor(A, _).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -96.857469 (regressionFit = 96.857465, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C), haswordauthor(B, _).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -82.887605 (regressionFit = 82.887601, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C), haswordauthor(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -82.887605): sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C), haswordauthor(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -159.868753 (regressionFit = 159.868749, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C), haswordtitle(_, C).  [covers 189.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -74.005662 (regressionFit = 74.005658, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -74.005662): sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -126.494070 (regressionFit = 126.494066, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(_, C), haswordvenue(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -123.377108 (regressionFit = 123.377104, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), venue(_, D).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=3] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]' score=-170.69057292603497
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for haswordtitle/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for title/2.
+There is no fact nor clause nor built-in predicate matching: 'sametitle/2'.
+  Possibly a typo?  If not, add to the BK file:   okIfUnknown: sametitle/2.
+
+% Skipping over this 'waitHere': There is no fact nor clause nor built-in predicate matching: 'sametitle/2'.
+  Possibly a typo?  If not, add to the BK file:   okIfUnknown: sametitle/2.
+%  At # nodes expanded = 3, |OPEN| = 5.  Pruned 3 variant children.  Sending 9 items to OPEN for evaluation and possible insertion.
+% Have created 9 valid-on-seeds descendants and have picked up 2 bad extensions.
+%     Score = -185.777952 (regressionFit = 185.777947, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C), author(_, A).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -185.777952 (regressionFit = 185.777947, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C), author(_, B).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -174.340450 (regressionFit = 174.340446, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C), haswordauthor(A, _).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -174.340450 (regressionFit = 174.340446, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C), haswordauthor(B, _).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -176.432442 (regressionFit = 176.432438, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C), haswordauthor(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -171.850342 (regressionFit = 171.850338, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(D, C), haswordtitle(D, _).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -193.160255 (regressionFit = 193.160251, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C), haswordtitle(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -174.682145 (regressionFit = 174.682141, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(_, C), haswordvenue(_, C).  [covers 189.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -188.883985 (regressionFit = 188.883981, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordtitle(D, C), title(_, D).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#4 of outerLoop #2, bodyLen=3] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, A).  [covers 532.0/532.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 4, |OPEN| = 4.  Pruned 4 variant children.  Sending 9 items to OPEN for evaluation and possible insertion.
+% Have created 9 valid-on-seeds descendants and have picked up 3 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, A), author(_, A).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, A), author(_, B).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, A), haswordauthor(A, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, A), haswordauthor(B, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, A), haswordauthor(_, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -276.996564 (regressionFit = 276.996559, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, A), haswordtitle(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -273.606573 (regressionFit = 273.606568, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, A), haswordvenue(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(D, A), title(D, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(D, A), venue(D, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#5 of outerLoop #2, bodyLen=3] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, B).  [covers 532.0/532.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 5, |OPEN| = 3.  Pruned 4 variant children.  Sending 9 items to OPEN for evaluation and possible insertion.
+% Have created 9 valid-on-seeds descendants and have picked up 3 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, B), author(_, A).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, B), author(_, B).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, B), haswordauthor(A, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, B), haswordauthor(B, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, B), haswordauthor(_, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -276.996564 (regressionFit = 276.996559, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, B), haswordtitle(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -273.606573 (regressionFit = 273.606568, penalties=4.150000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(_, B), haswordvenue(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(D, B), title(D, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), author(D, B), venue(D, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#6 of outerLoop #2, bodyLen=3] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 6, |OPEN| = 2.  Pruned 1 variant children.  Sending 11 items to OPEN for evaluation and possible insertion.
+% Have created 11 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, _), author(_, A).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, _), author(_, B).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, _), haswordauthor(A, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.740000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, D), haswordauthor(B, D).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, _), haswordauthor(B, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, _), haswordauthor(_, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.85E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, D), haswordauthor(_, D).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -188.901296 (regressionFit = 188.901292, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, _), haswordtitle(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -215.885546 (regressionFit = 215.885542, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, D), haswordtitle(_, D).  [covers 378.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -116.155266 (regressionFit = 116.155262, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, _), haswordvenue(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -134.536909 (regressionFit = 134.536905, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(A, D), haswordvenue(_, D).  [covers 283.0/532.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#7 of outerLoop #2, bodyLen=3] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 7, |OPEN| = 1.  Pruned 1 variant children.  Sending 11 items to OPEN for evaluation and possible insertion.
+% Have created 11 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, _), author(_, A).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, _), author(_, B).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.740000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, D), haswordauthor(A, D).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, _), haswordauthor(A, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, _), haswordauthor(B, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, _), haswordauthor(_, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.85E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, D), haswordauthor(_, D).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -188.901296 (regressionFit = 188.901292, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, _), haswordtitle(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -215.885546 (regressionFit = 215.885542, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, D), haswordtitle(_, D).  [covers 378.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -116.155266 (regressionFit = 116.155262, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, _), haswordvenue(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -134.536909 (regressionFit = 134.536905, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(B, D), haswordvenue(_, D).  [covers 283.0/532.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#8 of outerLoop #2, bodyLen=3] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(_, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 8, |OPEN| = 0.  Pruned 1 variant children.  Sending 9 items to OPEN for evaluation and possible insertion.
+% Have created 9 valid-on-seeds descendants and have picked up 5 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(_, C), author(_, A).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(_, C), author(_, B).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(D, C), author(_, D).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(_, C), haswordauthor(A, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(_, C), haswordauthor(B, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.85E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(D, C), haswordauthor(D, _).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(_, C), haswordauthor(_, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -176.025291 (regressionFit = 176.025287, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(_, C), haswordtitle(_, C).  [covers 304.0/532.0 pos, 0.0/0.0 neg]
+%     Score = -89.323486 (regressionFit = 89.323482, penalties=4.05E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordauthor(_, C), haswordvenue(_, C).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+
+% The best node found: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+
+% The best node found: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 1 with score = -0.112.
+% Will extend: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.1807045590062586 to score=0.0025 #egs=194.0
+Comparing variance: 0.11523364978360437 to score=0.0025 #egs=338.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 194.0
+%      addToQueueOfTreeStructuredLearningTasks (level=2; score=-0.180705)
+%         ILP node to extend: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 2 and with score = -0.180705) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 338.0
+%      addToQueueOfTreeStructuredLearningTasks (level=2; score=-0.115234)
+%         ILP node to extend: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C).  [covers 532.0/532.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 2 and with score = -0.115234) into the LAST position (#2) in the search queue.
+
+% Time for loop #2: 6.861 seconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 4
+
+% On cycle #2, the best clause found is:
+%      sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/532.0 pos, 0.0/0.0 neg]
+% This clause covers 194 positive examples, of which 194 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]'
+%     Score = -74.005662 (regressionFit = 74.005658, penalties=3.95E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+
+% Have these 7 positive seeds: 8 9 35 88 127 136 139
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #3, bodyLen=4] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]' score=-74.00566202407245
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 5 variant children.  Sending 12 items to OPEN for evaluation and possible insertion.
+% Have created 12 valid-on-seeds descendants and have picked up 4 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.060000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.060000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.960000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.960000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.960000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.860000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -94.180615 (regressionFit = 94.180610, penalties=5.060000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -94.180615): sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.96E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.960000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.960000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordvenue(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.860000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.060000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), venue(_, D).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #3, bodyLen=5] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]' score=-94.18061496956817
+% [ LazyGroundClauseIndex ]  Building full index for haswordtitle/2 with 1,139 assertions.
+%  At # nodes expanded = 2, |OPEN| = 11.  Pruned 9 variant children.  Sending 15 items to OPEN for evaluation and possible insertion.
+% Have created 15 valid-on-seeds descendants and have picked up 6 bad extensions.
+%     Score = -105.259270 (regressionFit = 105.259264, penalties=6.170000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), author(_, A).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -105.259270 (regressionFit = 105.259264, penalties=6.170000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), author(_, B).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.076029 (regressionFit = 95.076023, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordauthor(A, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.076029 (regressionFit = 95.076023, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordauthor(B, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.599537 (regressionFit = 95.599531, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordauthor(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.009790 (regressionFit = 95.009784, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, C), haswordauthor(_, E).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -94.645891 (regressionFit = 94.645885, penalties=5.760000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(F, C), haswordtitle(F, E).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -93.493879 (regressionFit = 93.493873, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(E, C), haswordtitle(E, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -93.493879): sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(E, C), haswordtitle(E, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -97.593290 (regressionFit = 97.593284, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.442868 (regressionFit = 95.442862, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, C), haswordtitle(_, E).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -92.505170 (regressionFit = 92.505164, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -92.505170): sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.007877 (regressionFit = 95.007871, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.277440 (regressionFit = 95.277434, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, C), haswordvenue(_, E).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -96.817614 (regressionFit = 96.817608, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(E, C), title(_, E).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.199881 (regressionFit = 95.199874, penalties=6.170000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), venue(_, D).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #3, bodyLen=5] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A).  [covers 194.0/194.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for venue/2 with 1,296 assertions.
+%  At # nodes expanded = 3, |OPEN| = 10.  Pruned 10 variant children.  Sending 14 items to OPEN for evaluation and possible insertion.
+% Have created 14 valid-on-seeds descendants and have picked up 8 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A), author(_, A).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A), author(_, B).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A), haswordauthor(A, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A), haswordauthor(B, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A), haswordauthor(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), author(_, A), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -105.840354 (regressionFit = 105.840347, penalties=6.170000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), author(_, A), haswordtitle(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A), haswordvenue(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), author(_, A), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(E, A), title(E, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(E, A), venue(E, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.170000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, A), venue(_, D).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#4 of outerLoop #3, bodyLen=5] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B).  [covers 194.0/194.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 4, |OPEN| = 9.  Pruned 10 variant children.  Sending 14 items to OPEN for evaluation and possible insertion.
+% Have created 14 valid-on-seeds descendants and have picked up 8 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B), author(_, A).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B), author(_, B).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B), haswordauthor(A, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B), haswordauthor(B, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B), haswordauthor(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), author(_, B), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -105.840354 (regressionFit = 105.840347, penalties=6.170000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), author(_, B), haswordtitle(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B), haswordvenue(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), author(_, B), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(E, B), title(E, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(E, B), venue(E, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.170000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), author(_, B), venue(_, D).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#5 of outerLoop #3, bodyLen=5] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for haswordvenue/2 with 1,313 assertions.
+%  At # nodes expanded = 5, |OPEN| = 8.  Pruned 7 variant children.  Sending 16 items to OPEN for evaluation and possible insertion.
+% Have created 16 valid-on-seeds descendants and have picked up 5 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _), author(_, A).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _), author(_, B).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _), haswordauthor(A, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.760000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, E), haswordauthor(B, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _), haswordauthor(B, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _), haswordauthor(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(A, _), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, E), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.076029 (regressionFit = 95.076023, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(A, _), haswordtitle(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -88.492294 (regressionFit = 88.492288, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, E), haswordtitle(_, E).  [covers 191.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _), haswordvenue(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(A, _), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, E), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(A, _), venue(_, D).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#6 of outerLoop #3, bodyLen=5] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 6, |OPEN| = 7.  Pruned 7 variant children.  Sending 16 items to OPEN for evaluation and possible insertion.
+% Have created 16 valid-on-seeds descendants and have picked up 5 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _), author(_, A).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _), author(_, B).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.760000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, E), haswordauthor(A, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _), haswordauthor(A, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _), haswordauthor(B, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _), haswordauthor(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(B, _), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, E), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.076029 (regressionFit = 95.076023, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(B, _), haswordtitle(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -88.492294 (regressionFit = 88.492288, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, E), haswordtitle(_, E).  [covers 191.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _), haswordvenue(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(B, _), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, E), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(B, _), venue(_, D).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#7 of outerLoop #3, bodyLen=5] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 7, |OPEN| = 6.  Pruned 7 variant children.  Sending 15 items to OPEN for evaluation and possible insertion.
+% Have created 15 valid-on-seeds descendants and have picked up 9 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C), author(_, A).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C), author(_, B).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(E, C), author(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C), haswordauthor(A, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C), haswordauthor(B, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.660000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(F, C), haswordauthor(F, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(E, C), haswordauthor(E, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C), haswordauthor(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, C), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.599537 (regressionFit = 95.599531, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, C), haswordtitle(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.970000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C), haswordvenue(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, C), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordauthor(_, C), venue(_, D).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#8 of outerLoop #3, bodyLen=5] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 8, |OPEN| = 5.  Pruned 7 variant children.  Sending 15 items to OPEN for evaluation and possible insertion.
+% Have created 15 valid-on-seeds descendants and have picked up 9 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), author(_, A).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), author(_, B).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.8700000000000005E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(F, E), author(_, F).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), haswordauthor(A, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), haswordauthor(B, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.660000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(F, E), haswordauthor(F, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.770000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(F, E), haswordauthor(F, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), haswordauthor(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.009790 (regressionFit = 95.009784, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), haswordtitle(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), haswordvenue(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.87E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordauthor(_, E), venue(_, D).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#9 of outerLoop #3, bodyLen=5] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 9, |OPEN| = 4.  Pruned 9 variant children.  Sending 15 items to OPEN for evaluation and possible insertion.
+% Have created 15 valid-on-seeds descendants and have picked up 6 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), author(_, A).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), author(_, B).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), haswordauthor(A, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), haswordauthor(B, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), haswordauthor(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), haswordauthor(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -94.645891 (regressionFit = 94.645885, penalties=5.760000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(F, E), haswordtitle(F, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.8700000000000005E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(F, E), haswordtitle(F, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -95.442868 (regressionFit = 95.442862, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), haswordtitle(_, C).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), haswordtitle(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), haswordvenue(D, _).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), haswordvenue(_, C).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), haswordvenue(_, E).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=5.9700000000000004E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(F, E), title(_, F).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.07E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, E), venue(_, D).  [covers 194.0/194.0 pos, 0.0/0.0 neg]
+
+***** Warning: #1 TOO MANY NODES CONSIDERED (i.e., 'expanded') for 'LearnOneClause': nodesConsidered = 10 and maxNodesToConsider = 10. *****
+
+
+% The best node found: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+
+% The best node found: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 2 with score = -0.181.
+% Will extend: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.48944531257032714 to score=0.0025 #egs=189.0
+Comparing variance: -8.881784197001253E-17 to score=0.0025 #egs=5.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 189.0
+%      addToQueueOfTreeStructuredLearningTasks (level=3; score=-0.489445)
+%         ILP node to extend: sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 3 and with score = -0.489445) into position #1 in the search queue (new size=2).
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 5.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #3: 3 minutes and 7.838 seconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 3
+% Max number of clauses    = 4
+
+% On cycle #3, the best clause found is:
+%      sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/194.0 pos, 0.0/0.0 neg]
+% This clause covers 189 positive examples, of which 189 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]'
+%     Score = -92.505170 (regressionFit = 92.505164, penalties=6.070000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+
+% Have these 7 positive seeds: 65 67 78 91 118 138 176
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #4, bodyLen=6] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]' score=-92.50517014579182
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 12 variant children.  Sending 19 items to OPEN for evaluation and possible insertion.
+% Have created 19 valid-on-seeds descendants and have picked up 8 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.1800000000000016E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.1800000000000016E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, B).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.080000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), haswordauthor(A, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.080000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), haswordauthor(B, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.080000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), haswordauthor(_, C).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.980000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, C), haswordvenue(D, _), haswordauthor(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.980000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, E), haswordauthor(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.770000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(F, C), haswordvenue(D, _), haswordtitle(F, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.770000000000001E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(E, C), haswordvenue(D, F), haswordtitle(E, F).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.980000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(E, C), haswordvenue(D, _), haswordtitle(E, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.080000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), haswordtitle(_, C).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.980000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, C), haswordvenue(D, _), haswordtitle(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.980000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, E), haswordtitle(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.080000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), haswordvenue(D, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.080000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), haswordvenue(_, C).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.980000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, C), haswordvenue(D, _), haswordvenue(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=6.980000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, E), haswordvenue(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.080000000000002E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(E, C), haswordvenue(D, _), title(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.1800000000000016E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), venue(_, D).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #4, bodyLen=7] 'sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A).  [covers 189.0/189.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for title/2 with 1,295 assertions.
+%  At # nodes expanded = 2, |OPEN| = 18.  Pruned 18 variant children.  Sending 22 items to OPEN for evaluation and possible insertion.
+% Have created 22 valid-on-seeds descendants and have picked up 12 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.19E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A), author(_, A).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.19E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A), author(_, B).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.19E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A), haswordauthor(A, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.19E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A), haswordauthor(B, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.19E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A), haswordauthor(_, C).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.09E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, C), haswordvenue(D, _), author(_, A), haswordauthor(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.09E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, E), author(_, A), haswordauthor(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.88E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(F, C), haswordvenue(D, _), author(_, A), haswordtitle(F, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=7.88E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(E, C), haswordvenue(D, F), author(_, A), haswordtitle(E, F).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.09E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(E, C), haswordvenue(D, _), author(_, A), haswordtitle(E, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.19E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A), haswordtitle(_, C).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.09E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, E), haswordtitle(_, C), haswordvenue(D, _), author(_, A), haswordtitle(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.09E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, E), author(_, A), haswordtitle(_, E).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.19E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A), haswordvenue(D, _).  [covers 189.0/189.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=8.19E-6) for clause:  sameauthor(A, B) :- haswordauthor(A, C), haswordauthor(B, C), haswordvenue(D, C), haswordvenue(D, _), haswordtitle(_, C), haswordvenue(D, _), author(_, A), haswordvenue(_, C).  [covers 189.0/189.0 pos, 0.0/0.0 neg]

@@ -1,0 +1,709 @@
+////// Learned from a dataset containing 12 positive (12.0 weighted sum) and 0 negative (0.0 wgt'ed) examples.
+////// The minimal (wgt'ed) coverage = 3.000, the maximal (wgt'ed) NEG coverage = 0.499, and the minimal (wgt'ed) precision = 0.001 (using m = 0.1)
+
+usePrologVariables: true.
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: allPossibleMarkers
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #0, (-Infinity, 0.05], from 'outerLoop #3, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.042, precision = 0.976, and F1 = 0.080 - learned after 9 total and 5 acceptable nodes.  Node score = -19.478262809565194
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), hasposition(D, faculty)) THEN output = -0.141851 ELSE output = 0.553801;
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #5, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.091, precision = 0.968, and F1 = 0.166 - learned after 26 total and 17 acceptable nodes.  Node score = -6.666668726666667
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(D, 9)) THEN output = -0.141851 ELSE output = 0.191482;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #7, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.124, precision = 0.968, and F1 = 0.221 - learned after 26 total and 14 acceptable nodes.  Node score = -3.2380983180952323
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_pubs(E, 15)) THEN output = 0.858149 ELSE output = 0.667673;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #7, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.166, precision = 0.976, and F1 = 0.284 - learned after 10 total and 3 acceptable nodes.  Node score = -3.2000030799999957
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), yearsinprogram(D, year_4)) THEN output = 0.858149 ELSE output = 0.658149;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #8, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.248, precision = 0.968, and F1 = 0.395 - learned after 27 total and 10 acceptable nodes.  Node score = -1.3537433898348965
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), yearsinprogram(Anon44527, year_6)) THEN output = 0.858149 ELSE output = 0.346696;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #6, null' and covering 5.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.262, precision = 0.980, and F1 = 0.413 - learned after 17 total and 6 acceptable nodes.  Node score = -4.014288794285712
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), yearsinprogram(D, year_1)) THEN output = 0.058149 ELSE output = 0.501006;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #8, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.331, precision = 0.976, and F1 = 0.494 - learned after 99 total and 48 acceptable nodes.  Node score = -1.475932245487459
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), count_taughtby(Anon44527, 3)) THEN output = 0.858149 ELSE output = 0.229587;
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #6, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.366, precision = 0.986, and F1 = 0.534 - learned after 13 total and 3 acceptable nodes.  Node score = -1.6666698366666644
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), tempadvisedby(D, Anon43919)) THEN output = -0.141851 ELSE output = 0.691482;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #8, null' and covering 5.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.413, precision = 0.980, and F1 = 0.581 - learned after 18 total and 5 acceptable nodes.  Node score = -1.658107749385903
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), inphase(Anon44527, post_generals)) THEN output = 0.643612 ELSE output = 0.363334;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #8, null' and covering 6.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.496, precision = 0.984, and F1 = 0.659 - learned after 5 total and 1 acceptable nodes.  Node score = -1.8489323462175433
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), student(Anon44527)) THEN output = 0.488766 ELSE output = 0.405433;
+
+// Best in (weighted) recall bin #10, (0.5, 0.55], from 'outerLoop #6, null' and covering 10.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.524, precision = 0.990, and F1 = 0.685 - learned after 32 total and 17 acceptable nodes.  Node score = -6.031564315157595
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), have_more_than_n_common_pubs(E, Anon43929, 3)) THEN output = 0.065047 ELSE output = 0.302593;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #7, null' and covering 14.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.581, precision = 0.993, and F1 = 0.733 - learned after 20 total and 8 acceptable nodes.  Node score = -3.257145937142851
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_pubs(E, 3)) THEN output = 0.643863 ELSE output = 0.758149;
+
+// Best in (weighted) recall bin #12, (0.6, 0.65], from 'outerLoop #7, null' and covering 15.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.622, precision = 0.993, and F1 = 0.765 - learned after 16 total and 6 acceptable nodes.  Node score = -4.900820588811738
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), ta(Anon44521, D, Anon44523)) THEN output = 0.442593 ELSE output = 0.635927;
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #8, null' and covering 8.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.661, precision = 0.988, and F1 = 0.792 - learned after 39 total and 15 acceptable nodes.  Node score = -1.6187976024921866
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), have_more_than_n_pubs(E, 9)) THEN output = 0.250962 ELSE output = 0.608149;
+
+// Best in (weighted) recall bin #14, (0.7, 0.75], from 'outerLoop #8, null' and covering 9.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.744, precision = 0.989, and F1 = 0.849 - learned after 30 total and 11 acceptable nodes.  Node score = -1.6576553131256464
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), ta(Anon45117, D, Anon45119)) THEN output = 0.227824 ELSE output = 0.524816;
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #7, null' and covering 19.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.788, precision = 0.995, and F1 = 0.880 - learned after 19 total and 7 acceptable nodes.  Node score = -3.326318869473677
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_pubs(E, 1)) THEN output = 0.700254 ELSE output = 0.658149;
+
+// Best in (weighted) recall bin #16, (0.8, 0.85], from 'outerLoop #7, null' and covering 20.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.830, precision = 0.995, and F1 = 0.905 - learned after 43 total and 26 acceptable nodes.  Node score = -3.3000031699999917
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), count_publications(E, Anon44537)) THEN output = 0.708149 ELSE output = 0.608149;
+      /* FALSE NEG: advisedby(person381, person168) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person403, person279) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person68, person201) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person265, person168) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #2, null' and covering 120.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.888, precision = 0.999, and F1 = 0.940 - learned after 59 total and 51 acceptable nodes.  Node score = -24.258335583333576
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), count_publications(E, Anon40749)) THEN output = 0.633149 ELSE output = 0.524816;
+      /* FALSE NEG: advisedby(person159, person201) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person208, person319) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person312, person319) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person126, person213) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person265, person168) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+
+// Best in (weighted) recall bin #18, (0.9, 0.95], from 'outerLoop #4, null' and covering 52.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.911, precision = 0.998, and F1 = 0.952 - learned after 4 total and 1 acceptable nodes.  Node score = -12.692309732307772
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), student(D)) THEN output = 0.435072 ELSE output = -0.141851;
+      /* FALSE NEG: advisedby(person235, person335) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person240, person213) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person378, person415) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person171, person82) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person364, person298) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #2, null' and covering 130.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.962, precision = 0.999, and F1 = 0.980 - learned after 3 total and 0 acceptable nodes.  Node score = -21.392309732308064
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), student(D)) THEN output = 0.650457 ELSE output = -0.141851;
+      /* FALSE NEG: advisedby(person235, person335) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person240, person213) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person378, person415) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person171, person82) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person364, person298) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #1, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #0, (-Infinity, 0.05], from 'outerLoop #1, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.033, precision = 0.991, and F1 = 0.063 - learned after 48 total and 43 acceptable nodes.  Node score = -73.25874250874142
+
+ FOR advisedby(D, E) IF (have_more_than_n_common_pubs(E, Anon39923, 13)) THEN output = 0.585422 ELSE output = 0.181226;
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #1, null' and covering 30.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.089, precision = 0.997, and F1 = 0.163 - learned after 36 total and 31 acceptable nodes.  Node score = -61.01628768495131
+
+ FOR advisedby(D, E) IF (have_more_than_n_common_pubs(D, E, 1)) THEN output = 0.858149 ELSE output = 0.131765;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #1, null' and covering 42.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.125, precision = 0.998, and F1 = 0.222 - learned after 64 total and 59 acceptable nodes.  Node score = -54.42711977406803
+
+ FOR advisedby(D, E) IF (count_common_pubs(D, E, Anon39937)) THEN output = 0.858149 ELSE output = 0.102217;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #1, null' and covering 65.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.193, precision = 0.998, and F1 = 0.323 - learned after 33 total and 28 acceptable nodes.  Node score = -60.947148457627186
+
+ FOR advisedby(D, E) IF (have_more_than_n_pubs(E, 11)) THEN output = 0.611995 ELSE output = 0.094311;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #1, null' and covering 76.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.225, precision = 0.999, and F1 = 0.368 - learned after 32 total and 27 acceptable nodes.  Node score = -62.19332097805683
+
+ FOR advisedby(D, E) IF (have_more_than_n_pubs(E, 9)) THEN output = 0.555517 ELSE output = 0.088918;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #1, null' and covering 94.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.279, precision = 0.999, and F1 = 0.436 - learned after 14 total and 12 acceptable nodes.  Node score = -57.88517199053394
+
+ FOR advisedby(D, E) IF (tempadvisedby(Anon39911, E)) THEN output = 0.363030 ELSE output = 0.039219;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #1, null' and covering 111.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.329, precision = 0.999, and F1 = 0.495 - learned after 22 total and 19 acceptable nodes.  Node score = -56.61904151463461
+
+ FOR advisedby(D, E) IF (ta(Anon39917, E, Anon39919)) THEN output = -0.082617 ELSE output = 0.360371;
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #1, null' and covering 122.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.362, precision = 0.999, and F1 = 0.531 - learned after 29 total and 24 acceptable nodes.  Node score = -54.12245634396523
+
+ FOR advisedby(D, E) IF (have_more_than_n_pubs(E, 3)) THEN output = 0.530280 ELSE output = 0.006986;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #1, null' and covering 135.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.400, precision = 0.999, and F1 = 0.572 - learned after 10 total and 8 acceptable nodes.  Node score = -34.81580605382508
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty)) THEN output = 0.621112 ELSE output = -0.087396;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #1, null' and covering 168.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.498, precision = 0.999, and F1 = 0.665 - learned after 3 total and 1 acceptable nodes.  Node score = -36.64285826285776
+
+ FOR advisedby(D, E) IF (professor(E)) THEN output = 0.536720 ELSE output = -0.141851;
+
+// Best in (weighted) recall bin #10, (0.5, 0.55], from 'outerLoop #1, null' and covering 169.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.501, precision = 0.999, and F1 = 0.668 - learned after 5 total and 3 acceptable nodes.  Node score = -36.5389232756889
+
+ FOR advisedby(D, E) IF (student(E)) THEN output = -0.141851 ELSE output = 0.534796;
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #1, null' and covering 291.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.863, precision = 1.000, and F1 = 0.926 - learned after 4 total and 2 acceptable nodes.  Node score = -69.34020730556783
+
+ FOR advisedby(D, E) IF (student(D)) THEN output = 0.249902 ELSE output = -0.141851;
+      /* FALSE NEG: advisedby(person107, person382) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person124, person320) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person150, person29) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person103, person86) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person111, person272) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #2, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #0, (-Infinity, 0.05], from 'outerLoop #2, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.030, precision = 0.976, and F1 = 0.057 - learned after 24 total and 17 acceptable nodes.  Node score = -24.076925136923236
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(D, 11)) THEN output = 0.358149 ELSE output = 0.627380;
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #2, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.052, precision = 0.986, and F1 = 0.098 - learned after 35 total and 28 acceptable nodes.  Node score = -23.937009934015848
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(D, E, 5)) THEN output = 0.858149 ELSE output = 0.606180;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #2, null' and covering 16.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.118, precision = 0.994, and F1 = 0.212 - learned after 34 total and 27 acceptable nodes.  Node score = -23.322035958305044
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(D, E, 3)) THEN output = 0.858149 ELSE output = 0.586962;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #2, null' and covering 27.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.200, precision = 0.996, and F1 = 0.333 - learned after 33 total and 26 acceptable nodes.  Node score = -22.51852057851846
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(D, E, 1)) THEN output = 0.858149 ELSE output = 0.561853;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #2, null' and covering 39.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.289, precision = 0.997, and F1 = 0.448 - learned after 60 total and 52 acceptable nodes.  Node score = -21.333335483333375
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), count_common_pubs(D, E, Anon40753)) THEN output = 0.858149 ELSE output = 0.524816;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #2, null' and covering 47.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.348, precision = 0.998, and F1 = 0.516 - learned after 9 total and 4 acceptable nodes.  Node score = -23.183996257292105
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_quals)) THEN output = 0.751766 ELSE output = 0.551331;
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #2, null' and covering 49.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.363, precision = 0.998, and F1 = 0.532 - learned after 19 total and 12 acceptable nodes.  Node score = -23.99620519241576
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(D, 1)) THEN output = 0.694884 ELSE output = 0.579079;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #2, null' and covering 55.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.407, precision = 0.998, and F1 = 0.578 - learned after 10 total and 5 acceptable nodes.  Node score = -21.78504233617957
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals)) THEN output = 0.785422 ELSE output = 0.503719;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #2, null' and covering 64.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.474, precision = 0.998, and F1 = 0.643 - learned after 58 total and 50 acceptable nodes.  Node score = -23.62060074154932
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), count_publications(D, Anon40749)) THEN output = 0.701899 ELSE output = 0.548290;
+
+// Best in (weighted) recall bin #10, (0.5, 0.55], from 'outerLoop #2, null' and covering 70.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.518, precision = 0.999, and F1 = 0.682 - learned after 45 total and 38 acceptable nodes.  Node score = -29.574752725331756
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(E, Anon40739, 5)) THEN output = 0.222236 ELSE output = 0.627380;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #2, null' and covering 79.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.585, precision = 0.999, and F1 = 0.738 - learned after 28 total and 21 acceptable nodes.  Node score = -24.412524763978322
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 7)) THEN output = 0.617643 ELSE output = 0.626006;
+
+// Best in (weighted) recall bin #12, (0.6, 0.65], from 'outerLoop #2, null' and covering 82.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.607, precision = 0.999, and F1 = 0.755 - learned after 27 total and 20 acceptable nodes.  Node score = -24.408883890326752
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 5)) THEN output = 0.626442 ELSE output = 0.612866;
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #2, null' and covering 92.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.681, precision = 0.999, and F1 = 0.810 - learned after 11 total and 6 acceptable nodes.  Node score = -27.869273353102944
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), tempadvisedby(Anon40727, E)) THEN output = 0.358667 ELSE output = 0.672102;
+
+// Best in (weighted) recall bin #14, (0.7, 0.75], from 'outerLoop #2, null' and covering 97.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.718, precision = 0.999, and F1 = 0.835 - learned after 26 total and 19 acceptable nodes.  Node score = -24.269399881106878
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 3)) THEN output = 0.641654 ELSE output = 0.568675;
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #2, null' and covering 120.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.888, precision = 0.999, and F1 = 0.940 - learned after 59 total and 51 acceptable nodes.  Node score = -24.258335583333576
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), count_publications(E, Anon40749)) THEN output = 0.633149 ELSE output = 0.524816;
+      /* FALSE NEG: advisedby(person159, person201) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person208, person319) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person312, person319) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person126, person213) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person265, person168) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #2, null' and covering 130.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.962, precision = 0.999, and F1 = 0.980 - learned after 3 total and 0 acceptable nodes.  Node score = -21.392309732308064
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), student(D)) THEN output = 0.650457 ELSE output = -0.141851;
+      /* FALSE NEG: advisedby(person235, person335) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person240, person213) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person378, person415) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person171, person82) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person364, person298) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #3, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #0, (-Infinity, 0.05], from 'outerLoop #3, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.042, precision = 0.976, and F1 = 0.080 - learned after 9 total and 5 acceptable nodes.  Node score = -19.478262809565194
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), hasposition(D, faculty)) THEN output = -0.141851 ELSE output = 0.553801;
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #3, null' and covering 5.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.052, precision = 0.980, and F1 = 0.099 - learned after 2 total and 0 acceptable nodes.  Node score = -18.989013029010962
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), professor(D)) THEN output = -0.141851 ELSE output = 0.561446;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #3, null' and covering 14.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.146, precision = 0.993, and F1 = 0.254 - learned after 51 total and 39 acceptable nodes.  Node score = -20.170109140942195
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(E, Anon41493, 11)) THEN output = 0.329936 ELSE output = 0.553271;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #3, null' and covering 15.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.156, precision = 0.993, and F1 = 0.270 - learned after 19 total and 13 acceptable nodes.  Node score = -20.06913786246917
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), yearsinprogram(D, year_5)) THEN output = 0.791482 ELSE output = 0.475433;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #3, null' and covering 23.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.239, precision = 0.996, and F1 = 0.386 - learned after 50 total and 38 acceptable nodes.  Node score = -19.972091235540898
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(E, Anon41493, 9)) THEN output = 0.265520 ELSE output = 0.584176;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #3, null' and covering 25.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.260, precision = 0.996, and F1 = 0.413 - learned after 69 total and 55 acceptable nodes.  Node score = -21.183100741549325
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), count_publications(D, Anon41503)) THEN output = 0.458149 ELSE output = 0.548290;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #3, null' and covering 33.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.343, precision = 0.997, and F1 = 0.511 - learned after 38 total and 27 acceptable nodes.  Node score = -21.28715944715738
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 11)) THEN output = 0.494513 ELSE output = 0.540689;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #3, null' and covering 39.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.406, precision = 0.997, and F1 = 0.577 - learned after 12 total and 7 acceptable nodes.  Node score = -18.569502734763923
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_quals)) THEN output = 0.729944 ELSE output = 0.384465;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #3, null' and covering 48.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.499, precision = 0.998, and F1 = 0.666 - learned after 36 total and 25 acceptable nodes.  Node score = -20.958335493333465
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 7)) THEN output = 0.462316 ELSE output = 0.587316;
+
+// Best in (weighted) recall bin #10, (0.5, 0.55], from 'outerLoop #3, null' and covering 51.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.531, precision = 0.998, and F1 = 0.693 - learned after 35 total and 24 acceptable nodes.  Node score = -21.166015231895557
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 5)) THEN output = 0.485600 ELSE output = 0.569260;
+
+// Best in (weighted) recall bin #12, (0.6, 0.65], from 'outerLoop #3, null' and covering 62.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.645, precision = 0.998, and F1 = 0.784 - learned after 34 total and 23 acceptable nodes.  Node score = -21.328275404781813
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 3)) THEN output = 0.519439 ELSE output = 0.534620;
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #3, null' and covering 64.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.666, precision = 0.998, and F1 = 0.799 - learned after 17 total and 11 acceptable nodes.  Node score = -23.283688119942855
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), tempadvisedby(Anon41481, E)) THEN output = 0.301746 ELSE output = 0.608149;
+
+// Best in (weighted) recall bin #16, (0.8, 0.85], from 'outerLoop #3, null' and covering 79.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.822, precision = 0.999, and F1 = 0.902 - learned after 33 total and 22 acceptable nodes.  Node score = -21.30156582344005
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 1)) THEN output = 0.516377 ELSE output = 0.564031;
+      /* FALSE NEG: advisedby(person159, person201) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person208, person319) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person312, person319) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person126, person213) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person265, person168) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+
+// Best in (weighted) recall bin #18, (0.9, 0.95], from 'outerLoop #3, null' and covering 91.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.947, precision = 0.999, and F1 = 0.972 - learned after 4 total and 1 acceptable nodes.  Node score = -18.98901302901092
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), student(D)) THEN output = 0.561446 ELSE output = -0.141851;
+      /* FALSE NEG: advisedby(person235, person335) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person240, person213) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person378, person415) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person171, person82) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person364, person298) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #4, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #4, null' and covering 5.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.088, precision = 0.980, and F1 = 0.161 - learned after 2 total and 0 acceptable nodes.  Node score = -12.692309732307717
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), professor(D)) THEN output = -0.141851 ELSE output = 0.435072;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #4, null' and covering 8.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.140, precision = 0.988, and F1 = 0.245 - learned after 15 total and 10 acceptable nodes.  Node score = -11.63265521122452
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), tempadvisedby(D, Anon42355)) THEN output = -0.141851 ELSE output = 0.470394;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #4, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.193, precision = 0.991, and F1 = 0.323 - learned after 62 total and 51 acceptable nodes.  Node score = -13.849804521541516
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), count_taughtby(D, Anon42373)) THEN output = 0.221785 ELSE output = 0.423366;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #4, null' and covering 13.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.228, precision = 0.992, and F1 = 0.370 - learned after 47 total and 37 acceptable nodes.  Node score = -13.248037360191027
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(E, Anon42365, 9)) THEN output = 0.143541 ELSE output = 0.449058;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #4, null' and covering 17.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.298, precision = 0.994, and F1 = 0.458 - learned after 46 total and 36 acceptable nodes.  Node score = -14.590710123204914
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(E, Anon42365, 7)) THEN output = 0.166237 ELSE output = 0.408149;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #4, null' and covering 19.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.333, precision = 0.995, and F1 = 0.499 - learned after 12 total and 7 acceptable nodes.  Node score = -14.21052837578946
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals)) THEN output = 0.384465 ELSE output = 0.384465;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #4, null' and covering 24.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.420, precision = 0.996, and F1 = 0.591 - learned after 11 total and 6 acceptable nodes.  Node score = -10.303032363030308
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals)) THEN output = 0.691482 ELSE output = 0.161179;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #4, null' and covering 27.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.473, precision = 0.996, and F1 = 0.641 - learned after 33 total and 24 acceptable nodes.  Node score = -13.866668826666645
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 7)) THEN output = 0.302593 ELSE output = 0.458149;
+
+// Best in (weighted) recall bin #10, (0.5, 0.55], from 'outerLoop #4, null' and covering 31.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.543, precision = 0.997, and F1 = 0.703 - learned after 44 total and 34 acceptable nodes.  Node score = -16.269759103658064
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(E, Anon42365, 3)) THEN output = 0.061821 ELSE output = 0.435072;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #4, null' and covering 34.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.595, precision = 0.997, and F1 = 0.746 - learned after 31 total and 22 acceptable nodes.  Node score = -14.152176073043458
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 3)) THEN output = 0.358149 ELSE output = 0.423366;
+
+// Best in (weighted) recall bin #12, (0.6, 0.65], from 'outerLoop #4, null' and covering 36.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.630, precision = 0.997, and F1 = 0.773 - learned after 14 total and 9 acceptable nodes.  Node score = -15.36927433896567
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), tempadvisedby(Anon42353, E)) THEN output = 0.208779 ELSE output = 0.477197;
+
+// Best in (weighted) recall bin #16, (0.8, 0.85], from 'outerLoop #4, null' and covering 47.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.823, precision = 0.998, and F1 = 0.902 - learned after 65 total and 53 acceptable nodes.  Node score = -14.202129909574527
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), count_publications(E, Anon42375)) THEN output = 0.390064 ELSE output = 0.358149;
+      /* FALSE NEG: advisedby(person381, person168) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person68, person201) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person312, person319) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person318, person319) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person265, person168) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+
+// Best in (weighted) recall bin #18, (0.9, 0.95], from 'outerLoop #4, null' and covering 52.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.911, precision = 0.998, and F1 = 0.952 - learned after 4 total and 1 acceptable nodes.  Node score = -12.692309732307772
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), student(D)) THEN output = 0.435072 ELSE output = -0.141851;
+      /* FALSE NEG: advisedby(person235, person335) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person240, person213) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person378, person415) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person171, person82) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person364, person298) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #5, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #5, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.091, precision = 0.968, and F1 = 0.166 - learned after 26 total and 17 acceptable nodes.  Node score = -6.666668726666667
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(D, 9)) THEN output = -0.141851 ELSE output = 0.191482;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #5, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.121, precision = 0.976, and F1 = 0.215 - learned after 9 total and 5 acceptable nodes.  Node score = -6.5517260779310345
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), hasposition(D, faculty)) THEN output = -0.141851 ELSE output = 0.202977;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #5, null' and covering 6.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.181, precision = 0.984, and F1 = 0.306 - learned after 15 total and 10 acceptable nodes.  Node score = -6.000002059999998
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), yearsinprogram(D, year_3)) THEN output = 0.524816 ELSE output = 0.080371;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #5, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.211, precision = 0.986, and F1 = 0.348 - learned after 7 total and 4 acceptable nodes.  Node score = -6.6824485753784755
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), taughtby(Anon43163, D, Anon43165)) THEN output = -0.014961 ELSE output = 0.204303;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #5, null' and covering 9.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.272, precision = 0.989, and F1 = 0.427 - learned after 41 total and 32 acceptable nodes.  Node score = -6.5174691489915055
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(E, Anon43185, 9)) THEN output = 0.016544 ELSE output = 0.233149;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #5, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.332, precision = 0.991, and F1 = 0.498 - learned after 40 total and 31 acceptable nodes.  Node score = -6.976677482609145
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(E, Anon43185, 7)) THEN output = 0.067963 ELSE output = 0.176331;
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #5, null' and covering 13.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.393, precision = 0.992, and F1 = 0.563 - learned after 32 total and 23 acceptable nodes.  Node score = -6.969232929230766
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 11)) THEN output = 0.165841 ELSE output = 0.158149;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #5, null' and covering 15.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.453, precision = 0.993, and F1 = 0.622 - learned after 31 total and 22 acceptable nodes.  Node score = -6.93333549333333
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_pubs(E, 9)) THEN output = 0.124816 ELSE output = 0.191482;
+
+// Best in (weighted) recall bin #10, (0.5, 0.55], from 'outerLoop #5, null' and covering 17.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.514, precision = 0.994, and F1 = 0.677 - learned after 39 total and 30 acceptable nodes.  Node score = -6.819746375806034
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), have_more_than_n_common_pubs(E, Anon43185, 5)) THEN output = 0.069833 ELSE output = 0.170649;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #5, null' and covering 19.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.574, precision = 0.995, and F1 = 0.728 - learned after 12 total and 7 acceptable nodes.  Node score = -4.736844165263157
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals)) THEN output = 0.384465 ELSE output = -0.141851;
+
+// Best in (weighted) recall bin #12, (0.6, 0.65], from 'outerLoop #5, null' and covering 21.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.634, precision = 0.995, and F1 = 0.775 - learned after 19 total and 12 acceptable nodes.  Node score = -6.845573885830708
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), ta(Anon43179, D, Anon43181)) THEN output = 0.072503 ELSE output = 0.191482;
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #5, null' and covering 22.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.665, precision = 0.995, and F1 = 0.797 - learned after 14 total and 9 acceptable nodes.  Node score = -6.725013921643427
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), tempadvisedby(Anon43173, E)) THEN output = 0.025704 ELSE output = 0.312694;
+
+// Best in (weighted) recall bin #16, (0.8, 0.85], from 'outerLoop #5, null' and covering 28.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.846, precision = 0.996, and F1 = 0.915 - learned after 4 total and 1 acceptable nodes.  Node score = -6.428573468571431
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), student(D)) THEN output = 0.215292 ELSE output = -0.141851;
+      /* FALSE NEG: advisedby(person235, person335) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person240, person213) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person378, person415) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person171, person82) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person364, person298) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #6, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #6, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.209, precision = 0.976, and F1 = 0.345 - learned after 28 total and 14 acceptable nodes.  Node score = -4.4833364133333315
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), have_more_than_n_pubs(E, 13)) THEN output = 0.608149 ELSE output = 0.324816;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #6, null' and covering 5.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.262, precision = 0.980, and F1 = 0.413 - learned after 17 total and 6 acceptable nodes.  Node score = -4.014288794285712
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), yearsinprogram(D, year_1)) THEN output = 0.058149 ELSE output = 0.501006;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #6, null' and covering 6.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.314, precision = 0.984, and F1 = 0.476 - learned after 14 total and 4 acceptable nodes.  Node score = -4.564105644102564
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), yearsinprogram(D, year_3)) THEN output = 0.524816 ELSE output = 0.319687;
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #6, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.366, precision = 0.986, and F1 = 0.534 - learned after 13 total and 3 acceptable nodes.  Node score = -1.6666698366666644
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), tempadvisedby(D, Anon43919)) THEN output = -0.141851 ELSE output = 0.691482;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #6, null' and covering 8.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.419, precision = 0.988, and F1 = 0.588 - learned after 24 total and 10 acceptable nodes.  Node score = -4.602275807272725
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), have_more_than_n_pubs(E, 5)) THEN output = 0.483149 ELSE output = 0.312694;
+
+// Best in (weighted) recall bin #10, (0.5, 0.55], from 'outerLoop #6, null' and covering 10.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.524, precision = 0.990, and F1 = 0.685 - learned after 32 total and 17 acceptable nodes.  Node score = -6.031564315157595
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), have_more_than_n_common_pubs(E, Anon43929, 3)) THEN output = 0.065047 ELSE output = 0.302593;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #6, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.576, precision = 0.991, and F1 = 0.728 - learned after 23 total and 9 acceptable nodes.  Node score = -4.727275807272727
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), have_more_than_n_pubs(E, 3)) THEN output = 0.403603 ELSE output = 0.358149;
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #6, null' and covering 13.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.681, precision = 0.992, and F1 = 0.807 - learned after 18 total and 7 acceptable nodes.  Node score = -5.00544032792976
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), ta(Anon43923, D, Anon43925)) THEN output = 0.099846 ELSE output = 0.524816;
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #6, null' and covering 15.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.785, precision = 0.993, and F1 = 0.877 - learned after 22 total and 8 acceptable nodes.  Node score = -4.733336413333332
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, pre_quals), have_more_than_n_pubs(E, 1)) THEN output = 0.391482 ELSE output = 0.358149;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #7, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #7, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.124, precision = 0.968, and F1 = 0.221 - learned after 26 total and 14 acceptable nodes.  Node score = -3.2380983180952323
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_pubs(E, 15)) THEN output = 0.858149 ELSE output = 0.667673;
+
+// Best in (weighted) recall bin #3, (0.15, 0.2], from 'outerLoop #7, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.166, precision = 0.976, and F1 = 0.284 - learned after 10 total and 3 acceptable nodes.  Node score = -3.2000030799999957
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), yearsinprogram(D, year_4)) THEN output = 0.858149 ELSE output = 0.658149;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #7, null' and covering 6.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.249, precision = 0.984, and F1 = 0.397 - learned after 24 total and 12 acceptable nodes.  Node score = -3.111114191111107
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_pubs(E, 11)) THEN output = 0.858149 ELSE output = 0.635927;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #7, null' and covering 8.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.332, precision = 0.988, and F1 = 0.497 - learned after 23 total and 11 acceptable nodes.  Node score = -3.2500030799999937
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_pubs(E, 9)) THEN output = 0.608149 ELSE output = 0.733149;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #7, null' and covering 10.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.415, precision = 0.990, and F1 = 0.585 - learned after 22 total and 10 acceptable nodes.  Node score = -3.028574508571424
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_pubs(E, 7)) THEN output = 0.558149 ELSE output = 0.786720;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #7, null' and covering 12.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.498, precision = 0.992, and F1 = 0.663 - learned after 28 total and 16 acceptable nodes.  Node score = -3.0123292098508294
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3)) THEN output = 0.274384 ELSE output = 0.774816;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #7, null' and covering 14.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.581, precision = 0.993, and F1 = 0.733 - learned after 20 total and 8 acceptable nodes.  Node score = -3.257145937142851
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_pubs(E, 3)) THEN output = 0.643863 ELSE output = 0.758149;
+
+// Best in (weighted) recall bin #12, (0.6, 0.65], from 'outerLoop #7, null' and covering 15.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.622, precision = 0.993, and F1 = 0.765 - learned after 16 total and 6 acceptable nodes.  Node score = -4.900820588811738
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), ta(Anon44521, D, Anon44523)) THEN output = 0.442593 ELSE output = 0.635927;
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #7, null' and covering 19.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.788, precision = 0.995, and F1 = 0.880 - learned after 19 total and 7 acceptable nodes.  Node score = -3.326318869473677
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_pubs(E, 1)) THEN output = 0.700254 ELSE output = 0.658149;
+
+// Best in (weighted) recall bin #16, (0.8, 0.85], from 'outerLoop #7, null' and covering 20.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.830, precision = 0.995, and F1 = 0.905 - learned after 43 total and 26 acceptable nodes.  Node score = -3.3000031699999917
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), count_publications(E, Anon44537)) THEN output = 0.708149 ELSE output = 0.608149;
+      /* FALSE NEG: advisedby(person381, person168) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person403, person279) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+      /* FALSE NEG: advisedby(person68, person201) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person265, person168) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #8, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #8, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.248, precision = 0.968, and F1 = 0.395 - learned after 27 total and 10 acceptable nodes.  Node score = -1.3537433898348965
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), yearsinprogram(Anon44527, year_6)) THEN output = 0.858149 ELSE output = 0.346696;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #8, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.331, precision = 0.976, and F1 = 0.494 - learned after 99 total and 48 acceptable nodes.  Node score = -1.475932245487459
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), count_taughtby(Anon44527, 3)) THEN output = 0.858149 ELSE output = 0.229587;
+
+// Best in (weighted) recall bin #8, (0.4, 0.45], from 'outerLoop #8, null' and covering 5.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.413, precision = 0.980, and F1 = 0.581 - learned after 18 total and 5 acceptable nodes.  Node score = -1.658107749385903
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), inphase(Anon44527, post_generals)) THEN output = 0.643612 ELSE output = 0.363334;
+
+// Best in (weighted) recall bin #9, (0.45, 0.5], from 'outerLoop #8, null' and covering 6.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.496, precision = 0.984, and F1 = 0.659 - learned after 5 total and 1 acceptable nodes.  Node score = -1.8489323462175433
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), student(Anon44527)) THEN output = 0.488766 ELSE output = 0.405433;
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #8, null' and covering 8.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.661, precision = 0.988, and F1 = 0.792 - learned after 39 total and 15 acceptable nodes.  Node score = -1.6187976024921866
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), have_more_than_n_pubs(E, 9)) THEN output = 0.250962 ELSE output = 0.608149;
+
+// Best in (weighted) recall bin #14, (0.7, 0.75], from 'outerLoop #8, null' and covering 9.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.744, precision = 0.989, and F1 = 0.849 - learned after 30 total and 11 acceptable nodes.  Node score = -1.6576553131256464
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), ta(Anon45117, D, Anon45119)) THEN output = 0.227824 ELSE output = 0.524816;
+
+// Best in (weighted) recall bin #16, (0.8, 0.85], from 'outerLoop #8, null' and covering 10.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.826, precision = 0.990, and F1 = 0.901 - learned after 3 total and 0 acceptable nodes.  Node score = -Infinity
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), professor(Anon44527)) THEN output = 0.402675 ELSE output = 0.358149;
+      /* FALSE NEG: advisedby(person275, person79) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+      /* FALSE NEG: advisedby(person75, person298) Actual Bool=false Prob=0.14185106490048777 Output=-0.14185106490048777 */
+
+// Best in (weighted) recall bin #18, (0.9, 0.95], from 'outerLoop #8, null' and covering 11.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.909, precision = 0.991, and F1 = 0.948 - learned after 37 total and 13 acceptable nodes.  Node score = -Infinity
+
+ FOR advisedby(D, E) IF (hasposition(E, faculty), inphase(D, post_generals), have_more_than_n_common_pubs(E, Anon44527, 3), have_more_than_n_pubs(E, 5)) THEN output = 0.264655 ELSE output = 0.858149;
+      /* FALSE NEG: advisedby(person275, person79) Actual Bool=true Prob=0.14185106490048777 Output=0.8581489350995122 */
+

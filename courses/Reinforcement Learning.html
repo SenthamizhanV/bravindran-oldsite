@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0069)http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Balaraman Ravindran</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="./Reinforcement Learning_files/default.css" rel="stylesheet" type="text/css">
+</head><body>
+<div id="header">
+<center>
+	<div id="logo">
+		<!--<h1>Balaraman Ravindran</h1>-->
+	<a href="http://www.cse.iitm.ac.in/~ravi/Ravi-Pic.jpg"><img src="./Reinforcement Learning_files/Ravi-Pic-small.jpg" vspace="25" height="150" align="middle"></a>
+	</div>
+</center>
+	<div id="address">
+<font size="+2">Balaraman Ravindran</font><br>
+<!--BSB 349--><br>
+Computer Science and Engineering &amp;<br>
+Robert Bosch Centre for Data Science and AI<br>
+Indian Institute of Technology Madras<br>
+Chennai, 600 036.<br>
+Ph: +91-44-22574370<br>
+ravi@cse.iitm.ac.in<br>
+		<ul>
+			<li><a href="http://www.cse.iitm.ac.in/~ravi/index.html" accesskey="1" title="">Home</a></li>
+			<li><a href="http://www.cse.iitm.ac.in/~ravi/publications.html" accesskey="2" title="">Publications</a></li>
+			<li><a href="http://www.cse.iitm.ac.in/~ravi/research.html" accesskey="3" title="">Research</a></li>
+			<li><a href="http://www.cse.iitm.ac.in/~ravi/teaching.html" accesskey="4" title="">Teaching</a></li>
+			<li><a href="http://www.cse.iitm.ac.in/~ravi/students.html" accesskey="5" title="">Students</a></li>
+		</ul>
+	</div>
+</div>
+<div id="content">
+	<div id="colOne">
+		<div class="content">
+<h4><a href="http://www.cse.iitm.ac.in/~ravi/courses/index.html">Online NPTEL Courses</a></h4>		<!-- replace with web link -->
+(<font size="1"><a href="http://www.cse.iitm.ac.in/~ravi/teaching.html">Classroom Courses Taught</a></font>)<br>
+<ul>
+<h4>Reinforcment Learning</h4><p></p>
+Reinforcement learning is a paradigm that aims to model the 
+trial-and-error learning process that is needed in many problem 
+situations where explicit instructive signals are not available. It has 
+roots in operations research, behavioral psychology and AI. The goal of 
+the course is to introduce the basic mathematical foundations of 
+reinforcement learning, as well as highlight some of the recent 
+directions of research.
+<p>
+We provide two alternate ways of streaming the videos<br> - default
+Youtube Player ( <img src="images/youtube.jpg" width=15 height=12> ) <br>
+- feature-rich <a href="http://videoken.com">Videoken Player</a> ( <img src="images/videoken.jpg"
+width=15 height=12> ). <p>
+
+<!--<font size="1">Previously offered: <a href="http://nptel.ac.in/courses/106106143/">July-October 2016</a>.</font>-->
+
+<font size="2"><ul>
+	<li><p><b>Week 0 - Preparatory Material</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>Probability tutorial - 1</li></td>
+        <td><a href="https://youtu.be/6KBUU2Aa6lw">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/6KBUU2Aa6lw">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Probability tutorial - 2</li></td>
+        <td><a href="https://youtu.be/ymBN8m1SL2s">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/ymBN8m1SL2s">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Linear algebra tutorial - 1</li></td>
+        <td><a href="https://youtu.be/7Py7x8pds24">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/7Py7x8pds24">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Linear algebra tutorial - 2</li></td>
+        <td><a href="https://youtu.be/AXvGBmPD9q4">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/AXvGBmPD9q4">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li> <a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment0.pdf">Assignment 0</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution0.pdf">Solution 0</a></li> </td></tr>
+</table>
+</ul>
+
+           <li><p><b>Week 1 - Introduction to RL and Immediate RL</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>Introduction to RL</li></td>
+        <td><a href="https://youtu.be/YaPSPu7K9S0">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/YaPSPu7K9S0">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>RL framework and applications</li></td>
+        <td><a href="https://youtu.be/ewkm38skUlY">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/ewkm38skUlY">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Introduction to immediate RL</li></td>
+        <td><a href="https://youtu.be/nNK4xKkAapM">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/nNK4xKkAapM">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Bandit optimalities</li></td>
+        <td><a href="https://youtu.be/AizR8uvhX-s">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/AizR8uvhX-s">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Value function based methods</li></td>
+        <td><a href="https://youtu.be/iB4m-jP7blI">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/iB4m-jP7blI">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment1.pdf">Assignment 1</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution1.pdf">Solution 1</a></li> </td></tr>
+</table>
+</ul>
+	<li><p><b>Week 2 - Bandit Algorithms</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>UCB 1</li></td>
+        <td><a href="https://youtu.be/TIlDzLZPyhY">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/TIlDzLZPyhY">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Concentration bounds</li></td>
+        <td><a href="https://youtu.be/KB-ZDvLbuOQ">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/KB-ZDvLbuOQ">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>UCB 1 Theorem</li></td>
+        <td><a href="https://youtu.be/7IA6Zb7KZM0">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/7IA6Zb7KZM0">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>PAC bounds</li></td>
+        <td><a href="https://youtu.be/N_9HgdhXKIY">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/N_9HgdhXKIY">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Median elimination</li></td>
+        <td><a href="https://youtu.be/3iNaR0Mq1ug">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/3iNaR0Mq1ug">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Thompson sampling</li></td>
+        <td><a href="https://youtu.be/H2OWTxdauqA">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/H2OWTxdauqA">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment2.pdf">Assignment 2</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution2.pdf">Solution 2</a></li> </td></tr>
+</table>
+<li><a href="https://drive.google.com/open?id=1Cx5BGNvLOLorIuvdvg3jyWJ476SN9V7H">Auer, P.; Cesa-Bianchi, N.; Fischer, P. 2002. Finite-time Analysis of the Multiarmed Bandit Problem.</a></li> 
+<li><a href="https://drive.google.com/open?id=1w3NAfjO96-1290AYBgxH1L5V00RjMFMJ">Auer, P.; Ortner, R. 2010. UCB Revisited: Improved Regret Bounds for the Stochastic Multi-Armed Bandit Problem.</a></li> 
+<li><a href="https://drive.google.com/open?id=1hY0U7ZM7qKDaNQyaUv_nFiA2serg9arb">Even-Dar, E.; Mannor, S.; Mansour, Y. 2006. Action Elimination and Stopping Conditions for the Multi-Armed Bandit and Reinforcement Learning Problems.</a></li> 
+<li>Tutorial on OFUL (Szepesvari, C.) <a href="https://www.youtube.com/watch?v=VVcLnAoU9Gw">Part 1</a> <a href="https://www.youtube.com/watch?v=cknukHreMdI">Part 2</a> <a href="https://www.youtube.com/watch?v=ruIO79C2IQc">Part 3</a></li> 
+</ul>
+	<li><p><b>Week 3 - Policy Gradient Methods &amp; Introduction to Full RL</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>Policy search</li></td>
+        <td><a href="https://youtu.be/y3QEOmkxsQo">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/y3QEOmkxsQo">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>REINFORCE</li></td>
+        <td><a href="https://youtu.be/WIBWQ7lOXoA">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/WIBWQ7lOXoA">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Contextual bandits</li></td>
+        <td><a href="https://youtu.be/K2Hh-ayvsJU">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/K2Hh-ayvsJU">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Full RL introduction</li></td>
+        <td><a href="https://youtu.be/yIdgKWFulNQ">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/yIdgKWFulNQ">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Returns, value functions & MDPs</li></td>
+        <td><a href="https://youtu.be/BiY_X1c068U">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/BiY_X1c068U">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment3.pdf">Assignment 3</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution3.pdf">Solution 3</a></li> </td></tr>
+</table>
+<li><a href="https://drive.google.com/open?id=1Z4koDFo3jS1Y_u9ddzqLr0gd1_7h467v">Notes on REINFORCE algorithm</a></li> 
+</ul>
+	<li><p><b>Week 4 - MDP Formulation, Bellman Equations &amp; Optimality Proofs</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>MDP modelling</li></td>
+        <td><a href="https://youtu.be/BpSNh1h4HeQ">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/BpSNh1h4HeQ">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Bellman equation</li></td>
+        <td><a href="https://youtu.be/CTPHADvQxSs">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/CTPHADvQxSs">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Bellman optimality equation</li></td>
+        <td><a href="https://youtu.be/4S9aRrsP954">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/4S9aRrsP954">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Cauchy sequence & Green's equation</li></td>
+        <td><a href="https://youtu.be/THmztE-ghWc">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/THmztE-ghWc">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Banach fixed point theorem</li></td>
+        <td><a href="https://youtu.be/EKwc7rw9YCU">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/EKwc7rw9YCU">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Convergence proof</li></td>
+        <td><a href="https://youtu.be/9UhK8U6rEVY">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/9UhK8U6rEVY">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment4.pdf">Assignment 4</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution4.pdf">Solution 4</a></li> </td></tr>
+</table>
+</ul>
+	<li><p><b>Week 5 - Dynamic Programming &amp; Monte Carlo Methods</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>LPI convergence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></td>
+        <td><a href="https://youtu.be/ybEyXc4hNuk">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/ybEyXc4hNuk">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Value iteration</li></td>
+        <td><a href="https://youtu.be/F3DjpixO1bY">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/F3DjpixO1bY">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Policy iteration</li></td>
+        <td><a href="https://youtu.be/09L0nqw9Vnc">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/09L0nqw9Vnc">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Dynamic programming</li></td>
+        <td><a href="https://youtu.be/_0BQZyXx0eU">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/_0BQZyXx0eU">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Monte Carlo</li></td>
+        <td><a href="https://youtu.be/DaxOiIdjQ4Y">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/DaxOiIdjQ4Y">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Control in Monte Carlo</li></td>
+        <td><a href="https://youtu.be/h7lfqnV-8Pc">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/h7lfqnV-8Pc">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment5.pdf">Assignment 5</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution5.pdf">Solution 5</a></li> </td></tr>
+</table>
+</ul>
+	<li><p><b>Week 6 - Monte Carlo &amp; Temporal Difference Methods</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>Off Policy MC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></td>
+        <td><a href="https://youtu.be/oHE7u15n7Qg">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/oHE7u15n7Qg">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>UCT</li></td>
+        <td><a href="https://youtu.be/unCdZCQS64g">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/unCdZCQS64g">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>TD(0)</li></td>
+        <td><a href="https://youtu.be/4KlVxH8wMWQ">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/4KlVxH8wMWQ">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>TD(0) control</li></td>
+        <td><a href="https://youtu.be/x3PgPnVC-bQ">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/x3PgPnVC-bQ">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Q-learning</li></td>
+        <td><a href=" https://youtu.be/ioQz9Pkycb0">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/ioQz9Pkycb0">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Afterstate</li></td>
+        <td><a href="https://youtu.be/w3wGvwi336I">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/w3wGvwi336I">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment6.pdf">Assignment 6</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution6.pdf">Solution 6</a></li> </td></tr>
+</table>
+</ul>
+	<li><p><b>Week 7 - Eligibility Traces</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>Eligibility traces</li></td>
+        <td><a href="https://youtu.be/n0K83V1sCxc">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/n0K83V1sCxc">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Backward view of eligibility traces</li></td>
+        <td><a href="https://youtu.be/A1s3dc64uhE">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/A1s3dc64uhE">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Eligibility trace control</li></td>
+        <td><a href="https://youtu.be/OgKysheQJSQ">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/OgKysheQJSQ">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Thompson sampling recap</li></td>
+        <td><a href="https://youtu.be/uGUAUkmqQtk">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/uGUAUkmqQtk">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment7.pdf">Assignment 7</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution7.pdf">Solution 7</a></li> </td></tr>
+</table>
+</ul>
+	<li><p><b>Week 8 - Function Approximation</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>Function approximation</li></td>
+        <td><a href="https://youtu.be/gqSuPgrcVx8">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/gqSuPgrcVx8">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Linear parameterization</li></td>
+        <td><a href="https://youtu.be/c4cvheE3diA">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/c4cvheE3diA">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>State aggregation methods</li></td>
+        <td><a href="https://youtu.be/wGPxro6C2ik">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/wGPxro6C2ik">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Function approximation & eligibility traces</li></td>
+        <td><a href="https://youtu.be/N21zCqTwxbs">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/N21zCqTwxbs">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>LSTD & LSTDQ</li></td>
+        <td><a href="https://youtu.be/zTFNYrYbvVE">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/zTFNYrYbvVE">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>LSPI & Fitted Q</li></td>
+        <td><a href="https://youtu.be/JmbN6XZ4Cro">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/JmbN6XZ4Cro">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment8.pdf">Assignment 8</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution8.pdf">Solution 8</a></li> </td></tr>
+</table>
+</ul>
+	<li><p><b>Week 9 - DQN, Fitted Q &amp; Policy Gradient Approaches</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>DQN & Fitted Q-iteration</li></td>
+        <td><a href="https://youtu.be/AohtWrJwvgg">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/AohtWrJwvgg">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Policy gradient approach</li></td>
+        <td><a href="https://youtu.be/f2l8bv8GH5U">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/f2l8bv8GH5U">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Actor critic & REINFORCE</li></td>
+        <td><a href="https://youtu.be/sTZ4GyJ4FZU">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/sTZ4GyJ4FZU">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>REINFORCE (cont'd)</li></td>
+        <td><a href="https://youtu.be/BEhnse8cLDw">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/BEhnse8cLDw">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Policy gradient with function approximation</li></td>
+        <td><a href="https://youtu.be/X6yCRaQa5FE">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/X6yCRaQa5FE">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment9.pdf">Assignment 9</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution9.pdf">Solution 9</a></li> </td></tr>
+</table>
+<li><a href="https://drive.google.com/open?id=1C8jVxnURRovcQEHgxq2kH1KVufIxvbRT">Notes on Policy Gradient Algorithms</a></li>
+</ul>
+	<li><p><b>Week 10 - Hierarchical Reinforcement Learning</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>Hierarchical reinforcement learning</li></td>
+        <td><a href="https://youtu.be/K5MlmO0UJtI">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/K5MlmO0UJtI">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Types of optimality</li></td>
+        <td><a href="https://youtu.be/EbTIQqVDJsg">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/EbTIQqVDJsg">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Semi-Markov decision processes</li></td>
+        <td><a href="https://youtu.be/vdRG-EbcNGw">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/vdRG-EbcNGw">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Options</li></td>
+        <td><a href="https://youtu.be/1eb4vECGKC4">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/1eb4vECGKC4">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Learning with options</li></td>
+        <td><a href="https://youtu.be/6wH3yS07NTA">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/6wH3yS07NTA">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Hierarchical abstract machines</li></td>
+        <td><a href="https://youtu.be/rVhb6f6G-1M">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/rVhb6f6G-1M">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment10.pdf">Assignment 10</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution10.pdf">Solution 10</a></li> </td></tr>
+</table>
+<li><a href="https://people.cs.umass.edu/~mahadeva/papers/hrl.pdf">Andrew G. Barto and Sridhar Mahadevan. 2003. Recent Advances in Hierarchical Reinforcement Learning. Discrete Event Dynamic Systems 13, 1-2 (January 2003), 41-77. DOI: https://doi.org/10.1023/A:1022140919877</a></li>
+</ul>
+	<li><p><b>Week 11 - Hierarchical RL: MAXQ</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>MAXQ</li></td>
+        <td><a href="https://youtu.be/4mmW0kYmK3I">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/4mmW0kYmK3I">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>MAXQ value function decomposition</li></td>
+        <td><a href="https://youtu.be/1iACStiJQBs">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/1iACStiJQBs">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Option discovery</li></td>
+        <td><a href="https://youtu.be/uJ0oNtDG6ro">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/uJ0oNtDG6ro">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment11.pdf">Assignment 11</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution11.pdf">Solution 11</a></li> </td></tr>
+</table>
+<li><a href="https://arxiv.org/pdf/cs/9905014.pdf">Dietterich, T. G. 2000. Hierarchical Reinforcement Learning with the MAXQ Value Function Decomposition.</a></li>
+</ul>
+	<li><p><b>Week 12 - POMDPs</b></p></li>
+<ul>
+<table style="width:99%">
+<col width=80%>
+<col width=10%>
+<col width=10%>
+<tr><div style="height:0px">
+        <td><li>POMDP introduction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></td>
+        <td><a href="https://youtu.be/9G_KevA8DFY">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/9G_KevA8DFY">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><div style="height:0px">
+        <td><li>Solving POMDP</li></td>
+        <td><a href="https://youtu.be/dMOUp7YzUpQ">
+        <img src="images/youtube.jpg" align="vertical-align" alt="youtube video" width="15" height="12" border="0">
+        </img></a></td>
+        <td><a href="https://videoken.com/embed/dMOUp7YzUpQ">
+        <img src="images/videoken.jpg" align="vertical-align" alt="videoken video" width="15" height="12" border="0">
+        </img></a></td></div></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Assignment12.pdf">Assignment 12</a></li></td></tr>
+<tr><td><li><a href="http://www.cse.iitm.ac.in/~ravi/courses/Reinforcement%20Learning_files/Solution12.pdf">Solution 12</a></li> </td></tr>
+</table>
+<li><a href="http://cs.brown.edu/research/ai/pomdp/tutorial/">POMDP Tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=EdBYYXSFt7k">Tutorial on Predictive State Representations (Singh, S. P.)</a></li>
+</ul>
+</ul></font>
+
+</ul>
+</div> </div> <div id="colTwo"> 
+               <h4 class="top-head">Currently Teaching</h4>
+                <div class="content">
+                <p>
+                </p><ul>                
+		<!--<font size="2"><li> <a href="https://onlinecourses.nptel.ac.in/noc17_mg24/preview">Introduction to Data Analytics</a></li></font>-->
+
+                <div class="content">
+</div>
+			<div class="content"><form method="get" action="http://www.google.com/search"> <input name="q" size="17" maxlength="255" type="text"> <input name="btnG" value="Google Search" type="submit"> </form></div>
+<font size="1">	</font></ul></div><font size="2">
+</font></div><font size="2">
+<div id="footer" style="clear: both;">
+<font size="1">	</font><p><font size="1">Copyright 2009 Balaraman Ravindran. Designed based on a template by  <a href="http://freecsstemplates.org/"><strong>Free CSS Templates</strong></a> and <a href="http://people.csail.mit.edu/kersting/index.html">Kristian Kersting</a></font></p>
+</div>
+
+</font>
+</div>
+
+</body></html>

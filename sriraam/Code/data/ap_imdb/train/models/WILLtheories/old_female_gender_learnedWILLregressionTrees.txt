@@ -1,0 +1,614 @@
+usePrologVariables: true.
+
+% maxTreeDepthInNodes                 = 5
+% maxTreeDepthInLiterals              = 12
+% maxNumberOfLiteralsAtAnInteriorNode = 3
+% maxFreeBridgersInBody               = 1
+% maxNumberOfClauses                  = 8
+% maxNodesToConsider                  = 10
+% maxNodesToCreate                    = 10,000
+% maxAcceptableNodeScoreToStop        = 0.003
+% negPosRatio                         = 2.000
+% testNegPosRatio                     = -1.000
+% # of pos examples                   = 243
+% # of neg examples                   = 0
+
+
+
+%%%%%  WILL-Produced Tree #1 @ 10:27:37 11/20/18.  [Using 3,708,024 memory cells.]  %%%%%
+
+% FOR female_gender(A):
+%   if ( workedunder_2_1_genre(A, adrama, 1) )
+%   then return 0.15676004621062295;  // std dev = 0.458, 144.000 (wgt'ed) examples reached here.  /* #neg=101 #pos=43 */
+%   else if ( workedunder_2_1_genre(A, acomedy, 1) )
+%   | then return 0.5248156017661785;  // std dev = 0.471, 30.000 (wgt'ed) examples reached here.  /* #neg=10 #pos=20 */
+%   | else if ( workedunder_2_1_genre(A, acrime, 2) )
+%   | | then return 0.40360348055405776;  // std dev = 0.498, 11.000 (wgt'ed) examples reached here.  /* #neg=5 #pos=6 */
+%   | | else if ( workedunder_2_1_genre(A, ascifi, 1) )
+%   | | | then return 0.10814893509951223;  // std dev = 0.433, 12.000 (wgt'ed) examples reached here.  /* #neg=9 #pos=3 */
+%   | | | else if ( workedunder_2_1_genre(A, adrama, 2) )
+%   | | | | then return 0.6081489350995122;  // std dev = 0.866, 4.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=3 */
+%   | | | | else if ( workedunder_2_1_genre(A, acomedy, 7) )
+%   | | | | | then return 0.13087620782678497;  // std dev = 1.477, 11.000 (wgt'ed) examples reached here.  /* #neg=8 #pos=3 */
+%   | | | | | else return 0.4387940963898349;  // std dev = 2.747, 31.000 (wgt'ed) examples reached here.  /* #neg=13 #pos=18 */
+
+
+% Clauses:
+
+female_gender(A, 0.15676004621062295) :- 
+     workedunder_2_1_genre(A, adrama, 1), 
+     !. // Clause #1.
+
+female_gender(A, 0.5248156017661785) :- 
+     workedunder_2_1_genre(A, acomedy, 1), 
+     !. // Clause #2.
+
+female_gender(A, 0.40360348055405776) :- 
+     workedunder_2_1_genre(A, acrime, 2), 
+     !. // Clause #3.
+
+female_gender(A, 0.10814893509951223) :- 
+     workedunder_2_1_genre(A, ascifi, 1), 
+     !. // Clause #4.
+
+female_gender(A, 0.6081489350995122) :- 
+     workedunder_2_1_genre(A, adrama, 2), 
+     !. // Clause #5.
+
+female_gender(A, 0.13087620782678497) :- 
+     workedunder_2_1_genre(A, acomedy, 7), 
+     !. // Clause #6.
+
+female_gender(A, 0.4387940963898349) :- !. // Clause #7.
+
+
+% The flattened versions of these clauses:
+
+flattened_female_gender(a, 0.15676004621062295) :-  /* #neg=101 #pos=43 */ 
+   workedunder_2_1_genre(a, adrama, 1),
+   !. // Flattened version of clause #1.
+
+flattened_female_gender(a, 0.5248156017661785) :-  /* #neg=10 #pos=20 */ 
+   workedunder_2_1_genre(a, acomedy, 1),
+   !. // Flattened version of clause #2.
+
+flattened_female_gender(a, 0.40360348055405776) :-  /* #neg=5 #pos=6 */ 
+   workedunder_2_1_genre(a, acrime, 2),
+   !. // Flattened version of clause #3.
+
+flattened_female_gender(a, 0.10814893509951223) :-  /* #neg=9 #pos=3 */ 
+   workedunder_2_1_genre(a, ascifi, 1),
+   !. // Flattened version of clause #4.
+
+flattened_female_gender(a, 0.6081489350995122) :-  /* #neg=1 #pos=3 */ 
+   workedunder_2_1_genre(a, adrama, 2),
+   !. // Flattened version of clause #5.
+
+flattened_female_gender(a, 0.13087620782678497) :-  /* #neg=8 #pos=3 */ 
+   workedunder_2_1_genre(a, acomedy, 7),
+   !. // Flattened version of clause #6.
+
+flattened_female_gender(underscore, 0.4387940963898349) :-  /* #neg=13 #pos=18 */ 
+   !. // Flattened version of clause #7.
+
+
+% The unique flattened literals:
+%   workedunder_2_1_genre(a, acrime, 2)
+%   workedunder_2_1_genre(a, acomedy, 7)
+%   workedunder_2_1_genre(a, ascifi, 1)
+%   workedunder_2_1_genre(a, adrama, 1)
+%   workedunder_2_1_genre(a, adrama, 2)
+%   workedunder_2_1_genre(a, acomedy, 1)
+
+%%%%%  WILL-Produced Tree #2 @ 10:27:38 11/20/18.  [Using 3,786,408 memory cells.]  %%%%%
+
+% FOR female_gender(A):
+%   if ( workedunder_2_1_genre(A, adrama, 1) )
+%   then return 0.15675050479427874;  // std dev = 0.458, 144.000 (wgt'ed) examples reached here.  /* #neg=101 #pos=43 */
+%   else if ( workedunder_2_1_genre(A, acomedy, 7) )
+%   | then return 0.13086824190287472;  // std dev = 0.445, 11.000 (wgt'ed) examples reached here.  /* #neg=8 #pos=3 */
+%   | else if ( workedunder_2_1_genre(A, ascifi, 1) )
+%   | | then return 0.16583270920324228;  // std dev = 0.462, 13.000 (wgt'ed) examples reached here.  /* #neg=9 #pos=4 */
+%   | | else if ( workedunder_2_1_genre(A, acomedy, 2) )
+%   | | | then return 0.35812222594296106;  // std dev = 0.500, 14.000 (wgt'ed) examples reached here.  /* #neg=7 #pos=7 */
+%   | | | else if ( workedunder_2_1_genre(A, acrime, 2) )
+%   | | | | then return 0.4035789135858488;  // std dev = 0.498, 11.000 (wgt'ed) examples reached here.  /* #neg=5 #pos=6 */
+%   | | | | else if ( workedunder_2_1_genre(A, adrama, 2) )
+%   | | | | | then return 0.6081119162839693;  // std dev = 0.866, 4.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=3 */
+%   | | | | | else return 0.5102928376680176;  // std dev = 3.230, 46.000 (wgt'ed) examples reached here.  /* #neg=16 #pos=30 */
+
+
+% Clauses:
+
+female_gender(A, 0.15675050479427874) :- 
+     workedunder_2_1_genre(A, adrama, 1), 
+     !. // Clause #1.
+
+female_gender(A, 0.13086824190287472) :- 
+     workedunder_2_1_genre(A, acomedy, 7), 
+     !. // Clause #2.
+
+female_gender(A, 0.16583270920324228) :- 
+     workedunder_2_1_genre(A, ascifi, 1), 
+     !. // Clause #3.
+
+female_gender(A, 0.35812222594296106) :- 
+     workedunder_2_1_genre(A, acomedy, 2), 
+     !. // Clause #4.
+
+female_gender(A, 0.4035789135858488) :- 
+     workedunder_2_1_genre(A, acrime, 2), 
+     !. // Clause #5.
+
+female_gender(A, 0.6081119162839693) :- 
+     workedunder_2_1_genre(A, adrama, 2), 
+     !. // Clause #6.
+
+female_gender(A, 0.5102928376680176) :- !. // Clause #7.
+
+
+% The flattened versions of these clauses:
+
+flattened_female_gender(a, 0.15675050479427874) :-  /* #neg=101 #pos=43 */ 
+   workedunder_2_1_genre(a, adrama, 1),
+   !. // Flattened version of clause #1.
+
+flattened_female_gender(a, 0.13086824190287472) :-  /* #neg=8 #pos=3 */ 
+   workedunder_2_1_genre(a, acomedy, 7),
+   !. // Flattened version of clause #2.
+
+flattened_female_gender(a, 0.16583270920324228) :-  /* #neg=9 #pos=4 */ 
+   workedunder_2_1_genre(a, ascifi, 1),
+   !. // Flattened version of clause #3.
+
+flattened_female_gender(a, 0.35812222594296106) :-  /* #neg=7 #pos=7 */ 
+   workedunder_2_1_genre(a, acomedy, 2),
+   !. // Flattened version of clause #4.
+
+flattened_female_gender(a, 0.4035789135858488) :-  /* #neg=5 #pos=6 */ 
+   workedunder_2_1_genre(a, acrime, 2),
+   !. // Flattened version of clause #5.
+
+flattened_female_gender(a, 0.6081119162839693) :-  /* #neg=1 #pos=3 */ 
+   workedunder_2_1_genre(a, adrama, 2),
+   !. // Flattened version of clause #6.
+
+flattened_female_gender(underscore, 0.5102928376680176) :-  /* #neg=16 #pos=30 */ 
+   !. // Flattened version of clause #7.
+
+
+% The unique flattened literals:
+%   workedunder_2_1_genre(a, acomedy, 7)
+%   workedunder_2_1_genre(a, acrime, 2)
+%   workedunder_2_1_genre(a, ascifi, 1)
+%   workedunder_2_1_genre(a, acomedy, 2)
+%   workedunder_2_1_genre(a, adrama, 1)
+%   workedunder_2_1_genre(a, adrama, 2)
+
+//// Loaded checkpoint from data\AP_IMDB\train/models/bRDNs/female_gender.model.ckpt at 10:28:39 11/20/18.
+//// Number of trees loaded:2
+
+//// Also loaded 7 flattened literals from data\AP_IMDB\train/models/bRDNs/female_gender.model.ckptLits
+
+%%%%%  WILL-Produced Tree #3 @ 10:28:40 11/20/18.  [Using 3,716,952 memory cells.]  %%%%%
+
+% FOR female_gender(A):
+%   if ( workedunder_2_1_genre(A, adrama, 1) )
+%   then return 0.15674096342304863;  // std dev = 0.458, 144.000 (wgt'ed) examples reached here.  /* #neg=101 #pos=43 */
+%   else if ( workedunder_2_1_genre(A, ascifi, 1) )
+%   | then return 0.16582261504352627;  // std dev = 0.462, 13.000 (wgt'ed) examples reached here.  /* #neg=9 #pos=4 */
+%   | else if ( workedunder_2_1_genre(A, aaction, 1) )
+%   | | then return 0.5132583356800702;  // std dev = 0.475, 29.000 (wgt'ed) examples reached here.  /* #neg=10 #pos=19 */
+%   | | else if ( workedunder_2_1_genre(A, acomedy, 7) )
+%   | | | then return 0.13086027609046472;  // std dev = 0.445, 11.000 (wgt'ed) examples reached here.  /* #neg=8 #pos=3 */
+%   | | | else if ( workedunder_2_1_genre(A, acomedy, 2) )
+%   | | | | then return 0.35810042412819054;  // std dev = 0.500, 14.000 (wgt'ed) examples reached here.  /* #neg=7 #pos=7 */
+%   | | | | else if ( workedunder_2_1_genre(A, acrime, 2) )
+%   | | | | | then return 0.40355434456216044;  // std dev = 1.651, 11.000 (wgt'ed) examples reached here.  /* #neg=5 #pos=6 */
+%   | | | | | else return 0.5247547274640199;  // std dev = 2.160, 21.000 (wgt'ed) examples reached here.  /* #neg=7 #pos=14 */
+
+
+% Clauses:
+
+female_gender(A, 0.15674096342304863) :- 
+     workedunder_2_1_genre(A, adrama, 1), 
+     !. // Clause #1.
+
+female_gender(A, 0.16582261504352627) :- 
+     workedunder_2_1_genre(A, ascifi, 1), 
+     !. // Clause #2.
+
+female_gender(A, 0.5132583356800702) :- 
+     workedunder_2_1_genre(A, aaction, 1), 
+     !. // Clause #3.
+
+female_gender(A, 0.13086027609046472) :- 
+     workedunder_2_1_genre(A, acomedy, 7), 
+     !. // Clause #4.
+
+female_gender(A, 0.35810042412819054) :- 
+     workedunder_2_1_genre(A, acomedy, 2), 
+     !. // Clause #5.
+
+female_gender(A, 0.40355434456216044) :- 
+     workedunder_2_1_genre(A, acrime, 2), 
+     !. // Clause #6.
+
+female_gender(A, 0.5247547274640199) :- !. // Clause #7.
+
+
+% The flattened versions of these clauses:
+
+flattened_female_gender(a, 0.15674096342304863) :-  /* #neg=101 #pos=43 */ 
+   workedunder_2_1_genre(a, adrama, 1),
+   !. // Flattened version of clause #1.
+
+flattened_female_gender(a, 0.16582261504352627) :-  /* #neg=9 #pos=4 */ 
+   workedunder_2_1_genre(a, ascifi, 1),
+   !. // Flattened version of clause #2.
+
+flattened_female_gender(a, 0.5132583356800702) :-  /* #neg=10 #pos=19 */ 
+   workedunder_2_1_genre(a, aaction, 1),
+   !. // Flattened version of clause #3.
+
+flattened_female_gender(a, 0.13086027609046472) :-  /* #neg=8 #pos=3 */ 
+   workedunder_2_1_genre(a, acomedy, 7),
+   !. // Flattened version of clause #4.
+
+flattened_female_gender(a, 0.35810042412819054) :-  /* #neg=7 #pos=7 */ 
+   workedunder_2_1_genre(a, acomedy, 2),
+   !. // Flattened version of clause #5.
+
+flattened_female_gender(a, 0.40355434456216044) :-  /* #neg=5 #pos=6 */ 
+   workedunder_2_1_genre(a, acrime, 2),
+   !. // Flattened version of clause #6.
+
+flattened_female_gender(underscore, 0.5247547274640199) :-  /* #neg=7 #pos=14 */ 
+   !. // Flattened version of clause #7.
+
+
+% The unique flattened literals:
+%   workedunder_2_1_genre(a, acrime, 2)
+%   workedunder_2_1_genre(a, adrama, 1)
+%   workedunder_2_1_genre(a, ascifi, 1)
+%   workedunder_2_1_genre(a, acomedy, 2)
+%   workedunder_2_1_genre(a, aaction, 1)
+%   workedunder_2_1_genre(a, acomedy, 7)
+
+%%%%%  WILL-Produced Tree #4 @ 10:28:41 11/20/18.  [Using 3,832,064 memory cells.]  %%%%%
+
+% FOR female_gender(A):
+%   if ( workedunder_2_1_genre(A, adrama, 1) )
+%   then if ( workedunder_2_1_genre(A, amystery, 1), workedunder_2_1_genre(A, athriller, 1) )
+%   | then return 0.09067845052077986;  // std dev = 0.422, 43.000 (wgt'ed) examples reached here.  /* #neg=33 #pos=10 */
+%   | else return 0.18485298425322289;  // std dev = 0.469, 101.000 (wgt'ed) examples reached here.  /* #neg=68 #pos=33 */
+%   else if ( workedunder_2_1_genre(A, acomedy, 7) )
+%   | then return 0.13085231038960707;  // std dev = 0.445, 11.000 (wgt'ed) examples reached here.  /* #neg=8 #pos=3 */
+%   | else if ( workedunder_2_1_genre(A, acomedy, 1) )
+%   | | then return 0.5247227391385143;  // std dev = 0.471, 30.000 (wgt'ed) examples reached here.  /* #neg=10 #pos=20 */
+%   | | else if ( workedunder_2_1_genre(A, ascifi, 1) )
+%   | | | then return 0.10812216445005207;  // std dev = 0.433, 12.000 (wgt'ed) examples reached here.  /* #neg=9 #pos=3 */
+%   | | | else if ( workedunder_2_1_genre(A, adrama, 2) )
+%   | | | | then return 0.6080429357197056;  // std dev = 0.866, 4.000 (wgt'ed) examples reached here.  /* #neg=1 #pos=3 */
+%   | | | | else if ( workedunder_2_1_genre(A, acomedy, 2) )
+%   | | | | | then return 0.35807862084480385;  // std dev = 1.871, 14.000 (wgt'ed) examples reached here.  /* #neg=7 #pos=7 */
+%   | | | | | else return 0.46520835783630016;  // std dev = 2.584, 28.000 (wgt'ed) examples reached here.  /* #neg=11 #pos=17 */
+
+
+% Clauses:
+
+female_gender(A, 0.09067845052077986) :- 
+     workedunder_2_1_genre(A, adrama, 1), 
+     workedunder_2_1_genre(A, amystery, 1), 
+     workedunder_2_1_genre(A, athriller, 1), 
+     !. // Clause #1.
+
+female_gender(A, 0.18485298425322289) :- 
+     workedunder_2_1_genre(A, adrama, 1), 
+     !. // Clause #2.
+
+female_gender(A, 0.13085231038960707) :- 
+     workedunder_2_1_genre(A, acomedy, 7), 
+     !. // Clause #3.
+
+female_gender(A, 0.5247227391385143) :- 
+     workedunder_2_1_genre(A, acomedy, 1), 
+     !. // Clause #4.
+
+female_gender(A, 0.10812216445005207) :- 
+     workedunder_2_1_genre(A, ascifi, 1), 
+     !. // Clause #5.
+
+female_gender(A, 0.6080429357197056) :- 
+     workedunder_2_1_genre(A, adrama, 2), 
+     !. // Clause #6.
+
+female_gender(A, 0.35807862084480385) :- 
+     workedunder_2_1_genre(A, acomedy, 2), 
+     !. // Clause #7.
+
+female_gender(A, 0.46520835783630016) :- !. // Clause #8.
+
+
+% The flattened versions of these clauses:
+
+flattened_female_gender(a, 0.09067845052077986) :-  /* #neg=33 #pos=10 */ 
+   workedunder_2_1_genre(a, adrama, 1),
+   workedunder_2_1_genre(a, amystery, 1),
+   workedunder_2_1_genre(a, athriller, 1),
+   !. // Flattened version of clause #1.
+
+flattened_female_gender(a, 0.18485298425322289) :-  /* #neg=68 #pos=33 */ 
+   workedunder_2_1_genre(a, adrama, 1),
+   !. // Flattened version of clause #2.
+
+flattened_female_gender(a, 0.13085231038960707) :-  /* #neg=8 #pos=3 */ 
+   workedunder_2_1_genre(a, acomedy, 7),
+   !. // Flattened version of clause #3.
+
+flattened_female_gender(a, 0.5247227391385143) :-  /* #neg=10 #pos=20 */ 
+   workedunder_2_1_genre(a, acomedy, 1),
+   !. // Flattened version of clause #4.
+
+flattened_female_gender(a, 0.10812216445005207) :-  /* #neg=9 #pos=3 */ 
+   workedunder_2_1_genre(a, ascifi, 1),
+   !. // Flattened version of clause #5.
+
+flattened_female_gender(a, 0.6080429357197056) :-  /* #neg=1 #pos=3 */ 
+   workedunder_2_1_genre(a, adrama, 2),
+   !. // Flattened version of clause #6.
+
+flattened_female_gender(a, 0.35807862084480385) :-  /* #neg=7 #pos=7 */ 
+   workedunder_2_1_genre(a, acomedy, 2),
+   !. // Flattened version of clause #7.
+
+flattened_female_gender(underscore, 0.46520835783630016) :-  /* #neg=11 #pos=17 */ 
+   !. // Flattened version of clause #8.
+
+
+% The unique flattened literals:
+%   workedunder_2_1_genre(a, acomedy, 1)
+%   workedunder_2_1_genre(a, adrama, 1)
+%   workedunder_2_1_genre(a, ascifi, 1)
+%   workedunder_2_1_genre(a, acomedy, 2)
+%   workedunder_2_1_genre(a, amystery, 1)
+%   workedunder_2_1_genre(a, adrama, 2)
+%   workedunder_2_1_genre(a, athriller, 1)
+%   workedunder_2_1_genre(a, acomedy, 7)
+
+%%%%%  WILL-Produced Tree #5 @ 10:28:42 11/20/18.  [Using 3,842,880 memory cells.]  %%%%%
+
+% FOR female_gender(A):
+%   if ( workedunder_2_1_genre(A, adrama, 1) )
+%   then return 0.1567218807959888;  // std dev = 0.458, 144.000 (wgt'ed) examples reached here.  /* #neg=101 #pos=43 */
+%   else if ( workedunder_2_1_genre(A, acomedy, 1) )
+%   | then return 0.5246907816108767;  // std dev = 0.471, 30.000 (wgt'ed) examples reached here.  /* #neg=10 #pos=20 */
+%   | else if ( workedunder_2_1_genre(A, ascifi, 1) )
+%   | | then return 0.10811558246612533;  // std dev = 0.433, 12.000 (wgt'ed) examples reached here.  /* #neg=9 #pos=3 */
+%   | | else if ( workedunder_2_1_genre(A, acomedy, 7) )
+%   | | | then return 0.13084434480035398;  // std dev = 0.445, 11.000 (wgt'ed) examples reached here.  /* #neg=8 #pos=3 */
+%   | | | else if ( workedunder_2_1_genre(A, acomedy, 2) )
+%   | | | | then return 0.35805681609321294;  // std dev = 0.500, 14.000 (wgt'ed) examples reached here.  /* #neg=7 #pos=7 */
+%   | | | | else if ( workedunder_2_1_genre(A, acrime, 2) )
+%   | | | | | then return 0.40350144409147026;  // std dev = 1.651, 11.000 (wgt'ed) examples reached here.  /* #neg=5 #pos=6 */
+%   | | | | | else return 0.5246927841507253;  // std dev = 2.160, 21.000 (wgt'ed) examples reached here.  /* #neg=7 #pos=14 */
+
+
+% Clauses:
+
+female_gender(A, 0.1567218807959888) :- 
+     workedunder_2_1_genre(A, adrama, 1), 
+     !. // Clause #1.
+
+female_gender(A, 0.5246907816108767) :- 
+     workedunder_2_1_genre(A, acomedy, 1), 
+     !. // Clause #2.
+
+female_gender(A, 0.10811558246612533) :- 
+     workedunder_2_1_genre(A, ascifi, 1), 
+     !. // Clause #3.
+
+female_gender(A, 0.13084434480035398) :- 
+     workedunder_2_1_genre(A, acomedy, 7), 
+     !. // Clause #4.
+
+female_gender(A, 0.35805681609321294) :- 
+     workedunder_2_1_genre(A, acomedy, 2), 
+     !. // Clause #5.
+
+female_gender(A, 0.40350144409147026) :- 
+     workedunder_2_1_genre(A, acrime, 2), 
+     !. // Clause #6.
+
+female_gender(A, 0.5246927841507253) :- !. // Clause #7.
+
+
+% The flattened versions of these clauses:
+
+flattened_female_gender(a, 0.1567218807959888) :-  /* #neg=101 #pos=43 */ 
+   workedunder_2_1_genre(a, adrama, 1),
+   !. // Flattened version of clause #1.
+
+flattened_female_gender(a, 0.5246907816108767) :-  /* #neg=10 #pos=20 */ 
+   workedunder_2_1_genre(a, acomedy, 1),
+   !. // Flattened version of clause #2.
+
+flattened_female_gender(a, 0.10811558246612533) :-  /* #neg=9 #pos=3 */ 
+   workedunder_2_1_genre(a, ascifi, 1),
+   !. // Flattened version of clause #3.
+
+flattened_female_gender(a, 0.13084434480035398) :-  /* #neg=8 #pos=3 */ 
+   workedunder_2_1_genre(a, acomedy, 7),
+   !. // Flattened version of clause #4.
+
+flattened_female_gender(a, 0.35805681609321294) :-  /* #neg=7 #pos=7 */ 
+   workedunder_2_1_genre(a, acomedy, 2),
+   !. // Flattened version of clause #5.
+
+flattened_female_gender(a, 0.40350144409147026) :-  /* #neg=5 #pos=6 */ 
+   workedunder_2_1_genre(a, acrime, 2),
+   !. // Flattened version of clause #6.
+
+flattened_female_gender(underscore, 0.5246927841507253) :-  /* #neg=7 #pos=14 */ 
+   !. // Flattened version of clause #7.
+
+
+% The unique flattened literals:
+%   workedunder_2_1_genre(a, acrime, 2)
+%   workedunder_2_1_genre(a, acomedy, 1)
+%   workedunder_2_1_genre(a, adrama, 1)
+%   workedunder_2_1_genre(a, ascifi, 1)
+%   workedunder_2_1_genre(a, acomedy, 2)
+%   workedunder_2_1_genre(a, acomedy, 7)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Final call for computing score for female_gender.  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+stepLength_tree1(5.0E-4).
+stepLength_tree2(5.0E-4).
+stepLength_tree3(5.0E-4).
+stepLength_tree4(5.0E-4).
+stepLength_tree5(5.0E-4).
+
+logPrior(-1.8).
+female_gender(E, Total) :- // A general accessor. 
+   female_gender(E, 1000000, Total), !.
+female_gender(E, Total) :- waitHere("This should not fail", female_gender(E, Total)).
+
+female_gender(E, TreesToUse, Total) :- // A tree-limited accessor (e.g., for tuning the number of trees to use).
+   logPrior(LogPrior),
+   getScore_female_gender_tree1(E, TreesToUse, Total1),
+   getScore_female_gender_tree2(E, TreesToUse, Total2),
+   getScore_female_gender_tree3(E, TreesToUse, Total3),
+   getScore_female_gender_tree4(E, TreesToUse, Total4),
+   getScore_female_gender_tree5(E, TreesToUse, Total5),
+   Total is LogPrior + Total1 + Total2 + Total3 + Total4 + Total5,
+   !.
+female_gender(E, TreesToUse, Total) :- waitHere("This should not fail", female_gender(E, TreesToUse, Total)).
+
+getScore_female_gender_tree1(E, TreesToUse, 0.0) :- 1 > TreesToUse, !.
+getScore_female_gender_tree1(E, TreesToUse, Total1) :- female_gender_tree1(E, Total), stepLength_tree1(StepLen), Total1 is Total * StepLen.
+
+getScore_female_gender_tree2(E, TreesToUse, 0.0) :- 2 > TreesToUse, !.
+getScore_female_gender_tree2(E, TreesToUse, Total2) :- female_gender_tree2(E, Total), stepLength_tree2(StepLen), Total2 is Total * StepLen.
+
+getScore_female_gender_tree3(E, TreesToUse, 0.0) :- 3 > TreesToUse, !.
+getScore_female_gender_tree3(E, TreesToUse, Total3) :- female_gender_tree3(E, Total), stepLength_tree3(StepLen), Total3 is Total * StepLen.
+
+getScore_female_gender_tree4(E, TreesToUse, 0.0) :- 4 > TreesToUse, !.
+getScore_female_gender_tree4(E, TreesToUse, Total4) :- female_gender_tree4(E, Total), stepLength_tree4(StepLen), Total4 is Total * StepLen.
+
+getScore_female_gender_tree5(E, TreesToUse, 0.0) :- 5 > TreesToUse, !.
+getScore_female_gender_tree5(E, TreesToUse, Total5) :- female_gender_tree5(E, Total), stepLength_tree5(StepLen), Total5 is Total * StepLen.
+
+flattenedLiteralsInThisSetOfTrees(female_gender, 10, [
+   workedunder_2_1_genre(a, acrime, 2),
+   workedunder_2_1_genre(a, acomedy, 1),
+   workedunder_2_1_genre(a, ascifi, 1),
+   workedunder_2_1_genre(a, adrama, 1),
+   workedunder_2_1_genre(a, acomedy, 2),
+   workedunder_2_1_genre(a, amystery, 1),
+   workedunder_2_1_genre(a, adrama, 2),
+   workedunder_2_1_genre(a, athriller, 1),
+   workedunder_2_1_genre(a, acomedy, 7),
+   workedunder_2_1_genre(a, aaction, 1)]).
+
+%%%%%  WILL-Produced Tree Combined @ 10:28:43 11/20/18.  [Using 3,875,920 memory cells.]  %%%%%
+
+% FOR female_gender(A):
+%   if ( workedunder_2_1_genre(A, aaction, 1) )
+%   then return 1.7711883654612846;  // std dev = 1.231, 93.000 (wgt'ed) examples reached here.  /* #neg=23 #pos=70 */
+%   else if ( workedunder_2_1_genre(A, adrama, 1) )
+%   | then if ( workedunder_2_1_genre(A, amystery, 1) )
+%   | | then return 0.26324046118430655;  // std dev = 1.274, 129.000 (wgt'ed) examples reached here.  /* #neg=99 #pos=30 */
+%   | | else return 0.5671703909490239;  // std dev = 1.457, 297.000 (wgt'ed) examples reached here.  /* #neg=201 #pos=96 */
+%   | else if ( workedunder_2_1_genre(A, acomedy, 7) )
+%   | | then return 0.39255693128042585;  // std dev = 1.336, 33.000 (wgt'ed) examples reached here.  /* #neg=24 #pos=9 */
+%   | | else if ( workedunder_2_1_genre(A, ascifi, 1) )
+%   | | | then return 0.49743912348091257;  // std dev = 1.385, 39.000 (wgt'ed) examples reached here.  /* #neg=27 #pos=12 */
+%   | | | else if ( workedunder_2_1_genre(A, acomedy, 2) )
+%   | | | | then return 1.0742358610662068;  // std dev = 1.500, 42.000 (wgt'ed) examples reached here.  /* #neg=21 #pos=21 */
+%   | | | | else if ( workedunder_2_1_genre(A, acrime, 2) )
+%   | | | | | then return 1.2105855621371282;  // std dev = 8.581, 33.000 (wgt'ed) examples reached here.  /* #neg=15 #pos=18 */
+%   | | | | | else return 1.5741702856136397;  // std dev = 11.225, 63.000 (wgt'ed) examples reached here.  /* #neg=21 #pos=42 */
+
+
+% Clauses:
+
+female_gender(A, 1.7711883654612846) :- 
+     workedunder_2_1_genre(A, aaction, 1), 
+     !. // Clause #1.
+
+female_gender(A, 0.26324046118430655) :- 
+     workedunder_2_1_genre(A, adrama, 1), 
+     workedunder_2_1_genre(A, amystery, 1), 
+     !. // Clause #2.
+
+female_gender(A, 0.5671703909490239) :- 
+     workedunder_2_1_genre(A, adrama, 1), 
+     !. // Clause #3.
+
+female_gender(A, 0.39255693128042585) :- 
+     workedunder_2_1_genre(A, acomedy, 7), 
+     !. // Clause #4.
+
+female_gender(A, 0.49743912348091257) :- 
+     workedunder_2_1_genre(A, ascifi, 1), 
+     !. // Clause #5.
+
+female_gender(A, 1.0742358610662068) :- 
+     workedunder_2_1_genre(A, acomedy, 2), 
+     !. // Clause #6.
+
+female_gender(A, 1.2105855621371282) :- 
+     workedunder_2_1_genre(A, acrime, 2), 
+     !. // Clause #7.
+
+female_gender(A, 1.5741702856136397) :- !. // Clause #8.
+
+
+% The flattened versions of these clauses:
+
+flattened_female_gender(a, 1.7711883654612846) :-  /* #neg=23 #pos=70 */ 
+   workedunder_2_1_genre(a, aaction, 1),
+   !. // Flattened version of clause #1.
+
+flattened_female_gender(a, 0.26324046118430655) :-  /* #neg=99 #pos=30 */ 
+   workedunder_2_1_genre(a, adrama, 1),
+   workedunder_2_1_genre(a, amystery, 1),
+   !. // Flattened version of clause #2.
+
+flattened_female_gender(a, 0.5671703909490239) :-  /* #neg=201 #pos=96 */ 
+   workedunder_2_1_genre(a, adrama, 1),
+   !. // Flattened version of clause #3.
+
+flattened_female_gender(a, 0.39255693128042585) :-  /* #neg=24 #pos=9 */ 
+   workedunder_2_1_genre(a, acomedy, 7),
+   !. // Flattened version of clause #4.
+
+flattened_female_gender(a, 0.49743912348091257) :-  /* #neg=27 #pos=12 */ 
+   workedunder_2_1_genre(a, ascifi, 1),
+   !. // Flattened version of clause #5.
+
+flattened_female_gender(a, 1.0742358610662068) :-  /* #neg=21 #pos=21 */ 
+   workedunder_2_1_genre(a, acomedy, 2),
+   !. // Flattened version of clause #6.
+
+flattened_female_gender(a, 1.2105855621371282) :-  /* #neg=15 #pos=18 */ 
+   workedunder_2_1_genre(a, acrime, 2),
+   !. // Flattened version of clause #7.
+
+flattened_female_gender(underscore, 1.5741702856136397) :-  /* #neg=21 #pos=42 */ 
+   !. // Flattened version of clause #8.
+
+
+% The unique flattened literals:
+%   workedunder_2_1_genre(a, acrime, 2)
+%   workedunder_2_1_genre(a, adrama, 1)
+%   workedunder_2_1_genre(a, ascifi, 1)
+%   workedunder_2_1_genre(a, acomedy, 2)
+%   workedunder_2_1_genre(a, amystery, 1)
+%   workedunder_2_1_genre(a, aaction, 1)
+%   workedunder_2_1_genre(a, acomedy, 7)

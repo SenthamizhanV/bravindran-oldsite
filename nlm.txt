@@ -1,0 +1,268 @@
+Natural Languages and Media Laboratory
+
+The NLM lab was established in 1999. The genesis of this lab can be traced to the initial research work carried out by the group, since 1990. Starting with the issues related to translation between Indian languages, the group got interested in the application of Natural Language techniques in representation and retrieval of Video data through an analysis of the contents. Employing both semi-automatic and automatic methods, and extending the approach from sports to agricultural applications the data from video and text media were handled. Currently the focus is on the development of appropriate knowledge representation tools for data useful for various language-oriented applications.
+
+The NLP approach is looked at as an efficient alternative for content-based access, especially since audio and video processing techniques have not sufficiently advanced to the level of identifying the information content, which is at a higher level, from the data captured at lower levels by the devices. The factors which have motivated the current research activities are:
+
+    (a) proliferation of the devices which, of late, are becoming highly portable,
+    (b) localization of the applications, on one hand, and
+    (c) globalization of markets on the other hand. 
+
+Thus, there is a great need for a quick transformation of data to information, which can be understood by people speaking different languages. Research leading to knowledge representation which makes use of languages understood by many can make useful contributions.
+Faculty : Dr. S. Raman
+
+Research Scholars :
+Degree 	Year 	Name of Student 	Title
+Ph.D. 	2000 	Ilango krishnamurthi 	A Text-oriented Validation Technique for Content-based Information Retrieval
+Ph.D. 	1997 	P.N. Sridharan 	Intrinsic Video Data Model for Content-based Information Retrieval
+M.S. 	2000 	V. Usha 	Natural-Language Oriented Retrieval of Multimedia Data
+M.S. 	2000 	B. Vijayalakshmi 	Annotation Generation System for Natural Language Systems
+M.S. 	1999 	T.R. Gayathri 	Set-Oriented Indexing of Video Data with Natural Language Interface
+M.S. 	1999 	T.S. Appan 	Candidate Drop Algorithm for Mining the Association Rules
+M.S. 	1999 	W. Gowri Shankar 	Design and Development of Multimedia Educational Modules
+M.S. 	1996 	E.R. Shaji 	ASIC Design of a Matching Unit for NLP
+M.S. 	1995 	N. Ramakrishna Reddy 	Design & Performance Studies of a Parallel Machine Translation. System for Indian Languages
+M.S. 	1990 	N. Alwar 	Domain Specific Machine Translation for Indian Languages
+Current Research Work :
+Degree 	Name of Student 	Area
+Ph.D. 	P.C. Reghu Raj 	Information Retrieval
+M.S. 	S. Sankaran 	NLP for Multimedia
+M.S. 	Vadali Srinivasamurty 	IT tools for NLP
+M.S. 	Rupali Sharma 	Information Representation
+M.S. 	M. Saravanan 	Text Data Mining
+List of Research Publications:
+International Journals
+
+   1. S. Raman and T. R. Gayathri. "Natural Language Interface to Video Database",in print Natural Language Engineering, Aug 2000.
+
+   2. S. Raman and N. Rama Krishna Reddy . "A Transputer-based Parallel Machine Translation System for Indian Languages", Microprocessors & Microsystems, 20(6), pp.373-383, Feb 1997.
+
+   3. S. Raman and E.R. Shaji. "ASIC-design of a Matching Unit for NLP", Microprocessors and Microsystems, 19(6), pp.327-340, Aug. 1995
+
+   4. S. Raman and N. Alwar. "An AI-based Approach to Machine Translation in Indian Languages", Commn. of the ACM, 33(5), pp.521-527, May 1990.
+
+National Journals
+
+   1. S. Raman, A.R. Madhusudhanan and Ilango K. "Design Considerations and choices for Image Sub-system of a Multimedia Database System", CSI Jl. on Comp. Sci. & Informatics, 26(1), pp.43-50, March 1996.
+
+   2. S. Raman and N. Ramakrishna Reddy. "A Parallel Machine Translation System for Indian Languages", Special issue on NLP of International Journal of Commn., Vol VI, No 1-2, pp.21-37, 1996, (simultaneous publication on International Journal of Translation, Vol VII (1-2), pp.31-45, 1995).
+
+   3. S. Raman and E.R. Shaji. "The Design of a Matching-oriented Lexicon", Special issue on NLP of International Journal of Commn., Vol VI, No 1-2, pp.85-100, 1996.
+
+   4. S. Raman, K. Roby, M. Kumaresan and P. Sreeram. "Simulation Studies of a Parallel System for Machine Translation", CSI Journal 'Computer Science & Informatics', 24(4), pp.39-49, December 1994.
+
+   5. Alwar and S. Raman. "Phrase Markers in Indian Languages", Jour. of IISc, (70), pp. 145-158, Mar-Apr 1990.
+
+   6. S. Raman. "Microprocessor-based Peripherals for Computer Input-Output in Indian Languages", IETE Tech. Review, 4(3), pp. 81-87, 1987.
+
+   7. S. Raman, R. Sundar and H.N. Mahabala "Microprocesor-based stencil cutter as computer output for text inh Indian languages", Jour. of IETE, 30(6), pp.234-237, 1984.
+
+   8. S. Raman, N.S.N. Murty, K.S. Roy, V.V. Rao and G. Rengarajan "Microcomputer-controlled Vaccum Adiabatic Calorimeter for the Temperature range 4.2-300K", Pramana, 19(2), pp. 151-157, 1982.
+
+International Conferences  
+
+   1. M.Saravanan and S. Raman "The Term Distribution Model for Summarization of Multiple Documents”, accepted for presentation in the Indo European Conference on Multilingual Communication Technologies (IEMCT 2002) to be held at Pune, June 24-25.
+
+   2. Rupali Sharma and S. Raman "Phrase-based Text Representation Approach for Effective Text Retrieval", accepted for presentation in the Indo European Conference on Multilingual Communication Technologies (IEMCT 2002) to be held at Pune, June 24-25.
+
+   3. P.C.Reghu Raj and S. Raman "Content Identification and Semantic indexing of Text Documents", accepted for presentation in the Indo European Conference on Multilingual Communication Technologies (IEMCT 2002) to be held at Pune, June 24-25.
+
+   4. Vadali Srinivasa Murty and S. Raman "Word Matching Algorithm in Information Processing", presented in International Conference on Control Instrumentation and Information Communication (CIIC-2001), Kolkata, December 12-15, 2001.
+
+   5. P.C. Reghu Raj and S. Raman "An Algorithm for NLP-based Document Classification for Effective Web Search", presented in International Conference on Industrial Mathematics (ICIM 2001), IIT Madras, India, August 12-14, 2001.
+
+   6. S. Sankaran and S.Raman "A feature-based probabilistic algorithm for text classification”, presented in International Conference on Industrial Mathematics (ICIM 2001), IIT Madras, India, August 12-14, 2001.
+
+   7. S. Raman and B. Vijayalakshmi " Annotation Generation System for Natural Language Descriptions", Paper accepted for Intl. Comp.Sc.Conf., (ICSC’99), 13-15 Dec 1999, Hong kong.
+
+   8. S. Raman and V. Usha "Natural Language-Oriented Retrieval of Multimedia Data", Paper presented at 7th Intl.Conf. on Advanced Computing & Communications (ADCOM’99) , 20-22 Dec 1999, Roorkee.
+
+   9. Ilango Krishnamurthy and S. Raman "Validation of Video Retrieval Systems", Proc. of 2nd Euro. Conf. on Multimedia Applications (ECMAST’97), 21-23 May’97, Milan, Italy, LNCS No. 1242, pp.475-490.
+
+  10. P.N. Sridharan and S. Raman "Video Handling in Multimedia: A Review", ADCOMP ‘96, Bangalore, 16-18 Dec. ‘96, Bangalore, pp. 182-186.
+
+  11. W. Gowri Shankar and S. Raman "An Experimental Survey on Multimedia Education", International Conference on Multimedia Technology and Management, 11-14 Dec. ‘96, Hong Kong, pp. 304-313.
+
+  12. P.N. Sridharan and S. Raman "Synthesized data structure for video data: a formal specification", in print Proc. ICIP 96, IEEE sig. Proc. Soc., Lausanne, Switzerland, 16-19 Sept. ‘96.
+
+  13. S. Raman and P.N. Sridharan. "The Role of World Knowledge and Belief Systems in Machine Translation", UNESCO Regional Workshop on New Information Technologies - Machine Translation, Dec. 1991, New Delhi, pp.37-48.
+
+  14. P. N. Sridharan and S. Raman "Characteristics of Video Data for Signal Analysis", Paper No.:sf215, ICSP’96, CIE III Int’l Conf. on Sig. Proc., Lausanne, Switzerland, 16-19 Sept’96.
+
+  15. N. Venkata Subramanian, N. Alwar, G. Mallikarjuna, P. Prabhakar Rao and S. Raman. "The Design of a Dictionary Module for Machine Translation in Indian Languages", Seoul Intl. Conf. on NLP (SICONLP), Nov. 1990, Seoul, Korea, pp. 310-319.
+
+  16. N. Alwar, S. Raman, A. Shanthi, R. Venkataramann and N. Venkata Subramanian. "A Multipurpose Multilingual Package for Indian Languages", UNESCO Regional Workshop on Computer Processing of Asian Languages, Sep. 1989, Bangkok, Thailand, pp.18-26.
+
+  17. C. Muthuvel, N. Alwar and S. Raman. "A Font Generator for Indian Languages", ibid, pp. 154-159.
+
+  18. N. Alwar, S. Raman and R. Damor "A Natural Language Generator for Hindi", ibid, pp. 102-109.
+
+  19. C. Tamil Thiru Mozhian and S. Raman. "Microprocessor-based Hospital Information System - a study in the development", ISMM Intl. Conf. on Microcomputer Applications, Dec. 1989, Los Angeles, U.S.A.
+
+  20. Raman and N. Alwar. "Studies on Phrase-level Semantics as applied to Machine Translation in Indian Languages", AIMSA-88, AI Methodology Systems and Applications, Sep. 1988, Varna, Bulgaria, pp.313-318.
+
+  21. R. Sundar, S. Raman and B. Yegnanarayana. "Studies on Speech Recognition of Hindi Stop Consonants", European Conf. on Speech Technology, Sep. 1987, Edinburgh, U.K., pp. 95-98.7.
+
+  22. B. Yegnanarayana, S. Raman and R. Sundar. "Signal-dependent Analysis for Speech Recognition", IEEE Intl. Conf. on Speech I/O Techniques and Applications, Mar. 1986, London, U.K., pp. 31-36.
+
+  23. S. Raman, B. Yegnanarayana, R. Sundar and V.V. Chandrasekaran "Knowledge-based signal processing for recognition of Hindi stop consonants", IEEE Intl. Conference on Computer Systems and Signal Processing, Dec. 1984, Bangalore, pp.896-900.
+
+  24. S. Raman and B. Yegnanarayana "Performance of Isolated word recognition system for a confusable vocabulary", IEEE Intl. Conference ICASSP-84, Mar. 1984, San Diego, U.S.A., pp.17.5.1-17.5.4.
+
+  25. B. Yegnanarayana, T. Sreekumar and S. Raman "Signal-dependent matching for speech recognition", IEEE Intl. Conference on Systems, man and Cybernetics, Dec. 1983, Bombay, pp.150-154.
+
+  26. B. Yegnanarayana, G. Subramani and S. Raman "Signal to symbol transformation for isolated word speech recognition system", ibid, pp.345-349.
+
+National Conferences
+
+   1.
+
+      P.C. Reghu Raj and S. Raman Content Identification and Semantic Approximation of Text Documents”, presented in the First Inter-Research Institute Student Seminar (IRISS'2002), IISc Bangalore, India, March 28-29,2002.
+   2.
+
+      P.C. Reghu Raj and S. Raman “NLP-based Document Classification for Effective Web Search” , National Seminar on Convergence of Technologies-2010 (CONTECH-2010), pp 146-149, Jan 20-22, 2001, Thiruvannamalai, India.
+   3.
+
+      Sankaran S. and S. Raman "Integrating Media: An automatic text-based image processing system and its applications", Proceedings of the National Seminar on convergence of technologies 2010, (CONTECH-2010), pp. 151-154, Jan 20-22, 2001, Tiruvannamalai, India
+   4.
+
+      T.R. Gayathri and S. Raman "The Role of Reversible Grammar in Language-based Annotation of Multimedia Data", invited paper presented at the Second International Seminar on Dravidian Linguistics; Kuppam, 23-24, June '96.
+   5.
+
+      W. Gowri Shankar and S. Raman. "ASHA : Authoring System for Hypermedia Applications", presented at the Symposium on Machine Aids for Translation and Communication '96, New Delhi,April, 1996.
+   6.
+
+      Ilango Krishnamurthi and S. Raman "Evaluating Multimedia Database Management Systems", presented at the Symposium on Machine Aids for Translation and Communication '96, New Delhi, April, 1996.
+
+   7. P.N. Sridharan and S. Raman . "Language Based Annotation for Multimedia Data" Proc. Indian Congress on Knowledge and Language, Vol.I, Jan. 1996, Mysore, pp. 67-80.
+
+   8. Ilango Krishnamurthi, S.Raman, P. Srihari Sampathkumar, R.K. Jayaraman . "Natural Language Query Interface to Multimedia Databases" Proc. Indian Congress on Knowledge and Language, Vol.I, Jan. 1996, Mysore, pp. 99-106.
+
+   9. T.R. Gayathri and S. Raman . "A Hybrid Model for NLP-Based Query Processing for Library Application" Proc. Indian Congress on Knowledge and Language, Vol.I, Jan. 1996, Mysore, pp. 53-65.
+
+  10. S. Raman and C.R. Sekar. "The Role of Computers in Library Resource Sharing", (in Tamil) presented at Tamil Nadu Science Congress - 3rd Seminar, Pondicherry University, Dec. 1994, pp. 53-59.
+
+  11. S. Raman. "The Projected Impact of Machine Translation", CSI Convention on IT applications in Indian languages, AKSHARA '92, Bhubaneshwar, Feb. 1992.
+
+  12. S. Raman and N. Alwar. "TAMIL - Translation Automated for Multiple Indian Languages - a Proposal for a system", IEEE Annual Convention on Technology on the Frontier Applications & Impact on the society, Feb. 1989, Pune, pp. 48-55.
+
+  13. M. Suresh, N. Alwar and S. Raman. "Multiword 2.0 : Multilingual Wordprocessor", CSI-88, Computer Society of India Annual Convention, Jan. 1988, Madras, pp. 120- 128. 
+
+Projects Undertaken:
+Title of the Project 	Duration of the Project 	Sponsoring Agency 	Value of the Project in Lakhs of Rs. 	Co-investigator(s)
+FPGA-based Natural Language Command Interface for Robots 	2001-2003 	
+
+ DST
+	
+
+14.66
+	Dr. S. Srinivasan
+Development of Software for Russian-English Translation 	
+1995-'98
+	
+ISRO
+	
+
+7.90
+
+	Dr. R. Sundar
+Software Development for Content-based Search of Telemetry Data for Flight Analysis 	
+1995
+	
+ISRO
+	
+1.6
+	Dr. R. Sundar
+Development of a Multimedia Video Subsystem 	
+1994-'95
+	
+IRDF
+	
+(staff)
+	Prof. S. Srinivasan
+Microprocessor-based Stencil Cutter for Computer I/O 	
+1982-'86
+	
+DoE
+	
+5.5
+	Prof. H. N. Mahabala
+Microprocessor Applications 	
+1981-'87
+	
+MHRD
+	
+50.0
+	Prof. H. N. Mahabala Prof. B. Yegnanarayana
+M. Tech Students:
+Degree 	Year 	Name of Student 	Title
+M.Tech  	2002 	Srinivasan S 	An Interactive ATN Syntax Analyzer for Natural Language Text
+M.Tech 	2002 	Abdul Nazeer 	Negative Sense Detector for Natural Language Text
+
+M.Tech
+	
+
+2001
+	
+
+Sudarsun S
+	
+
+Content Based Automatic Generation of a Title
+
+M.Tech
+	
+
+2001
+	
+
+Valarmathi B
+	
+
+Development of a Bottom-Up ATN Parser
+
+M.Tech
+	
+
+2001
+	
+
+Pushpa K
+	
+
+Negation Handler for Navigation Applications
+
+M.Tech
+	
+
+2000
+	
+
+G. Rajesh Kumar
+	
+
+Web-based Query Processing System
+
+M.Tech
+	2000 	S. K. Uma 	Interactive Information retrieval Using Keyword-Based Search
+M.Tech 	1997 	S. N. Vemuri 	Implementation of an Indexing Structure for the Retrieval of Annotated Video Objects
+M.Tech 	1995 	R. Ravikumar 	Hypertext tool for Book-writing
+M.Tech 	1995 	Radha Janakiraman 	Orchestrated multimedia presentation
+M.Tech 	1995 	Deepak Oberoi Param Pal Singh 	Design and implementation of an object-oriented platform for Multimedia databases
+M.Tech 	1994 	M. Sudheer Babu 	A transition network parser for a subset of English sentences
+M.Tech 	1994 	P. Krishna Prasad 	A text editor for Indian languages
+M.Tech 	1994 	P. Sreeram 	Performance evaluation of a machine translation system in a distributed environment
+M.Tech 	1993 	K. Roby 	Simulation study of a machine translation system
+M.Tech 	1993 	M. Kumaresan 	Simulation of DASH multiprocessor architecture for a machine translation system
+M.Tech 	1993 	Herm Anand 	An ATN Parser
+B.Tech 	2002 	Mahendra Varman 	Root Word Stemmer
+B.Tech 	1995 	K. Karun 	Video Compression using Wavelet Transformation
+B.Tech 	1995 	S. Sreenivas 	Media Synchronization for Multimedia Applications in a Distributed Environment using P4
+B.Tech 	1994 	P. Siddarth 	Parsing of English Sentences using a Mixed Mode ATN
+B.Tech 	1994 	N. Harish 	NL Parsing with Augmented Lexicon
+B.Tech 	1994 	K. Sreenadth Murthy 	NL Understanding based on Database Queries
+Infrastructural Facilities :
+
+The lab is equipped with systems running on Windows (with a client-server architecture) and Linux platforms. It also has HP Laser Jet, Epson Stylus Color Ink Jet and Wipro Dot Matrix printers, and software to support the research activities in the lab.
+
+

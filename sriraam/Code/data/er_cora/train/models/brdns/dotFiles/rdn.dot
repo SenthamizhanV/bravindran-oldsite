@@ -1,0 +1,13 @@
+digraph RDN{
+0[style="filled" label="haswordtitle(title,word)" color="gray92"];
+1[style="filled" label="author(paper,auth)" color="gray92"];
+2[style="filled" label="haswordauthor(auth,word)" color="gray92"];
+3[style="filled" label="haswordvenue(venue,word)" color="gray92"];
+4[style="filled" label="title(paper,title)" color="gray92"];
+5[style="filled" label="sameauthor(auth,auth)" color="gray52"];
+0 -> 5[label="" style=solid];
+4 -> 5[label="" style=solid];
+2 -> 5[label="" style=solid];
+3 -> 5[label="" style=solid];
+1 -> 5[label="" style=solid];
+}

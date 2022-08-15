@@ -1,0 +1,1198 @@
+% Running on host: BL-SOIC-F4CHPD2
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[data\RE_UW-CSE\train/train_pos.txt, data\RE_UW-CSE\train/train_neg.txt, data\RE_UW-CSE\train/train_bk.txt, data\RE_UW-CSE\train/train_facts.txt]
+%  for N=0: args[N]=data\RE_UW-CSE\train/train_pos.txt
+
+% getInputArgWithDefaultValue: args=[data\RE_UW-CSE\train/train_pos.txt, data\RE_UW-CSE\train/train_neg.txt, data\RE_UW-CSE\train/train_bk.txt, data\RE_UW-CSE\train/train_facts.txt]
+%  for N=1: args[N]=data\RE_UW-CSE\train/train_neg.txt
+
+% getInputArgWithDefaultValue: args=[data\RE_UW-CSE\train/train_pos.txt, data\RE_UW-CSE\train/train_neg.txt, data\RE_UW-CSE\train/train_bk.txt, data\RE_UW-CSE\train/train_facts.txt]
+%  for N=2: args[N]=data\RE_UW-CSE\train/train_bk.txt
+
+% getInputArgWithDefaultValue: args=[data\RE_UW-CSE\train/train_pos.txt, data\RE_UW-CSE\train/train_neg.txt, data\RE_UW-CSE\train/train_bk.txt, data\RE_UW-CSE\train/train_facts.txt]
+%  for N=3: args[N]=data\RE_UW-CSE\train/train_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+% Load '../uw-cse_bk.txt'.
+
+% Switching to VarIndicator = uppercase.
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+  loadThisFile: i=0 newName=precomputed.txt sents=[(commonpub(Title, P1, P2) :- publication(Title, P1), publication(Title, P2), P1 \== P2), (commonta(C, Q, P1, P2) :- ta(C, P2, Q), taughtby(C, P1, Q))]
+  loadThisFile: i=1 newName=precomputed1.txt sents=[(count_taughtby(Person, N) :- taughtby(SomeC, Person, SomeQ), all([Course, Quarter], taughtby(Course, Person, Quarter), AllCourses), N is length(AllCourses)), (count_publications(Person, N) :- publication(Somet, Person), all(Title, publication(Title, Person), AllTitles), N is length(AllTitles)), (count_common_pubs(P1, P2, N) :- commonpub(Somet, P1, P2), all(Title, commonpub(Title, P1, P2), AllTitles), N is length(AllTitles))]
+  loadThisFile: i=2 newName=precomputed2.txt sents=[(have_more_than_n_pubs(A, N) :- count_publications(A, N2), member(N, [1, 3, 5, 7, 9, 11, 13, 15]), N2 > N), (have_more_than_n_common_pubs(A1, A2, N) :- count_common_pubs(A1, A2, N2), member(N, [1, 3, 5, 7, 9, 11, 13, 15]), N2 > N)]
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+% LoadAllModes() called.  Currently loaded modes: []
+% [ LazyGroundClauseIndex ]  Building full index for sameAs/2 with 2 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for exp/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for log/3.
+
+%  Read the facts.
+%  Have read 2,561 facts.
+% Have read 114 examples from 'data\RE_UW-CSE\train' [data\RE_UW-CSE\train/train*].
+% Have read 77,172 examples from 'data\RE_UW-CSE\train' [data\RE_UW-CSE\train/train*].
+
+%  LearnOneClause initialized.
+
+% The outer looper has been created.
+
+% Initializing the ILP inner looper.
+
+% NEW target:                 advisedby(D, E)
+%  targetPred:                advisedby/2
+%  targetArgTypes:            signature = [const, const], types = [+Person, +Person]
+%  targets:                   [advisedby(D, E)]
+%  targetPredicates:          [advisedby/2]
+%  targetArgSpecs:            [[D[+Person], E[+Person]]]
+%  variablesInTargets:        [[D, E]]
+
+% Precompute #0's requests: 'precomputed.txt'
+%   commonpub(Title, P1, P2) :- publication(Title, P1), publication(Title, P2), P1 \== P2
+%   commonta(C, Q, P1, P2) :- ta(C, P2, Q), taughtby(C, P1, Q)
+
+% Precompute #1's requests: 'precomputed1.txt'
+%   count_taughtby(Person, N) :- taughtby(SomeC, Person, SomeQ), all([Course, Quarter], taughtby(Course, Person, Quarter), AllCourses), N is length(AllCourses)
+%   count_publications(Person, N) :- publication(Somet, Person), all(Title, publication(Title, Person), AllTitles), N is length(AllTitles)
+%   count_common_pubs(P1, P2, N) :- commonpub(Somet, P1, P2), all(Title, commonpub(Title, P1, P2), AllTitles), N is length(AllTitles)
+
+% Precompute #2's requests: 'precomputed2.txt'
+%   have_more_than_n_pubs(A, N) :- count_publications(A, N2), member(N, [1, 3, 5, 7, 9, 11, 13, 15]), N2 > N
+%   have_more_than_n_common_pubs(A1, A2, N) :- count_common_pubs(A1, A2, N2), member(N, [1, 3, 5, 7, 9, 11, 13, 15]), N2 > N
+% Processing precompute file: precomputed.txt
+Writing to file: C:\Users\sxd170431\Dropbox\BoostingTutorial\Code\precomputed.txt
+
+% Precomputing 'precomputed.txt'.
+
+%%% Precomputing 2 predicates.
+
+% Saving all provable instances of 'commonpub'
+% using clause:   commonpub(Title, P1, P2) :- publication(Title, P1), publication(Title, P2), P1 \== P2
+
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for publication/2.
+%  Found 1,096 proofs of 'commonpub(Title, P1, P2)'.
+
+// Precomputed a total of 1,096 facts (and found 0 duplications) from: 'commonpub(Title, P1, P2) :- publication(Title, P1), publication(Title, P2), P1 \== P2.'
+
+
+% Saving all provable instances of 'commonta'
+% using clause:   commonta(C, Q, P1, P2) :- ta(C, P2, Q), taughtby(C, P1, Q)
+
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for taughtby/3.
+%  Found 164 proofs of 'commonta(C, Q, P1, P2)'.
+
+// Precomputed a total of 164 facts (and found 0 duplications) from: 'commonta(C, Q, P1, P2) :- ta(C, P2, Q), taughtby(C, P1, Q).'
+
+
+
+%%% Precomputed a total of 1,260 facts (and found 0 duplications).  Done at 10:56:40 11/20/18
+
+%    No need to compress since small: precomputed.txt
+% Loading: precomputed.txt
+% Read an additional 1,260 facts from edu.wisc.cs.will.Utils.condor.CondorFileReader@4c59e45e.
+% Processing precompute file: precomputed1.txt
+Writing to file: C:\Users\sxd170431\Dropbox\BoostingTutorial\Code\precomputed1.txt
+
+% Precomputing 'precomputed1.txt'.
+
+%%% Precomputing 3 predicates.
+
+% Saving all provable instances of 'count_taughtby'
+% using clause:   count_taughtby(Person, N) :- taughtby(SomeC, Person, SomeQ), all([Course, Quarter], taughtby(Course, Person, Quarter), AllCourses), N is length(AllCourses)
+
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for taughtby/3.
+%  Found 286 proofs of 'count_taughtby(Person, N)'.
+
+// Precomputed a total of 64 facts (and found 222 duplications) from: 'count_taughtby(Person, N) :- taughtby(SomeC, Person, SomeQ), all([Course, Quarter], taughtby(Course, Person, Quarter), AllCourses), N is length(AllCourses).'
+
+
+% Saving all provable instances of 'count_publications'
+% using clause:   count_publications(Person, N) :- publication(Somet, Person), all(Title, publication(Title, Person), AllTitles), N is length(AllTitles)
+
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for publication/2.
+%  Found 734 proofs of 'count_publications(Person, N)'.
+
+// Precomputed a total of 99 facts (and found 635 duplications) from: 'count_publications(Person, N) :- publication(Somet, Person), all(Title, publication(Title, Person), AllTitles), N is length(AllTitles).'
+
+
+% Saving all provable instances of 'count_common_pubs'
+% using clause:   count_common_pubs(P1, P2, N) :- commonpub(Somet, P1, P2), all(Title, commonpub(Title, P1, P2), AllTitles), N is length(AllTitles)
+
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for commonpub/3.
+%  Found 1,096 proofs of 'count_common_pubs(P1, P2, N)'.
+
+// Precomputed a total of 362 facts (and found 734 duplications) from: 'count_common_pubs(P1, P2, N) :- commonpub(Somet, P1, P2), all(Title, commonpub(Title, P1, P2), AllTitles), N is length(AllTitles).'
+
+
+
+%%% Precomputed a total of 525 facts (and found 1,591 duplications).  Done at 10:56:40 11/20/18
+
+%    No need to compress since small: precomputed1.txt
+% Loading: precomputed1.txt
+% Read an additional 525 facts from edu.wisc.cs.will.Utils.condor.CondorFileReader@701bc94e.
+% Processing precompute file: precomputed2.txt
+Writing to file: C:\Users\sxd170431\Dropbox\BoostingTutorial\Code\precomputed2.txt
+
+% Precomputing 'precomputed2.txt'.
+
+%%% Precomputing 2 predicates.
+
+% Saving all provable instances of 'have_more_than_n_common_pubs'
+% using clause:   have_more_than_n_common_pubs(A1, A2, N) :- count_common_pubs(A1, A2, N2), member(N, [1, 3, 5, 7, 9, 11, 13, 15]), N2 > N
+
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for member/2.
+%  Found 424 proofs of 'have_more_than_n_common_pubs(A1, A2, N)'.
+
+// Precomputed a total of 424 facts (and found 0 duplications) from: 'have_more_than_n_common_pubs(A1, A2, N) :- count_common_pubs(A1, A2, N2), member(N, [1, 3, 5, 7, 9, 11, 13, 15]), N2 > N.'
+
+
+% Saving all provable instances of 'have_more_than_n_pubs'
+% using clause:   have_more_than_n_pubs(A, N) :- count_publications(A, N2), member(N, [1, 3, 5, 7, 9, 11, 13, 15]), N2 > N
+
+%  Found 256 proofs of 'have_more_than_n_pubs(A, N)'.
+
+// Precomputed a total of 256 facts (and found 0 duplications) from: 'have_more_than_n_pubs(A, N) :- count_publications(A, N2), member(N, [1, 3, 5, 7, 9, 11, 13, 15]), N2 > N.'
+
+
+
+%%% Precomputed a total of 680 facts (and found 0 duplications).  Done at 10:56:40 11/20/18
+
+%    No need to compress since small: precomputed2.txt
+% Loading: precomputed2.txt
+% Read an additional 680 facts from edu.wisc.cs.will.Utils.condor.CondorFileReader@3a89226e.
+
+% Started collecting constants
+
+% Collecting the types of constants.
+
+% Looking at the training examples to see if any types of new constants can be inferred.
+% Time to collect constants: 71 milliseconds
+% Time to collect examples: 0 seconds
+
+% Read 114 pos examples and 77,172 neg examples.
+% Time to init learnOneClause: 532 milliseconds
+% Old dirnull
+Setting model dir
+
+% Have 114 'raw' positive examples and kept 114.
+% Have 77,172 'raw' negative examples and kept 77,172.
+Setting class args for hasposition to: 1
+Setting class args for inphase to: 1
+
+% processing backup's for advisedby
+%  POS EX = 114
+%  NEG EX = 77,172
+
+% Memory usage by WILLSetup (just counts # targets?):
+%  |backupPosExamples| = 1
+%  |backupNegExamples| = 1
+%  |predicatesAsFacts| = 0
+%  |addedToFactBase|   = 0
+data\RE_UW-CSE\train/models/
+File: data\RE_UW-CSE\train/advice.txt doesnt exist.Hence no advice loaded
+% Learning 5 trees in this iteration for advisedby
+
+% Learn model for: advisedby
+% Kept 114 of the 114 positive examples.
+% Kept 223 of the 77,172 negative examples.
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.22384629608431877
+Set score:0.0025
+% Dataset size: 337
+Computing probabilities
+prob time:0 seconds
+No hidden examples for : advisedby
+Time to build dataset: 0 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.2238462960843213
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 12 27 45 65 79 94 156 167 168 187
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% LearnOneClause Parameters:
+%   Targets (1):
+%    advisedby(+Person, +Person)
+%  Modes (71):
+%    professor(+Person),
+%    student(+Person),
+%    publication(+Title, -Person),
+%    publication(-Title, +Person),
+%    taughtby(+Course, +Person, -Quarter),
+%    taughtby(+Course, -Person, +Quarter),
+%    taughtby(-Course, +Person, -Quarter),
+%    courselevel(+Course, +Level),
+%    courselevel(+Course, #Level),
+%    hasposition(+Person, +Position),
+%    hasposition(+Person, #Position),
+%    multiclass_hasposition(+Person),
+%    projectmember(+Project, -Person),
+%    projectmember(-Project, +Person),
+%    position(+Position),
+%    phase(+Phase),
+%    inphase(+Person, +Phase),
+%    inphase(+Person, #Phase),
+%    multiclass_inphase(+Person),
+%    tempadvisedby(-Person, +Person),
+%    tempadvisedby(+Person, -Person),
+%    yearsinprogram(+Person, #Integer),
+%    ta(+Course, -Person, +Quarter),
+%    ta(+Course, +Person, -Quarter),
+%    ta(-Course, +Person, -Quarter),
+%    sameperson(+Person, +Person),
+%    samecourse(+Course, +Course),
+%    sameproject(+Project, +Project),
+%    have_more_than_n_pubs(+Person, #PThresh),
+%    have_more_than_n_common_pubs(+Person, -Person, #PThresh),
+%    have_more_than_n_common_pubs(-Person, +Person, #PThresh),
+%    count_taughtby(+Person, -PThresh),
+%    count_publications(+Person, -PThresh),
+%    count_common_pubs(+Person, -Person, -PThresh),
+%    count_common_pubs(-Person, +Person, -PThresh),
+%    addList(+willList, #willNumber),
+%    multiplyList(+willList, #willNumber),
+%    abs(+willNumber, &willNumber),
+%    minus(+willNumber, &willNumber),
+%    minus(+willNumber, +willNumber, &willNumber),
+%    plus(+willNumber, +willNumber, &willNumber),
+%    mult(+willNumber, +willNumber, &willNumber),
+%    div(+willNumber, +willNumber, &willNumber),
+%    allNumbers(+willList),
+%    positiveNumber(+willNumber),
+%    negativeNumber(+willNumber),
+%    in0toDot001(+willNumber),
+%    in0toDot01(+willNumber),
+%    in0toDot1(+willNumber),
+%    in0to1(+willNumber),
+%    in0to10(+willNumber),
+%    in0to100(+willNumber),
+%    in0to1000(+willNumber),
+%    equalWithTolerance(+willNumber, +willNumber, &willNumber),
+%    greaterOrEqualDifference(+willNumber, +willNumber, &willNumber),
+%    smallerOrEqualDifference(+willNumber, +willNumber, &willNumber),
+%    isaEqualTolerance(+willNumber),
+%    lessThan(+willNumber, +willNumber),
+%    greaterThan(+willNumber, +willNumber),
+%    lessThanOrEqual(+willNumber, +willNumber),
+%    greaterThanOrEqual(+willNumber, +willNumber),
+%    inBetweenOO(+willNumber, +willNumber, +willNumber),
+%    inBetweenCO(+willNumber, +willNumber, +willNumber),
+%    inBetweenOC(+willNumber, +willNumber, +willNumber),
+%    inBetweenCC(+willNumber, +willNumber, +willNumber),
+%    memberOfList(+willAnything, +willList),
+%    firstInList(+willList, &willAnything),
+%    restOfList(+willList, &willList),
+%    positionInList(+willAnything, +willList, &willNumber),
+%    nthInList(+willNumber, +willList, &willAnything),
+%    lengthOfList(+willList, &willNumber)
+
+% target           = advisedby(D, E)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  advisedby(_, _).  [covers 337.0/337.0 pos, 0.0/0.0 neg]
+% Most-general root: advisedby(_, _).  [covers 337.0/337.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'advisedby(_, _).  [covers 337.0/337.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for professor/1 with 62 assertions.
+% [ LazyGroundClauseIndex ]  Building full index for student/1 with 216 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for hasposition/2.
+% [ LazyGroundClauseIndex ]  Building full index for hasposition/2 with 52 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for projectmember/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for inphase/2.
+% [ LazyGroundClauseIndex ]  Building full index for inphase/2 with 140 assertions.
+% [ LazyGroundClauseIndex ]  Building full index for tempadvisedby/2 with 37 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for tempadvisedby/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for tempadvisedby/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for yearsinprogram/2.
+% [ LazyGroundClauseIndex ]  Building full index for yearsinprogram/2 with 141 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for ta/3.
+% [ LazyGroundClauseIndex ]  Building full index for sameperson/2 with 278 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for have_more_than_n_pubs/2.
+% [ LazyGroundClauseIndex ]  Building full index for have_more_than_n_pubs/2 with 256 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for have_more_than_n_common_pubs/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for have_more_than_n_common_pubs/3.
+% [ LazyGroundClauseIndex ]  Building full index for have_more_than_n_common_pubs/3 with 424 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for count_taughtby/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for count_publications/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for count_common_pubs/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for count_common_pubs/3.
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 12 variant children.  Sending 68 items to OPEN for evaluation and possible insertion.
+% Have created 68 valid-on-seeds descendants and have picked up 14 bad extensions.
+%     Score = -68.968967 (regressionFit = 68.968966, penalties=1.12E-6) for clause:  advisedby(A, _) :- professor(A).  [covers 46.0/337.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -68.968967): advisedby(A, _) :- professor(A).  [covers 46.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -36.642858 (regressionFit = 36.642857, penalties=1.12E-6) for clause:  advisedby(_, A) :- professor(A).  [covers 168.0/337.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -36.642858): advisedby(_, A) :- professor(A).  [covers 168.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -69.340207 (regressionFit = 69.340206, penalties=1.12E-6) for clause:  advisedby(A, _) :- student(A).  [covers 291.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -36.538923 (regressionFit = 36.538922, penalties=1.12E-6) for clause:  advisedby(_, A) :- student(A).  [covers 169.0/337.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -36.538923): advisedby(_, A) :- student(A).  [covers 169.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -84.196375 (regressionFit = 84.196374, penalties=1.23E-6) for clause:  advisedby(A, _) :- publication(_, A).  [covers 137.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -61.693743 (regressionFit = 61.693741, penalties=1.23E-6) for clause:  advisedby(_, A) :- publication(_, A).  [covers 185.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -72.619766 (regressionFit = 72.619764, penalties=1.34E-6) for clause:  advisedby(A, _) :- taughtby(_, A, _).  [covers 55.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -45.455968 (regressionFit = 45.455967, penalties=1.34E-6) for clause:  advisedby(_, A) :- taughtby(_, A, _).  [covers 158.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -34.815806 (regressionFit = 34.815805, penalties=1.14E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/337.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -34.815806): advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -66.332681 (regressionFit = 66.332680, penalties=1.14E-6) for clause:  advisedby(A, _) :- inphase(A, post_generals).  [covers 92.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -70.093243 (regressionFit = 70.093241, penalties=1.14E-6) for clause:  advisedby(A, _) :- inphase(A, post_quals).  [covers 87.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -69.419796 (regressionFit = 69.419795, penalties=1.14E-6) for clause:  advisedby(_, A) :- inphase(A, post_quals).  [covers 43.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -57.885172 (regressionFit = 57.885171, penalties=1.23E-6) for clause:  advisedby(_, A) :- tempadvisedby(_, A).  [covers 94.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -71.796827 (regressionFit = 71.796825, penalties=1.14E-6) for clause:  advisedby(A, _) :- yearsinprogram(A, year_6).  [covers 21.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -74.605591 (regressionFit = 74.605590, penalties=1.14E-6) for clause:  advisedby(A, _) :- yearsinprogram(A, year_7).  [covers 14.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -74.049343 (regressionFit = 74.049342, penalties=1.14E-6) for clause:  advisedby(A, _) :- yearsinprogram(A, year_3).  [covers 32.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.14E-6) for clause:  advisedby(A, _) :- yearsinprogram(A, year_10).  [covers 2.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -71.825001 (regressionFit = 71.825000, penalties=1.14E-6) for clause:  advisedby(A, _) :- yearsinprogram(A, year_5).  [covers 56.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -72.463493 (regressionFit = 72.463492, penalties=1.14E-6) for clause:  advisedby(_, A) :- yearsinprogram(A, year_3).  [covers 21.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -76.588965 (regressionFit = 76.588964, penalties=1.34E-6) for clause:  advisedby(A, _) :- ta(_, A, _).  [covers 154.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -56.619042 (regressionFit = 56.619040, penalties=1.34E-6) for clause:  advisedby(_, A) :- ta(_, A, _).  [covers 111.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.12E-6) for clause:  advisedby(A, _) :- sameperson(A, A).  [covers 337.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.12E-6) for clause:  advisedby(_, A) :- sameperson(A, A).  [covers 337.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -74.354574 (regressionFit = 74.354572, penalties=1.14E-6) for clause:  advisedby(A, _) :- have_more_than_n_pubs(A, 1).  [covers 104.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -74.905699 (regressionFit = 74.905698, penalties=1.14E-6) for clause:  advisedby(A, _) :- have_more_than_n_pubs(A, 3).  [covers 62.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -74.654966 (regressionFit = 74.654965, penalties=1.14E-6) for clause:  advisedby(A, _) :- have_more_than_n_pubs(A, 5).  [covers 50.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -58.431904 (regressionFit = 58.431903, penalties=1.14E-6) for clause:  advisedby(_, A) :- have_more_than_n_pubs(A, 1).  [covers 166.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -54.122456 (regressionFit = 54.122455, penalties=1.14E-6) for clause:  advisedby(_, A) :- have_more_than_n_pubs(A, 3).  [covers 122.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -58.706509 (regressionFit = 58.706508, penalties=1.14E-6) for clause:  advisedby(_, A) :- have_more_than_n_pubs(A, 5).  [covers 102.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -60.662746 (regressionFit = 60.662745, penalties=1.14E-6) for clause:  advisedby(_, A) :- have_more_than_n_pubs(A, 7).  [covers 93.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -62.193321 (regressionFit = 62.193320, penalties=1.14E-6) for clause:  advisedby(_, A) :- have_more_than_n_pubs(A, 9).  [covers 76.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -60.947148 (regressionFit = 60.947147, penalties=1.14E-6) for clause:  advisedby(_, A) :- have_more_than_n_pubs(A, 11).  [covers 65.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -64.909962 (regressionFit = 64.909961, penalties=1.14E-6) for clause:  advisedby(_, A) :- have_more_than_n_pubs(A, 13).  [covers 47.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -65.529569 (regressionFit = 65.529568, penalties=1.14E-6) for clause:  advisedby(_, A) :- have_more_than_n_pubs(A, 15).  [covers 35.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -61.016288 (regressionFit = 61.016287, penalties=1.04E-6) for clause:  advisedby(A, B) :- have_more_than_n_common_pubs(A, B, 1).  [covers 30.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -66.619498 (regressionFit = 66.619497, penalties=1.04E-6) for clause:  advisedby(A, B) :- have_more_than_n_common_pubs(A, B, 3).  [covers 18.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -79.684940 (regressionFit = 79.684939, penalties=1.25E-6) for clause:  advisedby(A, _) :- have_more_than_n_common_pubs(A, _, 1).  [covers 104.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -76.750019 (regressionFit = 76.750018, penalties=1.25E-6) for clause:  advisedby(A, _) :- have_more_than_n_common_pubs(A, _, 3).  [covers 58.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -61.016288 (regressionFit = 61.016287, penalties=1.04E-6) for clause:  advisedby(A, B) :- have_more_than_n_common_pubs(B, A, 1).  [covers 30.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -66.619498 (regressionFit = 66.619497, penalties=1.04E-6) for clause:  advisedby(A, B) :- have_more_than_n_common_pubs(B, A, 3).  [covers 18.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -59.787283 (regressionFit = 59.787282, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(A, _, 1).  [covers 166.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -66.873924 (regressionFit = 66.873923, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(A, _, 3).  [covers 105.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -65.129405 (regressionFit = 65.129404, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(A, _, 5).  [covers 85.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -66.941152 (regressionFit = 66.941151, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(A, _, 7).  [covers 63.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -70.970007 (regressionFit = 70.970006, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(A, _, 9).  [covers 45.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -71.060221 (regressionFit = 71.060220, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(A, _, 11).  [covers 30.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -73.258743 (regressionFit = 73.258741, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(A, _, 13).  [covers 11.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -73.975685 (regressionFit = 73.975684, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(A, _, 15).  [covers 7.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -79.684940 (regressionFit = 79.684939, penalties=1.25E-6) for clause:  advisedby(A, _) :- have_more_than_n_common_pubs(_, A, 1).  [covers 104.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -76.750019 (regressionFit = 76.750018, penalties=1.25E-6) for clause:  advisedby(A, _) :- have_more_than_n_common_pubs(_, A, 3).  [covers 58.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -59.787283 (regressionFit = 59.787282, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(_, A, 1).  [covers 166.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -66.873924 (regressionFit = 66.873923, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(_, A, 3).  [covers 105.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -65.129405 (regressionFit = 65.129404, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(_, A, 5).  [covers 85.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -66.941152 (regressionFit = 66.941151, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(_, A, 7).  [covers 63.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -70.970007 (regressionFit = 70.970006, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(_, A, 9).  [covers 45.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -71.060221 (regressionFit = 71.060220, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(_, A, 11).  [covers 30.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -73.258743 (regressionFit = 73.258741, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(_, A, 13).  [covers 11.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -73.975685 (regressionFit = 73.975684, penalties=1.25E-6) for clause:  advisedby(_, A) :- have_more_than_n_common_pubs(_, A, 15).  [covers 7.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -72.992393 (regressionFit = 72.992392, penalties=1.23E-6) for clause:  advisedby(A, _) :- count_taughtby(A, _).  [covers 55.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -44.985646 (regressionFit = 44.985645, penalties=1.23E-6) for clause:  advisedby(_, A) :- count_taughtby(A, _).  [covers 158.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -73.466242 (regressionFit = 73.466241, penalties=1.23E-6) for clause:  advisedby(A, _) :- count_publications(A, _).  [covers 137.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -58.656473 (regressionFit = 58.656472, penalties=1.23E-6) for clause:  advisedby(_, A) :- count_publications(A, _).  [covers 185.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -54.427120 (regressionFit = 54.427119, penalties=1.1300000000000002E-6) for clause:  advisedby(A, B) :- count_common_pubs(A, B, _).  [covers 42.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -78.889999 (regressionFit = 78.889997, penalties=1.34E-6) for clause:  advisedby(A, _) :- count_common_pubs(A, _, _).  [covers 137.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -54.427120 (regressionFit = 54.427119, penalties=1.1300000000000002E-6) for clause:  advisedby(A, B) :- count_common_pubs(B, A, _).  [covers 42.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -55.243982 (regressionFit = 55.243981, penalties=1.34E-6) for clause:  advisedby(_, A) :- count_common_pubs(A, _, _).  [covers 185.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -78.889999 (regressionFit = 78.889997, penalties=1.34E-6) for clause:  advisedby(A, _) :- count_common_pubs(_, A, _).  [covers 137.0/337.0 pos, 0.0/0.0 neg]
+%     Score = -55.243982 (regressionFit = 55.243981, penalties=1.34E-6) for clause:  advisedby(_, A) :- count_common_pubs(_, A, _).  [covers 185.0/337.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/337.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/337.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/337.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.18085048010974233 to score=0.0025 #egs=135.0
+Comparing variance: 0.05149004999509832 to score=0.0025 #egs=202.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 135.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.180850)
+%         ILP node to extend: advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/337.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 1 and with score = -0.180850) into the LAST position (#1) in the search queue.
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 202.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.051490)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.051490) into the LAST position (#2) in the search queue.
+
+% Time for loop #1: 219 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/337.0 pos, 0.0/0.0 neg]
+% This clause covers 135 positive examples, of which 135 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/135.0 pos, 0.0/0.0 neg]'
+%     Score = -34.815806 (regressionFit = 34.815805, penalties=1.14E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/135.0 pos, 0.0/0.0 neg]
+
+% Have these 10 positive seeds: 25 33 42 47 62 67 80 89 91 96
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=1] 'advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/135.0 pos, 0.0/0.0 neg]' score=-34.81580605382508
+% [ LazyGroundClauseIndex ]  Building full index for position/1 with 4 assertions.
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 16 variant children.  Sending 64 items to OPEN for evaluation and possible insertion.
+% Have created 64 valid-on-seeds descendants and have picked up 19 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), professor(A).  [covers 135.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -21.392310 (regressionFit = 21.392308, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), student(A).  [covers 130.0/135.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -21.392310): advisedby(A, B) :- hasposition(B, faculty), student(A).  [covers 130.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -45.065025 (regressionFit = 45.065023, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), publication(_, A).  [covers 64.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -45.606524 (regressionFit = 45.606522, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), publication(_, A).  [covers 120.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -31.771072 (regressionFit = 31.771070, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), taughtby(_, A, _).  [covers 132.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.775098 (regressionFit = 24.775096, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), projectmember(_, A).  [covers 10.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), position(faculty).  [covers 135.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -23.183996 (regressionFit = 23.183994, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_quals).  [covers 47.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -21.785042 (regressionFit = 21.785040, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 55.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -27.869273 (regressionFit = 27.869271, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), tempadvisedby(_, A).  [covers 92.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -23.806856 (regressionFit = 23.806854, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_4).  [covers 27.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.357694 (regressionFit = 24.357692, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_12).  [covers 4.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -22.981657 (regressionFit = 22.981655, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_5).  [covers 27.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -23.857705 (regressionFit = 23.857703, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_6).  [covers 15.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -30.111710 (regressionFit = 30.111707, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), ta(_, A, _).  [covers 64.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), sameperson(A, A).  [covers 135.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), sameperson(A, A).  [covers 135.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -23.996205 (regressionFit = 23.996203, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 1).  [covers 49.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.311929 (regressionFit = 24.311927, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 3).  [covers 25.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.207285 (regressionFit = 24.207283, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 5).  [covers 15.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.052132 (regressionFit = 24.052130, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 7).  [covers 13.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.200399 (regressionFit = 24.200397, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 9).  [covers 8.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.076925 (regressionFit = 24.076923, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 11).  [covers 4.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.410872 (regressionFit = 24.410870, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 1).  [covers 115.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.269400 (regressionFit = 24.269398, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 3).  [covers 97.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.408884 (regressionFit = 24.408882, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 5).  [covers 82.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.412525 (regressionFit = 24.412523, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 7).  [covers 79.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.356508 (regressionFit = 24.356506, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 9).  [covers 66.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.254086 (regressionFit = 24.254083, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 11).  [covers 58.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.245478 (regressionFit = 24.245476, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 13).  [covers 41.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.143148 (regressionFit = 24.143146, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 15).  [covers 35.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -22.518521 (regressionFit = 22.518519, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, B, 1).  [covers 27.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -23.322036 (regressionFit = 23.322034, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, B, 3).  [covers 16.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -23.937010 (regressionFit = 23.937008, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, B, 5).  [covers 7.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.123079 (regressionFit = 24.123077, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, B, 7).  [covers 4.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -37.106293 (regressionFit = 37.106291, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 1).  [covers 49.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -28.099521 (regressionFit = 28.099519, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 3).  [covers 22.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -22.518521 (regressionFit = 22.518519, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(B, A, 1).  [covers 27.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -23.322036 (regressionFit = 23.322034, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(B, A, 3).  [covers 16.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -23.937010 (regressionFit = 23.937008, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(B, A, 5).  [covers 7.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.123079 (regressionFit = 24.123077, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(B, A, 7).  [covers 4.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -36.259778 (regressionFit = 36.259775, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 1).  [covers 115.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -35.416744 (regressionFit = 35.416741, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 3).  [covers 81.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -29.574753 (regressionFit = 29.574750, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 5).  [covers 70.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -27.675193 (regressionFit = 27.675191, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 7).  [covers 53.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.594110 (regressionFit = 24.594108, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 9).  [covers 37.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.054848 (regressionFit = 24.054846, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 11).  [covers 24.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -37.106293 (regressionFit = 37.106291, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 1).  [covers 49.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -28.099521 (regressionFit = 28.099519, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 3).  [covers 22.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -36.259778 (regressionFit = 36.259775, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 1).  [covers 115.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -35.416744 (regressionFit = 35.416741, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 3).  [covers 81.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -29.574753 (regressionFit = 29.574750, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 5).  [covers 70.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -27.675193 (regressionFit = 27.675191, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 7).  [covers 53.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.594110 (regressionFit = 24.594108, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 9).  [covers 37.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.054848 (regressionFit = 24.054846, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 11).  [covers 24.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.242426 (regressionFit = 24.242424, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_taughtby(A, _).  [covers 132.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -23.620601 (regressionFit = 23.620599, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_publications(A, _).  [covers 64.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -24.258336 (regressionFit = 24.258333, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_publications(A, _).  [covers 120.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -21.333335 (regressionFit = 21.333333, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, B, _).  [covers 39.0/135.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -21.333335): advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, B, _).  [covers 39.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -37.350254 (regressionFit = 37.350252, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, _, _).  [covers 64.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -21.333335 (regressionFit = 21.333333, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(B, A, _).  [covers 39.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -33.262584 (regressionFit = 33.262581, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_common_pubs(A, _, _).  [covers 120.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -37.350254 (regressionFit = 37.350252, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(_, A, _).  [covers 64.0/135.0 pos, 0.0/0.0 neg]
+%     Score = -33.262584 (regressionFit = 33.262581, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_common_pubs(_, A, _).  [covers 120.0/135.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, B, _).  [covers 39.0/135.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, B, _).  [covers 39.0/135.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 1 with score = -0.181.
+% Will extend: advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, B, _).  [covers 39.0/135.0 pos, 0.0/0.0 neg]
+Comparing variance: 1.548618783066885E-15 to score=0.0025 #egs=39.0
+Comparing variance: 0.22222222222222202 to score=0.0025 #egs=96.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 96.0
+%      addToQueueOfTreeStructuredLearningTasks (level=2; score=-0.222222)
+%         ILP node to extend: advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/135.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 2 and with score = -0.222222) into position #1 in the search queue (new size=2).
+
+% Time for loop #2: 177 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #2, the best clause found is:
+%      advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, B, _).  [covers 39.0/135.0 pos, 0.0/0.0 neg]
+% This clause covers 39 positive examples, of which 39 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'advisedby(_, A) :- hasposition(A, faculty).  [covers 135.0/96.0 pos, 0.0/0.0 neg]'
+%     Score = -34.815806 (regressionFit = 34.815805, penalties=1.14E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty).  [covers 96.0/96.0 pos, 0.0/0.0 neg]
+
+% Have these 10 positive seeds: 23 28 44 53 61 73 75 86 87 90
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #3, bodyLen=1] 'advisedby(_, A) :- hasposition(A, faculty).  [covers 96.0/96.0 pos, 0.0/0.0 neg]' score=-34.81580605382508
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 9 variant children.  Sending 73 items to OPEN for evaluation and possible insertion.
+% Have created 73 valid-on-seeds descendants and have picked up 35 bad extensions.
+%     Score = -18.989013 (regressionFit = 18.989011, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), professor(A).  [covers 5.0/96.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -18.989013): advisedby(A, B) :- hasposition(B, faculty), professor(A).  [covers 5.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), professor(A).  [covers 96.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -18.989013 (regressionFit = 18.989011, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), student(A).  [covers 91.0/96.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -18.989013): advisedby(A, B) :- hasposition(B, faculty), student(A).  [covers 91.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -26.274751 (regressionFit = 26.274749, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), publication(_, A).  [covers 25.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -33.846887 (regressionFit = 33.846885, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), publication(_, A).  [covers 81.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.724864 (regressionFit = 20.724862, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), taughtby(_, A, _).  [covers 11.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), taughtby(_, A, _).  [covers 94.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.478263 (regressionFit = 19.478261, penalties=1.9400000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), hasposition(A, faculty).  [covers 4.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.568046 (regressionFit = 21.568044, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), projectmember(_, A).  [covers 10.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), position(faculty).  [covers 96.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -18.569503 (regressionFit = 18.569501, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_quals).  [covers 39.0/96.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -18.569503): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_quals).  [covers 39.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.444447 (regressionFit = 20.444444, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.866714 (regressionFit = 20.866712, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), tempadvisedby(A, B).  [covers 1.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.963699 (regressionFit = 19.963696, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), tempadvisedby(_, A).  [covers 3.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -23.283688 (regressionFit = 23.283686, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), tempadvisedby(_, A).  [covers 64.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.604240 (regressionFit = 20.604238, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_3).  [covers 19.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.069138 (regressionFit = 20.069136, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_5).  [covers 15.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.226046 (regressionFit = 20.226044, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_4).  [covers 22.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.184617 (regressionFit = 20.184615, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_1).  [covers 5.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -24.852971 (regressionFit = 24.852968, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), ta(_, A, _).  [covers 51.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), sameperson(A, A).  [covers 96.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), sameperson(A, A).  [covers 96.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.944157 (regressionFit = 20.944155, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 1).  [covers 17.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.733335 (regressionFit = 19.733333, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 3).  [covers 6.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -18.989013 (regressionFit = 18.989011, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 5).  [covers 5.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -18.989013 (regressionFit = 18.989011, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 7).  [covers 5.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.956991 (regressionFit = 19.956989, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 9).  [covers 3.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 11).  [covers 2.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 13).  [covers 1.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 15).  [covers 1.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.301566 (regressionFit = 21.301564, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 1).  [covers 79.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.328275 (regressionFit = 21.328273, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 3).  [covers 62.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.166015 (regressionFit = 21.166013, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 5).  [covers 51.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.958335 (regressionFit = 20.958333, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 7).  [covers 48.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.028574 (regressionFit = 21.028571, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 9).  [covers 40.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.287159 (regressionFit = 21.287157, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 11).  [covers 33.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.326983 (regressionFit = 21.326980, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 13).  [covers 23.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.333335 (regressionFit = 21.333333, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 15).  [covers 18.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -23.113969 (regressionFit = 23.113966, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 1).  [covers 17.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.196051 (regressionFit = 20.196048, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 3).  [covers 5.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.971625 (regressionFit = 19.971623, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 5).  [covers 3.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.971625 (regressionFit = 19.971623, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 7).  [covers 3.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 9).  [covers 2.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -29.085225 (regressionFit = 29.085223, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 1).  [covers 79.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -26.727210 (regressionFit = 26.727208, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 3).  [covers 51.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -22.099994 (regressionFit = 22.099992, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 5).  [covers 42.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.705579 (regressionFit = 21.705577, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 7).  [covers 30.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.972091 (regressionFit = 19.972089, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 9).  [covers 23.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.170109 (regressionFit = 20.170107, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 11).  [covers 14.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.264850 (regressionFit = 21.264848, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 13).  [covers 7.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.309892 (regressionFit = 21.309890, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 15).  [covers 5.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -23.113969 (regressionFit = 23.113966, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 1).  [covers 17.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.196051 (regressionFit = 20.196048, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 3).  [covers 5.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.971625 (regressionFit = 19.971623, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 5).  [covers 3.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.971625 (regressionFit = 19.971623, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 7).  [covers 3.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 9).  [covers 2.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -29.085225 (regressionFit = 29.085223, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 1).  [covers 79.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -26.727210 (regressionFit = 26.727208, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 3).  [covers 51.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -22.099994 (regressionFit = 22.099992, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 5).  [covers 42.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.705579 (regressionFit = 21.705577, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 7).  [covers 30.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -19.972091 (regressionFit = 19.972089, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 9).  [covers 23.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.170109 (regressionFit = 20.170107, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 11).  [covers 14.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.264850 (regressionFit = 21.264848, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 13).  [covers 7.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.309892 (regressionFit = 21.309890, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 15).  [covers 5.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -20.192516 (regressionFit = 20.192513, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_taughtby(A, _).  [covers 11.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_taughtby(A, _).  [covers 94.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.183101 (regressionFit = 21.183099, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_publications(A, _).  [covers 25.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -21.333336 (regressionFit = 21.333333, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_publications(A, _).  [covers 81.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -24.475966 (regressionFit = 24.475964, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, _, _).  [covers 25.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -27.968388 (regressionFit = 27.968385, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_common_pubs(A, _, _).  [covers 81.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -24.475966 (regressionFit = 24.475964, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(_, A, _).  [covers 25.0/96.0 pos, 0.0/0.0 neg]
+%     Score = -27.968388 (regressionFit = 27.968385, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_common_pubs(_, A, _).  [covers 81.0/96.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_quals).  [covers 39.0/96.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_quals).  [covers 39.0/96.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 2 with score = -0.222.
+% Will extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_quals).  [covers 39.0/96.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.11176857330703655 to score=0.0025 #egs=39.0
+Comparing variance: 0.24930747922437713 to score=0.0025 #egs=57.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 39.0
+%      addToQueueOfTreeStructuredLearningTasks (level=3; score=-0.111769)
+%         ILP node to extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_quals).  [covers 39.0/96.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 3 and with score = -0.111769) into position #1 in the search queue (new size=2).
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 57.0
+%      addToQueueOfTreeStructuredLearningTasks (level=3; score=-0.249307)
+%         ILP node to extend: advisedby(_, A) :- hasposition(A, faculty).  [covers 96.0/96.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 3 and with score = -0.249307) into position #1 in the search queue (new size=3).
+
+% Time for loop #3: 127 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #3, the best clause found is:
+%      advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_quals).  [covers 39.0/96.0 pos, 0.0/0.0 neg]
+% This clause covers 39 positive examples, of which 39 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'advisedby(_, A) :- hasposition(A, faculty).  [covers 96.0/57.0 pos, 0.0/0.0 neg]'
+%     Score = -34.815806 (regressionFit = 34.815805, penalties=1.14E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty).  [covers 57.0/57.0 pos, 0.0/0.0 neg]
+
+% Have these 8 positive seeds: 3 4 5 12 34 43 48 55
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #4, bodyLen=1] 'advisedby(_, A) :- hasposition(A, faculty).  [covers 57.0/57.0 pos, 0.0/0.0 neg]' score=-34.81580605382508
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 9 variant children.  Sending 68 items to OPEN for evaluation and possible insertion.
+% Have created 68 valid-on-seeds descendants and have picked up 53 bad extensions.
+%     Score = -12.692310 (regressionFit = 12.692308, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), professor(A).  [covers 5.0/57.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -12.692310): advisedby(A, B) :- hasposition(B, faculty), professor(A).  [covers 5.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), professor(A).  [covers 57.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -12.692310 (regressionFit = 12.692308, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), student(A).  [covers 52.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -15.467147 (regressionFit = 15.467144, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), publication(_, A).  [covers 13.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -18.770057 (regressionFit = 18.770054, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), publication(_, A).  [covers 47.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.382153 (regressionFit = 14.382151, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), taughtby(_, A, _).  [covers 11.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), taughtby(_, A, _).  [covers 57.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.018870 (regressionFit = 13.018868, penalties=1.9400000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), hasposition(A, faculty).  [covers 4.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), position(faculty).  [covers 57.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -10.303032 (regressionFit = 10.303030, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/57.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -10.303032): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.210528 (regressionFit = 14.210526, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.340043 (regressionFit = 13.340041, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), tempadvisedby(_, A).  [covers 3.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -15.369274 (regressionFit = 15.369272, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), tempadvisedby(_, A).  [covers 36.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -11.632655 (regressionFit = 11.632653, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), tempadvisedby(A, _).  [covers 8.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -12.705884 (regressionFit = 12.705882, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_4).  [covers 6.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.578433 (regressionFit = 13.578431, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_6).  [covers 6.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_9).  [covers 1.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.626925 (regressionFit = 13.626923, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_1).  [covers 5.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.960786 (regressionFit = 13.960784, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_2).  [covers 6.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -16.106280 (regressionFit = 16.106278, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), ta(_, A, _).  [covers 36.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), sameperson(A, A).  [covers 57.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), sameperson(A, A).  [covers 57.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.140318 (regressionFit = 14.140316, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 1).  [covers 11.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -12.692310 (regressionFit = 12.692308, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 3).  [covers 5.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -12.692310 (regressionFit = 12.692308, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 5).  [covers 5.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -12.692310 (regressionFit = 12.692308, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 7).  [covers 5.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.333335 (regressionFit = 13.333333, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 9).  [covers 3.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 11).  [covers 2.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.205536 (regressionFit = 14.205534, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 1).  [covers 46.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.152176 (regressionFit = 14.152174, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 3).  [covers 34.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.998771 (regressionFit = 13.998768, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 5).  [covers 28.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.866669 (regressionFit = 13.866667, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 7).  [covers 27.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.887470 (regressionFit = 13.887468, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 9).  [covers 23.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.210528 (regressionFit = 14.210526, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 11).  [covers 19.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.208044 (regressionFit = 14.208042, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 13).  [covers 13.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.200002 (regressionFit = 14.200000, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 15).  [covers 12.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -15.213868 (regressionFit = 15.213865, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 1).  [covers 11.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.046781 (regressionFit = 13.046779, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 3).  [covers 4.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.347969 (regressionFit = 13.347967, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 5).  [covers 3.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.347969 (regressionFit = 13.347967, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 7).  [covers 3.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 9).  [covers 2.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -16.952077 (regressionFit = 16.952075, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 1).  [covers 46.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -16.269759 (regressionFit = 16.269757, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 3).  [covers 31.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.395643 (regressionFit = 14.395641, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 5).  [covers 27.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.590710 (regressionFit = 14.590708, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 7).  [covers 17.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.248037 (regressionFit = 13.248035, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 9).  [covers 13.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.758084 (regressionFit = 13.758082, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 11).  [covers 8.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.123079 (regressionFit = 14.123077, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 13).  [covers 5.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -15.213868 (regressionFit = 15.213865, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 1).  [covers 11.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.046781 (regressionFit = 13.046779, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 3).  [covers 4.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.347969 (regressionFit = 13.347967, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 5).  [covers 3.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.347969 (regressionFit = 13.347967, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 7).  [covers 3.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 9).  [covers 2.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -16.952077 (regressionFit = 16.952075, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 1).  [covers 46.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -16.269759 (regressionFit = 16.269757, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 3).  [covers 31.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.395643 (regressionFit = 14.395641, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 5).  [covers 27.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.590710 (regressionFit = 14.590708, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 7).  [covers 17.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.248037 (regressionFit = 13.248035, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 9).  [covers 13.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.758084 (regressionFit = 13.758082, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 11).  [covers 8.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.123079 (regressionFit = 14.123077, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 13).  [covers 5.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -13.849805 (regressionFit = 13.849802, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_taughtby(A, _).  [covers 11.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_taughtby(A, _).  [covers 57.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.139862 (regressionFit = 14.139860, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_publications(A, _).  [covers 13.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -14.202130 (regressionFit = 14.202128, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_publications(A, _).  [covers 47.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -15.235494 (regressionFit = 15.235492, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, _, _).  [covers 13.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -16.840607 (regressionFit = 16.840605, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_common_pubs(A, _, _).  [covers 47.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -15.235494 (regressionFit = 15.235492, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(_, A, _).  [covers 13.0/57.0 pos, 0.0/0.0 neg]
+%     Score = -16.840607 (regressionFit = 16.840605, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_common_pubs(_, A, _).  [covers 47.0/57.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/57.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/57.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 3 with score = -0.249.
+% Will extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/57.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.13888888888888906 to score=0.0025 #egs=24.0
+Comparing variance: 0.2112029384756658 to score=0.0025 #egs=33.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 24.0
+%      addToQueueOfTreeStructuredLearningTasks (level=4; score=-0.138889)
+%         ILP node to extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/57.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 4 and with score = -0.138889) into position #1 in the search queue (new size=3).
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 33.0
+%      addToQueueOfTreeStructuredLearningTasks (level=4; score=-0.211203)
+%         ILP node to extend: advisedby(_, A) :- hasposition(A, faculty).  [covers 57.0/57.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 4 and with score = -0.211203) into position #1 in the search queue (new size=4).
+
+% Time for loop #4: 39 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #4, the best clause found is:
+%      advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/57.0 pos, 0.0/0.0 neg]
+% This clause covers 24 positive examples, of which 24 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'advisedby(_, A) :- hasposition(A, faculty).  [covers 57.0/33.0 pos, 0.0/0.0 neg]'
+%     Score = -34.815806 (regressionFit = 34.815805, penalties=1.14E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty).  [covers 33.0/33.0 pos, 0.0/0.0 neg]
+
+% Have these 10 positive seeds: 0 2 4 5 7 8 12 14 16 19
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #5, bodyLen=1] 'advisedby(_, A) :- hasposition(A, faculty).  [covers 33.0/33.0 pos, 0.0/0.0 neg]' score=-34.81580605382508
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 9 variant children.  Sending 61 items to OPEN for evaluation and possible insertion.
+% Have created 61 valid-on-seeds descendants and have picked up 70 bad extensions.
+%     Score = -6.428573 (regressionFit = 6.428571, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), professor(A).  [covers 5.0/33.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -6.428573): advisedby(A, B) :- hasposition(B, faculty), professor(A).  [covers 5.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), professor(A).  [covers 33.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.428573 (regressionFit = 6.428571, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), student(A).  [covers 28.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -7.152293 (regressionFit = 7.152291, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), publication(_, A).  [covers 6.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -7.209301 (regressionFit = 7.209299, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), publication(_, A).  [covers 27.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.682449 (regressionFit = 6.682446, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), taughtby(_, A, _).  [covers 7.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), taughtby(_, A, _).  [covers 33.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.551726 (regressionFit = 6.551724, penalties=1.9400000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), hasposition(A, faculty).  [covers 4.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -7.068185 (regressionFit = 7.068183, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), projectmember(_, A).  [covers 4.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), position(faculty).  [covers 33.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -4.736844 (regressionFit = 4.736842, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/33.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -4.736844): advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.673376 (regressionFit = 6.673374, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), tempadvisedby(_, A).  [covers 3.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.725014 (regressionFit = 6.725012, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), tempadvisedby(_, A).  [covers 22.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.000002 (regressionFit = 6.000000, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_3).  [covers 6.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_4).  [covers 2.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_5).  [covers 1.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.907145 (regressionFit = 6.907143, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), yearsinprogram(A, year_1).  [covers 5.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.845574 (regressionFit = 6.845572, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), ta(_, A, _).  [covers 21.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.0400000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), sameperson(A, A).  [covers 33.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1400000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), sameperson(A, A).  [covers 33.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.907145 (regressionFit = 6.907143, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 1).  [covers 5.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.551726 (regressionFit = 6.551724, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 3).  [covers 4.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.551726 (regressionFit = 6.551724, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 5).  [covers 4.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.551726 (regressionFit = 6.551724, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 7).  [covers 4.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.666669 (regressionFit = 6.666667, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_pubs(A, 9).  [covers 3.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.962965 (regressionFit = 6.962963, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 1).  [covers 27.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.969233 (regressionFit = 6.969231, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 3).  [covers 20.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.966914 (regressionFit = 6.966912, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 5).  [covers 17.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.966914 (regressionFit = 6.966912, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 7).  [covers 17.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.933335 (regressionFit = 6.933333, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 9).  [covers 15.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.969233 (regressionFit = 6.969231, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 11).  [covers 13.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.958335 (regressionFit = 6.958333, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 13).  [covers 9.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.958335 (regressionFit = 6.958333, penalties=2.1600000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_pubs(A, 15).  [covers 9.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.893397 (regressionFit = 6.893395, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 1).  [covers 5.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.690517 (regressionFit = 6.690515, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(A, _, 3).  [covers 3.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.945210 (regressionFit = 6.945208, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 1).  [covers 27.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -7.398547 (regressionFit = 7.398545, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 3).  [covers 19.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.819746 (regressionFit = 6.819744, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 5).  [covers 17.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.976677 (regressionFit = 6.976675, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 7).  [covers 11.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.517469 (regressionFit = 6.517467, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 9).  [covers 9.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.724349 (regressionFit = 6.724347, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 11).  [covers 6.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.956899 (regressionFit = 6.956897, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 13).  [covers 4.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.966669 (regressionFit = 6.966667, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(A, _, 15).  [covers 3.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.893397 (regressionFit = 6.893395, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 1).  [covers 5.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.690517 (regressionFit = 6.690515, penalties=2.1700000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), have_more_than_n_common_pubs(_, A, 3).  [covers 3.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.945210 (regressionFit = 6.945208, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 1).  [covers 27.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -7.398547 (regressionFit = 7.398545, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 3).  [covers 19.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.819746 (regressionFit = 6.819744, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 5).  [covers 17.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.976677 (regressionFit = 6.976675, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 7).  [covers 11.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.517469 (regressionFit = 6.517467, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 9).  [covers 9.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.724349 (regressionFit = 6.724347, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 11).  [covers 6.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.956899 (regressionFit = 6.956897, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 13).  [covers 4.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.966669 (regressionFit = 6.966667, penalties=2.2700000000000003E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), have_more_than_n_common_pubs(_, A, 15).  [covers 3.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.741760 (regressionFit = 6.741758, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_taughtby(A, _).  [covers 7.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_taughtby(A, _).  [covers 33.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.962965 (regressionFit = 6.962963, penalties=2.1500000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_publications(A, _).  [covers 6.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.962965 (regressionFit = 6.962963, penalties=2.2500000000000005E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_publications(A, _).  [covers 27.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -7.176082 (regressionFit = 7.176080, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(A, _, _).  [covers 6.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.790843 (regressionFit = 6.790840, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_common_pubs(A, _, _).  [covers 27.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -7.176082 (regressionFit = 7.176080, penalties=2.2600000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), count_common_pubs(_, A, _).  [covers 6.0/33.0 pos, 0.0/0.0 neg]
+%     Score = -6.790843 (regressionFit = 6.790840, penalties=2.3600000000000007E-6) for clause:  advisedby(_, A) :- hasposition(A, faculty), count_common_pubs(_, A, _).  [covers 27.0/33.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/33.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/33.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 4 with score = -0.211.
+% Will extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/33.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.2493074792243767 to score=0.0025 #egs=19.0
+Comparing variance: -1.1895246692412391E-17 to score=0.0025 #egs=14.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 19.0
+%      addToQueueOfTreeStructuredLearningTasks (level=5; score=-0.249307)
+%         ILP node to extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/33.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 5 and with score = -0.249307) into position #1 in the search queue (new size=4).
+%   Creating a FALSE-branch leaf because good enough fit since score < 0.0025
+
+% Time for loop #5: 47 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #5, the best clause found is:
+%      advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/33.0 pos, 0.0/0.0 neg]
+% This clause covers 19 positive examples, of which 19 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/19.0 pos, 0.0/0.0 neg]'
+%     Score = -4.736844 (regressionFit = 4.736842, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+
+% Have these 10 positive seeds: 0 2 3 5 6 9 10 11 12 13
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #6, bodyLen=2] 'advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals).  [covers 19.0/19.0 pos, 0.0/0.0 neg]' score=-4.736844165263157
+% [ LazyGroundClauseIndex ]  Building full index for phase/1 with 3 assertions.
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 8 variant children.  Sending 46 items to OPEN for evaluation and possible insertion.
+% Have created 46 valid-on-seeds descendants and have picked up 19 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), professor(B).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), student(A).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), publication(_, A).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -5.473512 (regressionFit = 5.473509, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), publication(_, B).  [covers 15.0/19.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -5.473512): advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), publication(_, B).  [covers 15.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), taughtby(_, A, _).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), taughtby(_, B, _).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -5.008416 (regressionFit = 5.008413, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), projectmember(_, B).  [covers 4.0/19.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -5.008416): advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), projectmember(_, B).  [covers 4.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), position(faculty).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), phase(pre_quals).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), tempadvisedby(A, B).  [covers 1.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -5.091953 (regressionFit = 5.091950, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), tempadvisedby(_, B).  [covers 11.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -1.666670 (regressionFit = 1.666667, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), tempadvisedby(A, _).  [covers 7.0/19.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -1.666670): advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), tempadvisedby(A, _).  [covers 7.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.564106 (regressionFit = 4.564103, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), yearsinprogram(A, year_3).  [covers 6.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), yearsinprogram(A, year_4).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.628575 (regressionFit = 4.628571, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), yearsinprogram(A, year_2).  [covers 5.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.014289 (regressionFit = 4.014286, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), yearsinprogram(A, year_1).  [covers 5.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -5.005440 (regressionFit = 5.005437, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), ta(_, A, _).  [covers 13.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), sameperson(A, A).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), sameperson(B, B).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_pubs(A, 1).  [covers 1.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.733336 (regressionFit = 4.733333, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_pubs(B, 1).  [covers 15.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.727276 (regressionFit = 4.727273, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_pubs(B, 3).  [covers 11.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.602276 (regressionFit = 4.602273, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_pubs(B, 5).  [covers 8.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.602276 (regressionFit = 4.602273, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_pubs(B, 7).  [covers 8.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.714289 (regressionFit = 4.714286, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_pubs(B, 9).  [covers 7.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.714289 (regressionFit = 4.714286, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_pubs(B, 11).  [covers 7.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.483336 (regressionFit = 4.483333, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_pubs(B, 13).  [covers 4.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.483336 (regressionFit = 4.483333, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_pubs(B, 15).  [covers 4.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(A, _, 1).  [covers 1.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -5.196808 (regressionFit = 5.196804, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(B, _, 1).  [covers 15.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -6.031564 (regressionFit = 6.031561, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(B, _, 3).  [covers 10.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.748303 (regressionFit = 4.748300, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(B, _, 5).  [covers 8.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.892291 (regressionFit = 4.892288, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(B, _, 7).  [covers 4.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(_, A, 1).  [covers 1.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -5.196808 (regressionFit = 5.196804, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(_, B, 1).  [covers 15.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -6.031564 (regressionFit = 6.031561, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(_, B, 3).  [covers 10.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.748303 (regressionFit = 4.748300, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(_, B, 5).  [covers 8.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.892291 (regressionFit = 4.892288, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), have_more_than_n_common_pubs(_, B, 7).  [covers 4.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), count_taughtby(A, _).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), count_taughtby(B, _).  [covers 19.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), count_publications(A, _).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.733337 (regressionFit = 4.733333, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), count_publications(B, _).  [covers 15.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), count_common_pubs(A, _, _).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.950310 (regressionFit = 4.950307, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), count_common_pubs(B, _, _).  [covers 15.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), count_common_pubs(_, A, _).  [covers 2.0/19.0 pos, 0.0/0.0 neg]
+%     Score = -4.950310 (regressionFit = 4.950307, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), count_common_pubs(_, B, _).  [covers 15.0/19.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), tempadvisedby(A, _).  [covers 7.0/19.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), tempadvisedby(A, _).  [covers 7.0/19.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 5 with score = -0.249.
+% Will extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), tempadvisedby(A, _).  [covers 7.0/19.0 pos, 0.0/0.0 neg]
+%   Creating a TRUE-branch and FALSE-branch leaves because level = 5 >= 5
+
+% Time for loop #6: 31 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #6, the best clause found is:
+%      advisedby(A, B) :- hasposition(B, faculty), inphase(A, pre_quals), tempadvisedby(A, _).  [covers 7.0/19.0 pos, 0.0/0.0 neg]
+% This clause covers 7 positive examples, of which 7 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/24.0 pos, 0.0/0.0 neg]'
+%     Score = -10.303032 (regressionFit = 10.303030, penalties=2.06E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+
+% Have these 10 positive seeds: 2 3 4 6 8 9 10 11 12 13
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #7, bodyLen=2] 'advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/24.0 pos, 0.0/0.0 neg]' score=-10.303032363030308
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 8 variant children.  Sending 44 items to OPEN for evaluation and possible insertion.
+% Have created 44 valid-on-seeds descendants and have picked up 25 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), professor(B).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), student(A).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -8.328024 (regressionFit = 8.328020, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), publication(_, B).  [covers 20.0/24.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -8.328024): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), publication(_, B).  [covers 20.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.300003 (regressionFit = 3.300000, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), taughtby(_, A, _).  [covers 4.0/24.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -3.300003): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), taughtby(_, A, _).  [covers 4.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), taughtby(_, B, _).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), position(faculty).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), phase(post_generals).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.524019 (regressionFit = 3.524015, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), tempadvisedby(_, B).  [covers 14.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.200003 (regressionFit = 3.200000, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), yearsinprogram(A, year_4).  [covers 4.0/24.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -3.200003): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), yearsinprogram(A, year_4).  [covers 4.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.333336 (regressionFit = 3.333333, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), yearsinprogram(A, year_6).  [covers 6.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), yearsinprogram(A, year_9).  [covers 1.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.312503 (regressionFit = 3.312500, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), yearsinprogram(A, year_5).  [covers 8.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), yearsinprogram(A, year_12).  [covers 2.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), yearsinprogram(A, year_10).  [covers 1.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -4.900821 (regressionFit = 4.900817, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), ta(_, A, _).  [covers 15.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), sameperson(A, A).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.0600000000000008E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), sameperson(B, B).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.326319 (regressionFit = 3.326316, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 1).  [covers 19.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.257146 (regressionFit = 3.257143, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 3).  [covers 14.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.104898 (regressionFit = 3.104895, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 5).  [covers 11.0/24.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -3.104898): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 5).  [covers 11.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.028575 (regressionFit = 3.028571, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 7).  [covers 10.0/24.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -3.028575): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 7).  [covers 10.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.250003 (regressionFit = 3.250000, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 9).  [covers 8.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.111114 (regressionFit = 3.111111, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 11).  [covers 6.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.200003 (regressionFit = 3.200000, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 13).  [covers 4.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.238098 (regressionFit = 3.238095, penalties=3.0800000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_pubs(B, 15).  [covers 3.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -7.469705 (regressionFit = 7.469702, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 1).  [covers 19.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.012329 (regressionFit = 3.012326, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/24.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -3.012329): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.878947 (regressionFit = 3.878944, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 5).  [covers 10.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.745046 (regressionFit = 3.745043, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 7).  [covers 6.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.232384 (regressionFit = 3.232380, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 9).  [covers 4.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 11).  [covers 2.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 13).  [covers 1.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -7.469705 (regressionFit = 7.469702, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(_, B, 1).  [covers 19.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.012329 (regressionFit = 3.012326, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(_, B, 3).  [covers 12.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.878947 (regressionFit = 3.878944, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(_, B, 5).  [covers 10.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.745046 (regressionFit = 3.745043, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(_, B, 7).  [covers 6.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.232384 (regressionFit = 3.232380, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(_, B, 9).  [covers 4.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(_, B, 11).  [covers 2.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(_, B, 13).  [covers 1.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.300003 (regressionFit = 3.300000, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), count_taughtby(A, _).  [covers 4.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), count_taughtby(B, _).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -3.300003 (regressionFit = 3.300000, penalties=3.1700000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), count_publications(B, _).  [covers 20.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -7.867788 (regressionFit = 7.867785, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), count_common_pubs(B, _, _).  [covers 20.0/24.0 pos, 0.0/0.0 neg]
+%     Score = -7.867788 (regressionFit = 7.867785, penalties=3.280000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), count_common_pubs(_, B, _).  [covers 20.0/24.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/24.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/24.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 4 with score = -0.139.
+% Will extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/24.0 pos, 0.0/0.0 neg]
+Comparing variance: 0.17463827943201368 to score=0.0025 #egs=12.0
+Comparing variance: 0.07638888888888877 to score=0.0025 #egs=12.0
+%   Creating a TRUE-branch interior node with wgtedCountTrueBranchPos = 12.0
+%      addToQueueOfTreeStructuredLearningTasks (level=5; score=-0.174638)
+%         ILP node to extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/24.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 5 and with score = -0.174638) into position #1 in the search queue (new size=3).
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 12.0
+%      addToQueueOfTreeStructuredLearningTasks (level=5; score=-0.076389)
+%         ILP node to extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals).  [covers 24.0/24.0 pos, 0.0/0.0 neg]
+%      Insert tree-structured search node (@ level = 5 and with score = -0.076389) into position #3 in the search queue (new size=4).
+
+% Time for loop #7: 48 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #7, the best clause found is:
+%      advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/24.0 pos, 0.0/0.0 neg]
+% This clause covers 12 positive examples, of which 12 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Working on expanding this node: 'advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]'
+%     Score = -3.012329 (regressionFit = 3.012326, penalties=3.1900000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+
+% Have these 10 positive seeds: 0 1 2 3 5 6 7 8 9 10
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Consider expanding [#1 of outerLoop #8, bodyLen=3] 'advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]' score=-3.0123292098508294
+% [ LazyGroundClauseIndex ]  Building full index for count_taughtby/2 with 64 assertions.
+% [ LazyGroundClauseIndex ]  Building full index for count_publications/2 with 99 assertions.
+% [ LazyGroundClauseIndex ]  Building full index for count_common_pubs/3 with 362 assertions.
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 42 variant children.  Sending 115 items to OPEN for evaluation and possible insertion.
+% Have created 115 valid-on-seeds descendants and have picked up 41 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1900000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), professor(B).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.090000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), professor(C).  [covers 10.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1900000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), student(A).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.848932 (regressionFit = 1.848928, penalties=4.090000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), student(C).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -1.848932): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), student(C).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.932995 (regressionFit = 1.932991, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), publication(_, A).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), publication(_, B).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.2000000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), publication(_, C).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.41E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), taughtby(_, A, _).  [covers 2.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.41E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), taughtby(_, B, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.864158 (regressionFit = 1.864154, penalties=4.31E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), taughtby(_, C, _).  [covers 8.0/12.0 pos, 0.0/0.0 neg]
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for hasposition/2.
+%     Score = -1.709932 (regressionFit = 1.709928, penalties=3.990000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), hasposition(C, faculty).  [covers 9.0/12.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -1.709932): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), hasposition(C, faculty).  [covers 9.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), hasposition(C, faculty_emeritus).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), hasposition(C, faculty_adjunct).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.2000000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), projectmember(_, C).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1900000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), position(faculty).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1900000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), phase(post_generals).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for inphase/2.
+%     Score = -1.658108 (regressionFit = 1.658104, penalties=3.990000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), inphase(C, post_generals).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -1.658108): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), inphase(C, post_generals).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.970747 (regressionFit = 1.970743, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), tempadvisedby(_, B).  [covers 8.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.854168 (regressionFit = 2.854164, penalties=4.2000000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), tempadvisedby(_, C).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), tempadvisedby(A, _).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), yearsinprogram(A, year_4).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.887245 (regressionFit = 1.887240, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), yearsinprogram(A, year_6).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), yearsinprogram(A, year_8).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.911328 (regressionFit = 1.911324, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), yearsinprogram(A, year_5).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), yearsinprogram(A, year_2).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for yearsinprogram/2.
+%     Score = -1.353743 (regressionFit = 1.353739, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), yearsinprogram(C, year_6).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -1.353743): advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), yearsinprogram(C, year_6).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), yearsinprogram(C, year_12).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), yearsinprogram(C, year_5).  [covers 2.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.657655 (regressionFit = 1.657651, penalties=4.41E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), ta(_, A, _).  [covers 9.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1900000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), sameperson(A, A).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1900000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), sameperson(B, B).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.090000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), sameperson(C, C).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.085062 (regressionFit = 2.085058, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_pubs(A, 1).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_pubs(B, 1).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1900000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_pubs(B, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_pubs(B, 5).  [covers 11.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_pubs(B, 7).  [covers 10.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.618798 (regressionFit = 1.618793, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_pubs(B, 9).  [covers 8.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.048972 (regressionFit = 2.048967, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_pubs(B, 11).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.980703 (regressionFit = 1.980698, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_pubs(B, 13).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.858056 (regressionFit = 1.858052, penalties=4.21E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_pubs(B, 15).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for have_more_than_n_pubs/2.
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_pubs(C, 1).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.090000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_pubs(C, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_pubs(C, 5).  [covers 11.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_pubs(C, 7).  [covers 11.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_pubs(C, 9).  [covers 11.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_pubs(C, 11).  [covers 10.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.975677 (regressionFit = 1.975673, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_pubs(C, 13).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.900851 (regressionFit = 1.900847, penalties=4.1100000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_pubs(C, 15).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.085062 (regressionFit = 2.085058, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(A, _, 1).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(B, C, 1).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(B, C, 5).  [covers 10.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.446926 (regressionFit = 2.446922, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(B, C, 7).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.036287 (regressionFit = 2.036283, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(B, C, 9).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(B, C, 11).  [covers 2.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(B, C, 13).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(B, _, 1).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.200000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(B, _, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(B, _, 5).  [covers 10.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -3.101738 (regressionFit = 3.101734, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(B, _, 7).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.290169 (regressionFit = 2.290165, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(B, _, 9).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(B, _, 11).  [covers 2.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(B, _, 13).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, B, 1).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=3.990000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, B, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, B, 5).  [covers 10.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.446926 (regressionFit = 2.446922, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, B, 7).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.036287 (regressionFit = 2.036283, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, B, 9).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, B, 11).  [covers 2.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.0100000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, B, 13).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, _, 1).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1000000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, _, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, _, 5).  [covers 11.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -3.077251 (regressionFit = 3.077247, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, _, 7).  [covers 9.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.128083 (regressionFit = 2.128079, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, _, 9).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.888812 (regressionFit = 1.888808, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, _, 11).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, _, 13).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(C, _, 15).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.085062 (regressionFit = 2.085058, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(_, A, 1).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(_, B, 1).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.200000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(_, B, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(_, B, 5).  [covers 10.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -3.101738 (regressionFit = 3.101734, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(_, B, 7).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.290169 (regressionFit = 2.290165, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(_, B, 9).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(_, B, 11).  [covers 2.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.220000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), have_more_than_n_common_pubs(_, B, 13).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(_, C, 1).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1000000000000006E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(_, C, 3).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(_, C, 5).  [covers 11.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -3.077251 (regressionFit = 3.077247, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(_, C, 7).  [covers 9.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.128083 (regressionFit = 2.128079, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(_, C, 9).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.888812 (regressionFit = 1.888808, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(_, C, 11).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(_, C, 13).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.12E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), have_more_than_n_common_pubs(_, C, 15).  [covers 1.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_taughtby(A, _).  [covers 2.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.858717 (regressionFit = 1.858713, penalties=4.1900000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_taughtby(B, 3).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_taughtby(B, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for count_taughtby/2.
+%     Score = -1.475932 (regressionFit = 1.475928, penalties=4.090000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), count_taughtby(C, 3).  [covers 4.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.663534 (regressionFit = 1.663530, penalties=4.2000000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), count_taughtby(C, _).  [covers 8.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.1900000000000005E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_publications(A, 3).  [covers 2.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.095555 (regressionFit = 2.095550, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_publications(A, _).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_publications(B, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.2000000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), count_publications(C, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.854000 (regressionFit = 1.853996, penalties=4.41E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_common_pubs(A, _, _).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.2000000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), count_common_pubs(B, C, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.928046 (regressionFit = 1.928042, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_common_pubs(B, _, 3).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.41E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_common_pubs(B, _, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.2000000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), count_common_pubs(C, B, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.453529 (regressionFit = 2.453525, penalties=4.2000000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), count_common_pubs(C, _, 3).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.31E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), count_common_pubs(C, _, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.854000 (regressionFit = 1.853996, penalties=4.41E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_common_pubs(_, A, _).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -1.928046 (regressionFit = 1.928042, penalties=4.300000000000001E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_common_pubs(_, B, 3).  [covers 6.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.41E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, _, 3), count_common_pubs(_, B, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -2.453529 (regressionFit = 2.453525, penalties=4.2000000000000004E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), count_common_pubs(_, C, 3).  [covers 5.0/12.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=4.31E-6) for clause:  advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), count_common_pubs(_, C, _).  [covers 12.0/12.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), yearsinprogram(C, year_6).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+
+% The best node found: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), yearsinprogram(C, year_6).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 5 with score = -0.175.
+% Will extend: advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), yearsinprogram(C, year_6).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+%   Creating a TRUE-branch and FALSE-branch leaves because level = 5 >= 5
+
+% Time for loop #8: 111 milliseconds.
+% Internal node max length = 1
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #8, the best clause found is:
+%      advisedby(A, B) :- hasposition(B, faculty), inphase(A, post_generals), have_more_than_n_common_pubs(B, C, 3), yearsinprogram(C, year_6).  [covers 3.0/12.0 pos, 0.0/0.0 neg]
+% This clause covers 3 positive examples, of which 3 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+% Have stopped ILP's outer loop because have reached the maximum number of iterations (8).
+
+% ******************************************
+Created a leaf under (advisedby(D, E) :- inphase(D, post_quals))
+Created a leaf under (advisedby(D, E) :- have_more_than_n_common_pubs(E, Anon44527, 3))
+Created a leaf under (advisedby(D, E) :- hasposition(E, faculty))

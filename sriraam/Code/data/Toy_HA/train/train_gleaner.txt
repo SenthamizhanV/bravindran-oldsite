@@ -1,0 +1,117 @@
+////// Learned from a dataset containing 24 positive (24.0 weighted sum) and 0 negative (0.0 wgt'ed) examples.
+////// The minimal (wgt'ed) coverage = 3.000, the maximal (wgt'ed) NEG coverage = 0.499, and the minimal (wgt'ed) precision = 0.001 (using m = 0.1)
+
+useStdLogicNotation: true.
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: allPossibleMarkers
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #3, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.083, precision = 0.968, and F1 = 0.153 - learned after 3 total and 1 acceptable nodes.  Node score = -52.36686251266264
+
+ FOR HA(a) IF (BP(a, 130)) THEN output = 2.486994 ELSE output = 0.232739;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #5, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.124, precision = 0.968, and F1 = 0.221 - learned after 2 total and 0 acceptable nodes.  Node score = -1.0299999973354648E-6
+
+ FOR HA(a) IF (BP(a, 130)) THEN output = 2.486994 ELSE output = -0.513006;
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #4, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.248, precision = 0.968, and F1 = 0.395 - learned after 5 total and 3 acceptable nodes.  Node score = -2.0499999935607067E-6
+
+ FOR HA(a) IF (Chol(a, 160), BP(a, 70)) THEN output = -0.712207 ELSE output = 2.287793;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #1, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.265, precision = 0.976, and F1 = 0.417 - learned after 13 total and 0 acceptable nodes.  Node score = -3.295455575454544
+
+ FOR HA(a) IF (Chol(a, 160)) THEN output = 0.608149 ELSE output = 0.221785;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #3, null' and covering 12.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.332, precision = 0.992, and F1 = 0.498 - learned after 10 total and 8 acceptable nodes.  Node score = -43.87500102999997
+
+ FOR HA(a) IF (Chol(a, 160)) THEN output = 1.537793 ELSE output = -0.138006;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #1, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #1, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.067, precision = 0.968, and F1 = 0.124 - learned after 3 total and 1 acceptable nodes.  Node score = -88.30148664998391
+
+ FOR HA(a) IF (BP(a, 90)) THEN output = 2.486994 ELSE output = 0.715794;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #1, null' and covering 4.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.265, precision = 0.976, and F1 = 0.417 - learned after 13 total and 0 acceptable nodes.  Node score = -3.295455575454544
+
+ FOR HA(a) IF (Chol(a, 160)) THEN output = 0.608149 ELSE output = 0.221785;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #2, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #2, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.071, precision = 0.968, and F1 = 0.133 - learned after 5 total and 3 acceptable nodes.  Node score = -78.16607984202149
+
+ FOR HA(a) IF (BP(a, 150)) THEN output = 2.486994 ELSE output = 0.579547;
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #2, null' and covering 6.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.143, precision = 0.984, and F1 = 0.249 - learned after 12 total and 10 acceptable nodes.  Node score = -66.34143856606538
+
+ FOR HA(a) IF (Chol(a, 239)) THEN output = 2.486994 ELSE output = 0.420594;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #2, null' and covering 12.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.285, precision = 0.992, and F1 = 0.443 - learned after 9 total and 7 acceptable nodes.  Node score = -76.95000102999997
+
+ FOR HA(a) IF (Chol(a, 160)) THEN output = 1.537793 ELSE output = 0.386994;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #3, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #1, (0.05, 0.1], from 'outerLoop #3, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.083, precision = 0.968, and F1 = 0.153 - learned after 3 total and 1 acceptable nodes.  Node score = -52.36686251266264
+
+ FOR HA(a) IF (BP(a, 130)) THEN output = 2.486994 ELSE output = 0.232739;
+
+// Best in (weighted) recall bin #6, (0.3, 0.35], from 'outerLoop #3, null' and covering 12.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.332, precision = 0.992, and F1 = 0.498 - learned after 10 total and 8 acceptable nodes.  Node score = -43.87500102999997
+
+ FOR HA(a) IF (Chol(a, 160)) THEN output = 1.537793 ELSE output = -0.138006;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #4, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #4, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.248, precision = 0.968, and F1 = 0.395 - learned after 5 total and 3 acceptable nodes.  Node score = -2.0499999935607067E-6
+
+ FOR HA(a) IF (Chol(a, 160), BP(a, 70)) THEN output = -0.712207 ELSE output = 2.287793;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #5, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #2, (0.1, 0.15], from 'outerLoop #5, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.124, precision = 0.968, and F1 = 0.221 - learned after 2 total and 0 acceptable nodes.  Node score = -1.0299999973354648E-6
+
+ FOR HA(a) IF (BP(a, 130)) THEN output = 2.486994 ELSE output = -0.513006;
+
